@@ -107,7 +107,7 @@ export default function Tabs() {
                       </h3>
                     </header>
                     <div className="text-gray-600 dark:text-gray-400 grow">
-                      <p>Google handles over 3.5 billion searches daily, using this data to optimize ad placements. </p>
+                      <p>Google handles over 3.5 billion searches daily, using this data to optimize ad placements on you. </p>
                     </div>
                   </div>
                   <div className={['2'].includes(category) ? undefined : 'hidden'}>
@@ -118,7 +118,7 @@ export default function Tabs() {
                       </h3>
                     </header>
                     <div className="text-gray-600 dark:text-gray-400 grow">
-                      <p> Meta tracks interactions of over 2.9 billion monthly active users for precise ad targeting. </p>
+                      <p> Meta tracks interactions of over 2.9 billion monthly active users for precise ad targeting on you. </p>
                     </div>
                     
                   </div>
@@ -147,7 +147,7 @@ export default function Tabs() {
                     
                     </header>
                     <div className="text-gray-600 dark:text-gray-400 grow">
-                      <p>Hold My Beer CO prioritize user privacy by ensuring no personal data is collected or stored during usage. We do not sell user information to third parties, or share anything with AI learning maintaining complete confidentiality.</p>
+                      <p>Hold My Beer CO prioritizes user privacy by ensuring no personal data is collected or stored during usage. We do not sell user information to third parties, or share anything with AI learning maintaining complete confidentiality.</p>
                     </div>
                   </div>
                   <div className={['3'].includes(category) ? undefined : 'hidden'}>
@@ -155,7 +155,7 @@ export default function Tabs() {
                      
                     </header>
                     <div className="text-gray-600 dark:text-gray-400 grow">
-                      <p>Without ads, Hold My Beer CO's Apps provide an uninterrupted and clean user experience, witch eliminate tracking & preventing any form of user surveillance or data mining.</p>
+                      <p>Without ads, Hold My Beer CO's Apps provide an uninterrupted and clean user experience, which eliminates tracking & prevents any form of user surveillance or data mining.</p>
                     </div>   
                   </div>
                  

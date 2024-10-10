@@ -127,7 +127,11 @@ export default function Footer() {
                     AI Allergy Check App (COMING SOON)
                     </a>
                   </li>
-                 
+                  <li className="mb-1">
+                    <a className="text-gray-600 dark:text-gray-400 hover:underline transition duration-150 ease-in-out" href="#0">
+                     Advanced Search Engine (COMING SOON)
+                    </a>
+                  </li>
                 </ul>
               </div>
             </div>

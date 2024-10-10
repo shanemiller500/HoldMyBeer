@@ -6,8 +6,8 @@ export default function FeaturesAnimation() {
 
           {/* Section header */}
           <div className="max-w-3xl mx-auto text-center pb-12 md:pb-16">
-            <h1 className="h2 font-red-hat-display mb-4">Hold My Beer's feature ecosystem</h1>
-            <p className="text-xl text-gray-600 dark:text-gray-400">Here are some features we have across our applications. We are not even 12 months old, our future is extreamly bright! Thanks for your ongoing support.</p>
+            <h1 className="h2 font-red-hat-display mb-4">Hold My Beer's Feature Rich Ecosystem</h1>
+            <p className="text-xl text-gray-600 dark:text-gray-400"> Discover the innovative features across our suite of applications. In less than 12 months, we've built a robust ecosystem with a remarkably bright future ahead! Thank you for your unwavering support.</p>
           </div>
 
           {/* Custom animation */}

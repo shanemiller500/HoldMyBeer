@@ -21,7 +21,7 @@ export default function Tabs() {
           {/* Section header */}
           <div className="max-w-3xl mx-auto text-center pb-12 md:pb-16">
             <h2 className="h2 font-red-hat-display mb-4">We are all the product & we all know it, but we do nothing about it.</h2>
-            <p className="text-xl text-gray-600 dark:text-gray-400">Lets stop pretending it's ok that we give everything up for free. I mean it is, but do you really need the 15th throw pilow with a face of Nick Cage under the heart sequents? (link below) </p>
+            <p className="text-xl text-gray-600 dark:text-gray-400">Let's stop pretending it's okay to give everything away for free. Sure, it happens, but do you really need to be sold the 15th throw pillow featuring Nick Cage face under sequins? (Link below) </p>
           </div>
 
           {/* Section content */}
@@ -46,7 +46,7 @@ export default function Tabs() {
                   <svg className="w-4 h-4 shrink-0 mr-2" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
                     <path className={`fill-current ${category === '2' ? 'text-teal-200 dark:text-teal-400' : 'text-teal-500 dark:text-gray-400'}`} d="M8 3l4 4H4zM8 13L4 9h8zM1 0h14v2H1zM1 14h14v2H1z" />
                   </svg>
-                  <span className={category === '2' ? 'text-white dark:text-teal-400' : 'text-gray-600 dark:text-gray-300'}>Why Not!</span>
+                  <span className={category === '2' ? 'text-white dark:text-teal-400' : 'text-gray-600 dark:text-gray-300'}>Really?</span>
                 </button>
                 <button
                   className={`lg:w-full font-medium px-3 py-2 bg-white hover:bg-gray-50 shadow dark:bg-gray-800 dark:hover:bg-gray-700 transition duration-150 ease-in-out rounded flex items-center justify-center lg:justify-start m-1 lg:mx-0 ${category === '3' && 'bg-teal-500 hover:bg-teal-500 dark:bg-teal-600 dark:hover:bg-teal-600 dark:bg-opacity-25 dark:hover:bg-opacity-25'}`}
@@ -55,7 +55,7 @@ export default function Tabs() {
                   <svg className="w-4 h-4 shrink-0 mr-2" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
                     <path className={`fill-current ${category === '3' ? 'text-teal-200 dark:text-teal-400' : 'text-teal-500 dark:text-gray-400'}`} d="M6 0H1a1 1 0 00-1 1v5a1 1 0 001 1h5a1 1 0 001-1V1a1 1 0 00-1-1zM5 5H2V2h3v3zM15 9h-5a1 1 0 00-1 1v5a1 1 0 001 1h5a1 1 0 001-1v-5a1 1 0 00-1-1zm-1 5h-3v-3h3v3zM6 9H1a1 1 0 00-1 1v5a1 1 0 001 1h5a1 1 0 001-1v-5a1 1 0 00-1-1zm-1 5H2v-3h3v3zM12.5 7a1 1 0 01-.707-.293l-2.5-2.5a1 1 0 010-1.414l2.5-2.5a1 1 0 011.414 0l2.5 2.5a1 1 0 010 1.414l-2.5 2.5A1 1 0 0112.5 7z" />
                   </svg>
-                  <span className={category === '3' ? 'text-white dark:text-teal-400' : 'text-gray-600 dark:text-gray-300'}>The answer is the question</span>
+                  <span className={category === '3' ? 'text-white dark:text-teal-400' : 'text-gray-600 dark:text-gray-300'}>The answer!</span>
                 </button>
                 {/* <button
                   className={`lg:w-full font-medium px-3 py-2 bg-white hover:bg-gray-50 shadow dark:bg-gray-800 dark:hover:bg-gray-700 transition duration-150 ease-in-out rounded flex items-center justify-center lg:justify-start m-1 lg:mx-0 ${category === '4' && 'bg-teal-500 hover:bg-teal-500 dark:bg-teal-600 dark:hover:bg-teal-600 dark:bg-opacity-25 dark:hover:bg-opacity-25'}`}
@@ -144,19 +144,15 @@ export default function Tabs() {
                   </div>
                   <div className={['3'].includes(category) ? undefined : 'hidden'}>
                   <header>
-                      <h3 className="h4 font-red-hat-display mb-1">
-                        <a href="#0">The answer</a>
-                      </h3>
+                    
                     </header>
                     <div className="text-gray-600 dark:text-gray-400 grow">
-                      <p>Hold My Beer CO prioritize user privacy by ensuring no personal data is collected or stored during usage. We do not sell user information to third parties, or share anything with AP learning maintaining complete confidentiality.</p>
+                      <p>Hold My Beer CO prioritize user privacy by ensuring no personal data is collected or stored during usage. We do not sell user information to third parties, or share anything with AI learning maintaining complete confidentiality.</p>
                     </div>
                   </div>
                   <div className={['3'].includes(category) ? undefined : 'hidden'}>
                   <header>
-                      <h3 className="h4 font-red-hat-display mb-1">
-                        <a href="#0">The answer</a>
-                      </h3>
+                     
                     </header>
                     <div className="text-gray-600 dark:text-gray-400 grow">
                       <p>Without ads, Hold My Beer CO's Apps provide an uninterrupted and clean user experience, witch eliminate tracking & preventing any form of user surveillance or data mining.</p>

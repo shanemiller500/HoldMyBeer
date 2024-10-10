@@ -22,11 +22,15 @@ export default function Team() {
                 <div className="flex flex-col items-center">
                   <Image className="rounded-full mb-2" src={TeamImage01} width={80} height={80} alt="Team member 01" />
                   <h4 className="dark:text-gray-300 text-lg font-medium">Shane Miller</h4>
-                  {/* <a className="p-2" href="#0">
-                    <svg width="16" height="13" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M16 1.5c-.6.3-1.2.4-1.9.5.7-.4 1.2-1 1.4-1.8-.6.4-1.3.6-2.1.8-.6-.6-1.5-1-2.4-1-1.7 0-3.2 1.5-3.2 3.3 0 .3 0 .5.1.7C5.2 3.9 2.7 2.6 1.1.6c-.3.5-.4 1-.4 1.7 0 1.1.6 2.1 1.5 2.7-.5 0-1-.2-1.5-.4 0 1.6 1.1 2.9 2.6 3.2-.3.1-.6.1-.9.1-.2 0-.4 0-.6-.1.4 1.3 1.6 2.3 3.1 2.3-1.1.9-2.5 1.4-4.1 1.4H0c1.5.9 3.2 1.5 5 1.5 6 0 9.3-5 9.3-9.3v-.4c.7-.5 1.3-1.1 1.7-1.8z" fill="#1DA1F2" fillRule="nonzero" />
+                  <a className="p-2" href="https://www.linkedin.com/in/shane-miller-ninja/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                    <svg width="16" height="16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                      <path 
+                        d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-10h3v10zm-1.5-11.3c-.966 0-1.75-.784-1.75-1.75s.784-1.75 1.75-1.75 1.75.784 1.75 1.75-.784 1.75-1.75 1.75zm13.5 11.3h-3v-5.6c0-1.34-.03-3.07-1.87-3.07-1.87 0-2.16 1.46-2.16 2.96v5.7h-3v-10h2.88v1.37h.04c.4-.76 1.37-1.56 2.82-1.56 3.02 0 3.58 1.99 3.58 4.59v5.55z" 
+                        fill="#0A66C2" 
+                        fillRule="nonzero" 
+                      />
                     </svg>
-                  </a> */}
+                  </a>
                 </div>
               </div>
 

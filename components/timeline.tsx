@@ -54,11 +54,11 @@ export default function Timeline() {
                   <article className="p-6 bg-white dark:bg-gray-800 shadow-2xl flex flex-col">
                     <header>
                       <h3 className="h4 font-red-hat-display mb-1">
-                        <a href="#0">Laid Off</a>
+                        <a href="#0">Redundant</a>
                       </h3>
                     </header>
                     <div className="text-gray-600 dark:text-gray-400 grow">
-                      <p>Like many software developers, I was laid off at the beginning of 2024 after a decade of loyal service at a major company.</p>
+                      <p>Like many software developers, I was made redundant at the beginning of 2024 after a decade of loyal service at a major company.</p>
                     </div>
                    
                   </article>
@@ -69,7 +69,7 @@ export default function Timeline() {
                       </h3>
                     </header>
                     <div className="text-gray-600 dark:text-gray-400 grow">
-                      <p>While exploring AI and developing my portfolio, I created an innovative tool that transforms swear words into polite and kind expressions. It was a fun and creative project that showcased the power of AI in enhancing communication.</p>
+                      <p>While exploring AI and developing a portfolio, I created an innovative tool that transforms swear words into polite and kind expressions. It was a fun and creative project that showcased the power of AI in enhancing communication.</p>
                     </div>
 
                   </article>
@@ -104,7 +104,7 @@ export default function Timeline() {
                       </h3>
                     </header>
                     <div className="text-gray-600 dark:text-gray-400 grow">
-                      <p>After persistent efforts, I finally secured an interview! During the interview, I was encouraged to either continue my job search or start my own company. It was a bold move, but just two hours later, UMail was born.</p>
+                      <p>After persistent efforts, I finally secured an interview! During the interview, I was encouraged to either continue my job search & work for someone else or pursue my own company. It was very clear what they wanted me to choose, a bold move was made two hours later, UMail was born.</p>
                     </div>
                    
                   </article>

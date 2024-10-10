@@ -81,30 +81,86 @@ export default function Tabs() {
               <div className="lg:col-span-2 max-w-sm mx-auto md:max-w-3xl lg:max-w-none">
                 <div className="grid md:grid-cols-2 gap-6">
                   <div className={['1'].includes(category) ? undefined : 'hidden'}>
-                    <p className=' text-gray-600 dark:text-gray-400'> Why not! It's really </p>
-                  </div>
-                  <div className={['1', '2'].includes(category) ? undefined : 'hidden'}>
-                    gfadgfsdgfsd htrehrdsh trytreh trerutre jyterjytrgjmg yfjtysfj tfsjytfk hgr
-                  </div>
-                  <div className={['1', '3'].includes(category) ? undefined : 'hidden'}>
-                   Lets talk words
-                  </div>
-                  <div className={['1', '4'].includes(category) ? undefined : 'hidden'}>
-                    <div className="relative flex justify-center items-center shadow">
-                   And some more
+                  <header>
+                      <h3 className="h4 font-red-hat-display mb-1">
+                        <a href="#0">Data theft</a>
+                      </h3>
+                    </header>
+                    <div className="text-gray-600 dark:text-gray-400 grow">
+                      <p>Tech firms analyze personal information, browsing habits, and location data to build detailed user profiles. These profiles enable highly targeted advertising, increasing ad effectiveness and company profits.</p>
                     </div>
                   </div>
-                  <div className={['2', '5'].includes(category) ? undefined : 'hidden'}>
-                    <p>bhdf</p>
+                  <div className={['1'].includes(category) ? undefined : 'hidden'}>
+                  <header>
+                      <h3 className="h4 font-red-hat-display mb-1">
+                        <a href="#0">Tech Landscape</a>
+                      </h3>
+                    </header>
+                    <div className="text-gray-600 dark:text-gray-400 grow">
+                      <p>Many tech companies offer free products like social media, search engines, and apps to millions of users worldwide. These free platforms generate revenue primarily through the collection and monetization of user data.</p>
+                    </div>
                   </div>
-                  <div className={['2', '3'].includes(category) ? undefined : 'hidden'}>
-                   Words
+                  <div className={['2'].includes(category) ? undefined : 'hidden'}>
+                  <header>
+                      <h3 className="h4 font-red-hat-display mb-1">
+                        <a href="#0">Google</a>
+                      </h3>
+                    </header>
+                    <div className="text-gray-600 dark:text-gray-400 grow">
+                      <p>Google handles over 3.5 billion searches daily, using this data to optimize ad placements. </p>
+                    </div>
                   </div>
-                  <div className={['2', '4'].includes(category) ? undefined : 'hidden'}>
-                    More words
+                  <div className={['2'].includes(category) ? undefined : 'hidden'}>
+                  
+                    <header>
+                      <h3 className="h4 font-red-hat-display mb-1">
+                        <a href="#0">Meta</a>
+                      </h3>
+                    </header>
+                    <div className="text-gray-600 dark:text-gray-400 grow">
+                      <p> Meta tracks interactions of over 2.9 billion monthly active users for precise ad targeting. </p>
+                    </div>
+                    
                   </div>
-                  <div className={['3', '5'].includes(category) ? undefined : 'hidden'}>
-                    less words
+                  <div className={['2'].includes(category) ? undefined : 'hidden'}>
+                  <header>
+                      <h3 className="h4 font-red-hat-display mb-1">
+                        <a href="#0">Cost</a>
+                      </h3>
+                    </header>
+                    <div className="text-gray-600 dark:text-gray-400 grow">
+                      <p>  Digital ad spending is projected to reach $645 billion by 2024, driven largely by data-driven strategies.</p>
+                    </div>
+                  </div>
+                  <div className={['2'].includes(category) ? undefined : 'hidden'}>
+                  <header>
+                      <h3 className="h4 font-red-hat-display mb-1">
+                        <a href="#0">Fallout</a>
+                      </h3>
+                    </header>
+                    <div className="text-gray-600 dark:text-gray-400 grow">
+                      <p> This lack of transparency can lead to unauthorized data sharing and potential breaches. Data breaches expose personal information, increasing risks of identity theft and misuse.</p>
+                    </div>
+                  </div>
+                  <div className={['3'].includes(category) ? undefined : 'hidden'}>
+                  <header>
+                      <h3 className="h4 font-red-hat-display mb-1">
+                        <a href="#0">The answer</a>
+                      </h3>
+                    </header>
+                    <div className="text-gray-600 dark:text-gray-400 grow">
+                      <p>Hold My Beer CO prioritize user privacy by ensuring no personal data is collected or stored during usage. We do not sell user information to third parties, or share anything with AP learning maintaining complete confidentiality.</p>
+                    </div>
+                  </div>
+                  <div className={['3'].includes(category) ? undefined : 'hidden'}>
+                  <header>
+                      <h3 className="h4 font-red-hat-display mb-1">
+                        <a href="#0">The answer</a>
+                      </h3>
+                    </header>
+                    <div className="text-gray-600 dark:text-gray-400 grow">
+                      <p>Without ads, Hold My Beer CO's Apps provide an uninterrupted and clean user experience, witch eliminate tracking & preventing any form of user surveillance or data mining.</p>
+                    </div>   
                   </div>
                  
                   {/* <div className={['5'].includes(category) ? undefined : 'hidden'}>

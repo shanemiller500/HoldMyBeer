@@ -90,6 +90,10 @@ export default function Footer() {
                       About us
                     </a>
                   </li>
+                  <li className="mb-1">
+                    <a className="text-gray-600 dark:text-gray-400 hover:underline transition duration-150 ease-in-out" href="https://www.amazon.com/JYVNCZ-Reversible-Pillowcase-Decorative-Inches%EF%BC%88Gold%EF%BC%89/dp/B0BG8HW1DV/ref=asc_df_B0BG8HW1DV/?tag=hyprod-20&linkCode=df0&hvadid=693769995797&hvpos=&hvnetw=g&hvrand=12613000348124047769&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9028890&hvtargid=pla-2068535422238&mcid=542f2c86667831afae14b3cc9ec173fe&th=1">
+                    Nicolas Cage Sequin Pillow                    </a>
+                  </li>
                   {/* <li className="mb-1">
                     <a className="text-gray-600 dark:text-gray-400 hover:underline transition duration-150 ease-in-out" href="#0">
                       Press
@@ -123,6 +127,7 @@ export default function Footer() {
                     AI Allergy Check App (COMING SOON)
                     </a>
                   </li>
+                 
                 </ul>
               </div>
             </div>

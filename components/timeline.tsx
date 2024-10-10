@@ -58,7 +58,7 @@ export default function Timeline() {
                       </h3>
                     </header>
                     <div className="text-gray-600 dark:text-gray-400 grow">
-                      <p>Like many software developers, I was laid off at the beginning of 2024 after a decade of dedicated service at a major company.</p>
+                      <p>Like many software developers, I was laid off at the beginning of 2024 after a decade of loyal service at a major company.</p>
                     </div>
                    
                   </article>

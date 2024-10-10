@@ -83,11 +83,11 @@ export default function Tabs() {
                   <div className={['1'].includes(category) ? undefined : 'hidden'}>
                   <header>
                       <h3 className="h4 font-red-hat-display mb-1">
-                        <a href="#0">Data theft</a>
+                        <a href="#0">Data Theft</a>
                       </h3>
                     </header>
                     <div className="text-gray-600 dark:text-gray-400 grow">
-                      <p>Tech firms analyze personal information, browsing habits, and location data to build detailed user profiles. These profiles enable highly targeted advertising, increasing ad effectiveness and company profits.</p>
+                      <p>Tech firms analyze personal information, browsing habits, and location data to build detailed user profiles. These profiles enable highly targeted advertising, increasing ad effectiveness and company profits from you.</p>
                     </div>
                   </div>
                   <div className={['1'].includes(category) ? undefined : 'hidden'}>
@@ -97,7 +97,7 @@ export default function Tabs() {
                       </h3>
                     </header>
                     <div className="text-gray-600 dark:text-gray-400 grow">
-                      <p>Many tech companies offer free products like social media, search engines, and apps to millions of users worldwide. These free platforms generate revenue primarily through the collection and monetization of user data.</p>
+                      <p>Many tech companies offer free products like social media, search engines, and apps to millions of users worldwide. These free platforms generate revenue primarily through the collection and monetization of your data.</p>
                     </div>
                   </div>
                   <div className={['2'].includes(category) ? undefined : 'hidden'}>

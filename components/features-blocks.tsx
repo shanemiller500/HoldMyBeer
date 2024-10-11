@@ -53,8 +53,8 @@ export default function FeaturesBlocks() {
               <svg className="w-8 h-8 mb-3" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
                 <path className="fill-current" d="M20.243 6.757l.707.707-1.414 1.414-.707-.707a4 4 0 00-5.658 0l-.707.707-1.414-1.414.707-.707a6 6 0 018.486 0zm3.535-3.535l.707.707-1.414 1.414-.707-.707a9 9 0 00-12.728 0l-.707.707L7.515 3.93l.707-.707c4.296-4.296 11.26-4.296 15.556 0zM9 17.212V16a7 7 0 00-7-7H1V7h1a9 9 0 019 9v.788l2.302 5.18L11 23.117V24a4 4 0 01-4 4H5v3H3v-5h4a2 2 0 002-2v-2.118l1.698-.85L9 17.213zm12-.424V16a9 9 0 019-9h1v2h-1a7 7 0 00-7 7v1.212l-1.698 3.82 1.698.85V24a2 2 0 002 2h4v5h-2v-3h-2a4 4 0 01-4-4v-.882l-2.302-1.15L21 16.787zM16 12a1 1 0 110-2 1 1 0 010 2z" fillRule="nonzero" />
               </svg>
-              <div className="font-red-hat-display text-xl font-black tracking-tighter mb-1">AI search Browser (2025)</div>
-              <div className="grow opacity-80 mb-4">Looking for the right answer instantly? Our extremely powerful search browser gets straight to the point without clickbait, tracking and sponsored links.</div>
+              <div className="font-red-hat-display text-xl font-black tracking-tighter mb-1">AI Search Engine (2025)</div>
+              <div className="grow opacity-80 mb-4">Looking for the right answer instantly? Our extremely powerful Search Engine gets straight to the point without clickbait, tracking and sponsored links.</div>
               <svg className="w-6 h-6 self-end transform -translate-x-2 group-hover:translate-x-0 transition duration-150 ease-in-out" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                 <path className="fill-current" d="M13 11V5.057L22.72 12 13 18.943V13H2v-2h11zm2 4.057L19.28 12 15 8.943v6.114z" />
               </svg>

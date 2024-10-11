@@ -20,8 +20,8 @@ export default function Tabs() {
 
           {/* Section header */}
           <div className="max-w-3xl mx-auto text-center pb-12 md:pb-16">
-            <h2 className="h2 font-red-hat-display mb-4">We are all the product & we all know it, but we do nothing about it.</h2>
-            <p className="text-xl text-gray-600 dark:text-gray-400">Let's stop pretending it's okay to give everything away for free. Sure, it happens, but do you really need to be sold the 15th throw pillow featuring Nick Cage face under sequins? (Link below) </p>
+            <h2 className="h2 font-red-hat-display mb-4"><span className="text-teal-500">We recognize our personal data drives others profits</span>,  but remain passive in changing the system.</h2>
+            <p className="text-xl text-gray-600 dark:text-gray-400">Unlike other companies that harvest your personal data for profit, our tools prioritize your privacy and security. Enjoy powerful, ad-free solutions that protect your personal information. We are committed to safeguarding your digital life, ensuring you have full control over your online experience</p>
           </div>
 
           {/* Section content */}
@@ -87,7 +87,7 @@ export default function Tabs() {
                       </h3>
                     </header>
                     <div className="text-gray-600 dark:text-gray-400 grow">
-                      <p>Tech firms analyze personal information, browsing habits, and location data to build detailed user profiles. These profiles enable highly targeted advertising, increasing ad effectiveness and company profits from you.</p>
+                      <p>Tech giants exploit your digital footprint, monitor your online activities & locations to create comprehensive profiles. These profiles drive precision-targeted ads, significantly boosting advertising effectiveness and generating immense profits while compromising your privacy and control.</p>
                     </div>
                   </div>
                   <div className={['1'].includes(category) ? undefined : 'hidden'}>
@@ -97,7 +97,7 @@ export default function Tabs() {
                       </h3>
                     </header>
                     <div className="text-gray-600 dark:text-gray-400 grow">
-                      <p>Many tech companies offer free products like social media, search engines, and apps to millions of users worldwide. These free platforms generate revenue primarily through the collection and monetization of your data.</p>
+                      <p>Countless tech companies offer free services like social media, search engines, and apps to millions worldwide. Their main revenue comes from collecting and monetizing your personal data, turning your personal information into profit while providing no-cost access.</p>
                     </div>
                   </div>
                   <div className={['2'].includes(category) ? undefined : 'hidden'}>
@@ -107,7 +107,7 @@ export default function Tabs() {
                       </h3>
                     </header>
                     <div className="text-gray-600 dark:text-gray-400 grow">
-                      <p>Google handles over 3.5 billion searches daily, using this data to optimize ad placements on you. </p>
+                      <p>Google processes over <span className="text-teal-500">3.5 billion</span> searches each day, using this data to fine-tune targeted ad placements across its entire ecosystem. This extensive data collection enables highly targeted advertising, turning your personal information into a valuable revenue stream.</p>
                     </div>
                   </div>
                   <div className={['2'].includes(category) ? undefined : 'hidden'}>
@@ -118,7 +118,7 @@ export default function Tabs() {
                       </h3>
                     </header>
                     <div className="text-gray-600 dark:text-gray-400 grow">
-                      <p> Meta tracks interactions of over 2.9 billion monthly active users for precise ad targeting on you. </p>
+                      <p>Meta tracks interactions of over <span className="text-teal-500">2.9 billion</span> monthly active users across Facebook, Instagram, and Messenger to deliver precise ad targeting while you use the apps. This extensive data collection results in countless "Sponsored" posts tailored to your behavior and preferences.</p>
                     </div>
                     
                   </div>
@@ -129,7 +129,7 @@ export default function Tabs() {
                       </h3>
                     </header>
                     <div className="text-gray-600 dark:text-gray-400 grow">
-                      <p>  Digital ad spending is projected to reach $645 billion by 2024, driven largely by data-driven strategies.</p>
+                      <p>Digital ad spending is expected to reach <span className="text-teal-500">$645 billion</span> by 2024, largely driven by data-driven strategies. This surge underscores how companies rely on user data to enhance ad targeting and effectiveness, heightening concerns about privacy and data exploitation.</p>
                     </div>
                   </div>
                   <div className={['2'].includes(category) ? undefined : 'hidden'}>
@@ -139,7 +139,7 @@ export default function Tabs() {
                       </h3>
                     </header>
                     <div className="text-gray-600 dark:text-gray-400 grow">
-                      <p> This lack of transparency can lead to unauthorized data sharing and potential breaches. Data breaches expose personal information, increasing risks of identity theft and misuse.</p>
+                      <p>Without transparency, unauthorized data sharing and security breaches become rampant. These incidents expose personal information, significantly increasing the chances of identity theft and the exploitation of your data.</p>
                     </div>
                   </div>
                   <div className={['3'].includes(category) ? undefined : 'hidden'}>
@@ -147,7 +147,7 @@ export default function Tabs() {
                     
                     </header>
                     <div className="text-gray-600 dark:text-gray-400 grow">
-                      <p>Hold My Beer CO prioritizes user privacy by ensuring no personal data is collected or stored during usage. We do not sell user information to third parties, or share anything with AI learning maintaining complete confidentiality.</p>
+                      <p>  <span className="text-teal-500">Hold My Beer CO</span> prioritizes your privacy by never collecting or storing your personal data. We guarantee that your information is never sold to third parties or used for AI learning, ensuring complete confidentiality and peace of mind.</p>
                     </div>
                   </div>
                   <div className={['3'].includes(category) ? undefined : 'hidden'}>
@@ -155,7 +155,7 @@ export default function Tabs() {
                      
                     </header>
                     <div className="text-gray-600 dark:text-gray-400 grow">
-                      <p>Without ads, Hold My Beer CO's Apps provide an uninterrupted and clean user experience, which eliminates tracking & prevents any form of user surveillance or data mining.</p>
+                      <p>Our ad-free apps deliver a seamless and pristine user experience, free from tracking and surveillance. By eliminating data mining, <span className="text-teal-500">Hold My Beer CO</span> ensures your interactions remain private and secure, allowing you to enjoy our services without compromise, ads or data mining.</p>
                     </div>   
                   </div>
                  

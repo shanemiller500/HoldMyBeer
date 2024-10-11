@@ -80,12 +80,19 @@ export default function TransparencyPolicyPage() {
                 </svg>
                 <span>Helps in improving website performance</span>
               </li>
-              <span>
+
+              <li className="flex items-center">
+                <svg className=" w-4 h-4 text-teal-500 mr-2 flex-shrink-0" viewBox="0 0 20 20" fill="currentColor">
+                  <path d="M10 2a8 8 0 100 16 8 8 0 000-16zM9 9V7a1 1 0 012 0v2h2a1 1 0 110 2h-2v2a1 1 0 11-2 0v-2H7a1 1 0 110-2h2z" />
+                </svg>
+                <span>
                   For more information, visit the{' '}
                   <a href="https://support.google.com/analytics/answer/12159447?hl=en#:~:text=Google%20Analytics%20is%20a%20platform,provide%20insights%20into%20your%20business." target="_blank" rel="noopener noreferrer" className="text-teal-500 underline">
                   How Google Analytics works
                   </a>.
                 </span>
+              </li>
+             
             </ul>
           </div>
 
@@ -132,7 +139,7 @@ export default function TransparencyPolicyPage() {
                 <svg className=" w-4 h-4 text-teal-500 mr-2 flex-shrink-0" viewBox="0 0 20 20" fill="currentColor">
                   <path d="M10 2a8 8 0 100 16 8 8 0 000-16zM9 9V7a1 1 0 012 0v2h2a1 1 0 110 2h-2v2a1 1 0 11-2 0v-2H7a1 1 0 110-2h2z" />
                 </svg>
-                <span>Optional: Website / Linkedin Profile, Phone Number, job status, Industry</span>
+                <span>Optional: Website / Linkedin Profile, Phone Number, job status, age range & Industry</span>
               </li>
             </ul>
           </div>
@@ -156,7 +163,29 @@ export default function TransparencyPolicyPage() {
               </li>
             </ul>
           </div>
+
+          <div>
+            <h2 className="text-2xl font-semibold mb-2 text-teal-500">8. Voice Collection</h2>
+            <p className="mb-4"> Voice collection is optional. If you opt in, we capture brief, 2-second snippets (one to two words). These help us improve voice synthesis and accent recognition for more natural-sounding experiences. All data is anonymized and stored securely without any user association. </p>
+            <ul className="space-y-2">
+                <li className="flex items-center">
+                <svg className="w-4 h-4 text-teal-500 mr-2 flex-shrink-0" viewBox="0 0 20 20" fill="currentColor">
+                    <path d="M10 2a8 8 0 100 16 8 8 0 000-16zM9 9V7a1 1 0 012 0v2h2a1 1 0 110 2h-2v2a1 1 0 11-2 0v-2H7a1 1 0 110-2h2z" />
+                </svg>
+                <span>Voice data is collected in 2-second segments</span>
+                </li>
+                <li className="flex items-center">
+                <svg className="w-4 h-4 text-teal-500 mr-2 flex-shrink-0" viewBox="0 0 20 20" fill="currentColor">
+                    <path d="M10 2a8 8 0 100 16 8 8 0 000-16zM9 9V7a1 1 0 012 0v2h2a1 1 0 110 2h-2v2a1 1 0 11-2 0v-2H7a1 1 0 110-2h2z" />
+                </svg>
+                <span>Used solely for improving accent synthesis and recognition</span>
+                </li>
+            </ul>
+            </div>
         </div>
+
+        
+
 
         {/* Acknowledgment Button */}
         {/* <div className="mt-12 text-center">

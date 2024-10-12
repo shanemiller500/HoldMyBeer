@@ -97,11 +97,11 @@ export default function Contact() {
           <div className="py-12 md:py-20">
             {/* Section header */}
             <div className="pb-12 text-center">
-              <h1 className="animate-[gradient_6s_linear_infinite] bg-[linear-gradient(to_right,theme(colors.gray.200),theme(colors.indigo.200),theme(colors.gray.50),theme(colors.indigo.300),theme(colors.gray.200))] bg-[length:200%_auto] bg-clip-text pb-5 font-nacelle text-4xl font-semibold text-transparent md:text-5xl">
+              <h1 className="h1 lg:text-6xl mb-4 font-red-hat-display font-black aos-init aos-animate" data-aos="fade-down">
                 Contact us
               </h1>
               <div className="mx-auto max-w-3xl">
-                <p className="text-xl text-indigo-200/65">
+                <p className="text-xl text-gray-600 dark:text-gray-400 aos-init aos-animate">
                   Have some questions? Feel free to reach out!
                 </p>
               </div>
@@ -112,7 +112,7 @@ export default function Contact() {
                 <div className="flex flex-col gap-x-6 gap-y-4 md:flex-row">
                   <div className="flex-1">
                     <label
-                      className="mb-1 block text-sm font-medium text-indigo-200/65"
+                      className="mb-1 block text-sm font-medium dark:text-gray-200 text-black-400/65"
                       htmlFor="firstName"
                     >
                       Name
@@ -130,7 +130,7 @@ export default function Contact() {
                   </div>
                   <div className="flex-1">
                     <label
-                      className="mb-1 block text-sm font-medium text-indigo-200/65"
+                      className="mb-1 block text-sm font-medium dark:text-gray-200 text-black-400/65"
                       htmlFor="lastName"
                     >
                       Surname
@@ -150,7 +150,7 @@ export default function Contact() {
                 <div className="flex flex-col gap-x-6 gap-y-4 md:flex-row">
                   <div className="flex-1">
                     <label
-                      className="mb-1 block text-sm font-medium text-indigo-200/65"
+                      className="mb-1 block text-sm font-medium dark:text-gray-200 text-black-400/65"
                       htmlFor="email"
                     >
                       Email
@@ -170,7 +170,7 @@ export default function Contact() {
                 <div className="flex flex-col gap-x-6 gap-y-4 md:flex-row">
                   <div className="flex-1">
                     <label
-                      className="mb-1 block text-sm font-medium text-indigo-200/65"
+                      className="mb-1 block text-sm font-medium dark:text-gray-200 text-black-400/65"
                       htmlFor="subject"
                     >
                       Subject
@@ -188,7 +188,7 @@ export default function Contact() {
                 </div>
                 <div>
                   <label
-                    className="mb-1 block text-sm font-medium text-indigo-200/65"
+                    className="mb-1 block text-sm font-medium dark:text-gray-200 text-black-400/65"
                     htmlFor="description"
                   >
                     Full description
@@ -209,7 +209,7 @@ export default function Contact() {
                 <div>
                   <button
                     type="submit"
-                    className="btn group w-full bg-gradient-to-t from-indigo-600 to-indigo-500 bg-[length:100%_100%] bg-[bottom] text-white shadow-[inset_0px_1px_0px_0px_theme(colors.white/.16)] hover:bg-[length:100%_150%]"
+                    className="btn text-white bg-teal-500 hover:bg-teal-400 shrink-0"
                   >
                     <span className="relative inline-flex items-center">
                       Send

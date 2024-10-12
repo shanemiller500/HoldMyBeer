@@ -7,7 +7,7 @@ export default function FeaturesBlocks() {
           {/* Section header */}
           <div className="max-w-3xl mx-auto text-center pb-12 md:pb-20">
             <h2 className="h2 font-red-hat-display">Apps made for people that care about Privacy</h2>
-          </div>
+            <p className="text-xl text-gray-600 dark:text-gray-400">The apps below are either nearing production or well within the capabilities of our current team. As we grow, we’ll onboard more developers and accelerate the release of new applications. Stay tuned —<span className="text-teal-500"> this is just the beginning of a new era in how we use the internet ad free.</span> </p></div>
 
           {/* Items */}
           <div className="max-w-xs mx-auto sm:max-w-none md:max-w-xl lg:max-w-none grid sm:grid-cols-4 gap-4 lg:gap-6 lg:grid-cols-4" data-aos-id-featbl>

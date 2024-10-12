@@ -21,7 +21,7 @@ export default function Tabs() {
           {/* Section header */}
           <div className="max-w-3xl mx-auto text-center pb-12 md:pb-16">
             <h2 className="h2 font-red-hat-display mb-4"><span className="text-teal-500">We recognize our personal data drives others profits</span>,  but remain passive in changing the system.</h2>
-            <p className="text-xl text-gray-600 dark:text-gray-400">Unlike other companies that harvest your personal data for profit, our tools prioritize your privacy and security. Enjoy powerful, ad-free solutions that protect your personal information. We are committed to safeguarding your digital life, ensuring you have full control over your online experience</p>
+            <p className="text-xl text-gray-600 dark:text-gray-400">Unlike other companies that harvest your personal data for profit, our tools prioritize your privacy and security. Enjoy powerful, ad-free solutions that protect your personal information. We are committed to safeguarding your digital life, ensuring you have full control over your online footprint.</p>
           </div>
 
           {/* Section content */}

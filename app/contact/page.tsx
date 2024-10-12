@@ -1,107 +1,256 @@
-export const metadata = {
-  title: 'Contact - HMB-CO',
-  description: 'Page description',
-}
+"use client"; // Mark this as a Client Component
 
-import PageIllustration from '@/components/page-illustration'
+import { useState } from "react";
 
 export default function Contact() {
+  const [formData, setFormData] = useState({
+    firstName: "",
+    lastName: "",
+    email: "",
+    topic: "",
+    subject: "",
+    description: "",
+  });
+
+  const [statusMessage, setStatusMessage] = useState("");
+  const [isPopupVisible, setIsPopupVisible] = useState(false);
+
+  const handleChange = (e: { target: { id: any; value: any; }; }) => {
+    setFormData({
+      ...formData,
+      [e.target.id]: e.target.value,
+    });
+  };
+
+  const handleSubmit = async (e: { preventDefault: () => void; }) => {
+    e.preventDefault();
+
+    // Basic validation for required fields
+    if (
+      !formData.firstName ||
+      !formData.email ||
+      !formData.subject ||
+      !formData.description
+    ) {
+      setStatusMessage(
+        "Please fill in all required fields: Name, Email, Subject, and Description."
+      );
+      setIsPopupVisible(true);
+      return;
+    }
+
+    // Optional: Additional validation for email format
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(formData.email)) {
+      setStatusMessage("Please enter a valid email address.");
+      setIsPopupVisible(true);
+      return;
+    }
+
+    try {
+      const response = await fetch(
+        "https://u-mail.co/api/pro-send-email/contact",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            name: formData.firstName,
+            surname: formData.lastName,
+            email: formData.email,
+            topic: formData.topic,
+            subject: formData.subject,
+            description: formData.description,
+          }),
+        }
+      );
+
+      if (!response.ok) {
+        const errorText = await response.text();
+        throw new Error(`Error: ${errorText}`);
+      }
+
+      const result = await response.json();
+
+      setStatusMessage("Message sent successfully!");
+      setIsPopupVisible(true);
+      setFormData({
+        firstName: "",
+        lastName: "",
+        email: "",
+        topic: "",
+        subject: "",
+        description: "",
+      });
+    } catch (error) {
+      console.error("Error:", error);
+      setStatusMessage("An error occurred while sending the message.");
+      setIsPopupVisible(true);
+    }
+  };
+
   return (
     <>
-      {/*  Page illustration */}
-      <div className="relative max-w-6xl mx-auto h-0 pointer-events-none -z-1" aria-hidden="true">
-        <PageIllustration />
-      </div>
-
-      <section className="relative">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 relative">
-          <div className="pt-32 pb-12 md:pt-40 md:pb-20">
-
-            {/* Page header */}
-            <div className="max-w-3xl mx-auto text-center pb-12 md:pb-16">
-              <h1 className="h1 font-red-hat-display mb-4">Get started with Appy in seconds</h1>
-              <p className="text-xl text-gray-600 dark:text-gray-400">We'll send you a text with a link to download the app.</p>
+      <section>
+        <div className="mx-auto max-w-6xl px-4 sm:px-6">
+          <div className="py-12 md:py-20">
+            {/* Section header */}
+            <div className="pb-12 text-center">
+              <h1 className="animate-[gradient_6s_linear_infinite] bg-[linear-gradient(to_right,theme(colors.gray.200),theme(colors.indigo.200),theme(colors.gray.50),theme(colors.indigo.300),theme(colors.gray.200))] bg-[length:200%_auto] bg-clip-text pb-5 font-nacelle text-4xl font-semibold text-transparent md:text-5xl">
+                Contact us
+              </h1>
+              <div className="mx-auto max-w-3xl">
+                <p className="text-xl text-indigo-200/65">
+                  Have some questions? Feel free to reach out!
+                </p>
+              </div>
             </div>
-
             {/* Contact form */}
-            <form className="max-w-xl mx-auto">
-              <div className="flex flex-wrap -mx-3 mb-5">
-                <div className="w-full md:w-1/2 px-3 mb-4 md:mb-0">
-                  <label className="block text-gray-800 dark:text-gray-300 text-sm font-medium mb-1" htmlFor="first-name">First Name <span className="text-red-600">*</span></label>
-                  <input id="first-name" type="text" className="form-input w-full" placeholder="Enter your first name" required />
-                </div>
-                <div className="w-full md:w-1/2 px-3">
-                  <label className="block text-gray-800 dark:text-gray-300 text-sm font-medium mb-1" htmlFor="last-name">Last Name <span className="text-red-600">*</span></label>
-                  <input id="last-name" type="text" className="form-input w-full" placeholder="Enter your last name" required />
-                </div>
-              </div>
-              <div className="flex flex-wrap -mx-3 mb-5">
-                <div className="w-full px-3">
-                  <label className="block text-gray-800 dark:text-gray-300 text-sm font-medium mb-1" htmlFor="company">Company <span className="text-red-600">*</span></label>
-                  <input id="company" type="text" className="form-input w-full" placeholder="Enter your company name" required />
-                </div>
-              </div>
-              <div className="flex flex-wrap -mx-3 mb-5">
-                <div className="w-full px-3">
-                  <label className="block text-gray-800 dark:text-gray-300 text-sm font-medium mb-1" htmlFor="phone">Phone Number <span className="text-red-600">*</span></label>
-                  <input id="phone" type="tel" className="form-input w-full" placeholder="Enter your phone number" required />
-                </div>
-              </div>
-              <div className="flex flex-wrap -mx-3 mb-5">
-                <div className="w-full px-3">
-                  <label className="block text-gray-800 dark:text-gray-300 text-sm font-medium mb-1" htmlFor="country">Country <span className="text-red-600">*</span></label>
-                  <select id="country" className="form-select w-full" required>
-                    <option>United States</option>
-                    <option>United Kingdom</option>
-                    <option>Germany</option>
-                  </select>
-                </div>
-              </div>
-              <div className="flex flex-wrap -mx-3 mb-5">
-                <div className="w-full px-3">
-                  <div className="flex justify-between items-center mb-1">
-                    <label className="block text-gray-800 dark:text-gray-300 text-sm font-medium" htmlFor="message">Details</label>
-                    <span className="text-sm text-gray-500">Optional</span>
+            <form className="mx-auto max-w-[640px]" onSubmit={handleSubmit}>
+              <div className="space-y-5">
+                <div className="flex flex-col gap-x-6 gap-y-4 md:flex-row">
+                  <div className="flex-1">
+                    <label
+                      className="mb-1 block text-sm font-medium text-indigo-200/65"
+                      htmlFor="firstName"
+                    >
+                      Name
+                    </label>
+                    <input
+                      id="firstName"
+                      name="firstName"
+                      type="text"
+                      className="form-input w-full"
+                      placeholder="Your name"
+                      value={formData.firstName}
+                      onChange={handleChange}
+                      autoComplete="given-name"
+                    />
                   </div>
-                  <textarea id="message" rows={4} className="form-textarea w-full" placeholder="What do you want to build with Appy?"></textarea>
+                  <div className="flex-1">
+                    <label
+                      className="mb-1 block text-sm font-medium text-indigo-200/65"
+                      htmlFor="lastName"
+                    >
+                      Surname
+                    </label>
+                    <input
+                      id="lastName"
+                      name="lastName"
+                      type="text"
+                      className="form-input w-full"
+                      placeholder="Your surname"
+                      value={formData.lastName}
+                      onChange={handleChange}
+                      autoComplete="family-name"
+                    />
+                  </div>
+                </div>
+                <div className="flex flex-col gap-x-6 gap-y-4 md:flex-row">
+                  <div className="flex-1">
+                    <label
+                      className="mb-1 block text-sm font-medium text-indigo-200/65"
+                      htmlFor="email"
+                    >
+                      Email
+                    </label>
+                    <input
+                      id="email"
+                      name="email"
+                      type="email"
+                      className="form-input w-full"
+                      placeholder="Enter your email address"
+                      value={formData.email}
+                      onChange={handleChange}
+                      autoComplete="email"
+                    />
+                  </div>
+                </div>
+                <div className="flex flex-col gap-x-6 gap-y-4 md:flex-row">
+                  <div className="flex-1">
+                    <label
+                      className="mb-1 block text-sm font-medium text-indigo-200/65"
+                      htmlFor="subject"
+                    >
+                      Subject
+                    </label>
+                    <input
+                      id="subject"
+                      name="subject"
+                      type="text"
+                      className="form-input w-full"
+                      placeholder="Let us know how we can help"
+                      value={formData.subject}
+                      onChange={handleChange}
+                    />
+                  </div>
+                </div>
+                <div>
+                  <label
+                    className="mb-1 block text-sm font-medium text-indigo-200/65"
+                    htmlFor="description"
+                  >
+                    Full description
+                  </label>
+                  <textarea
+                    id="description"
+                    name="description"
+                    rows={5}
+                    className="form-textarea w-full text-gray-200"
+                    placeholder="Add message here"
+                    value={formData.description}
+                    onChange={handleChange}
+                  />
                 </div>
               </div>
-              <div className="flex flex-wrap -mx-3 mb-5">
-                <div className="w-full px-3">
-                  <div className="block text-gray-800 dark:text-gray-300 text-sm font-medium mb-3">Tell us about your role</div>
-                  <label className="flex items-center mb-2">
-                    <input type="radio" className="form-radio" name="role" />
-                    <span className="text-sm text-gray-600 dark:text-gray-400 ml-3">CO-founder</span>
-                  </label>
-                  <label className="flex items-center mb-2">
-                    <input type="radio" className="form-radio" name="role" />
-                    <span className="text-sm text-gray-600 dark:text-gray-400 ml-3">Developer</span>
-                  </label>
-                  <label className="flex items-center mb-2">
-                    <input type="radio" className="form-radio" name="role" />
-                    <span className="text-sm text-gray-600 dark:text-gray-400 ml-3">Design / Marketing</span>
-                  </label>
-                  <label className="flex items-center mb-2">
-                    <input type="radio" className="form-radio" name="role" />
-                    <span className="text-sm text-gray-600 dark:text-gray-400 ml-3">Other</span>
-                  </label>
-                </div>
-              </div>
-              <div className="flex flex-wrap -mx-3 mt-6">
-                <div className="w-full px-3">
-                  <button className="btn text-white bg-teal-500 hover:bg-teal-400 w-full flex items-center">
-                    <span>Request code</span>
-                    <svg className="w-3 h-3 shrink-0 mt-px ml-2" viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg">
-                      <path className="fill-current" d="M6.602 11l-.875-.864L9.33 6.534H0v-1.25h9.33L5.727 1.693l.875-.875 5.091 5.091z" />
-                    </svg>
+              <div className="mt-8 flex w-full flex-col justify-between gap-5 md:flex-row md:items-center">
+                
+                <div>
+                  <button
+                    type="submit"
+                    className="btn group w-full bg-gradient-to-t from-indigo-600 to-indigo-500 bg-[length:100%_100%] bg-[bottom] text-white shadow-[inset_0px_1px_0px_0px_theme(colors.white/.16)] hover:bg-[length:100%_150%]"
+                  >
+                    <span className="relative inline-flex items-center">
+                      Send
+                      <span className="ml-1 tracking-normal text-white/50 transition-transform group-hover:translate-x-0.5">
+                        -&gt;
+                      </span>
+                    </span>
                   </button>
                 </div>
               </div>
+              {/* Popup Notification */}
+              {isPopupVisible && (
+                <div className="fixed top-4 right-4 z-50 w-96">
+                  <div className="flex items-center justify-between bg-indigo-600 text-white px-4 py-3 rounded shadow-lg">
+                    <span>{statusMessage}</span>
+                    <button
+                      onClick={() => setIsPopupVisible(false)}
+                      className="text-white focus:outline-none"
+                    >
+                      <svg
+                        className="h-6 w-6"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={2}
+                          d="M6 18L18 6M6 6l12 12"
+                        />
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+              )}
             </form>
-
           </div>
         </div>
       </section>
     </>
-  )
+  );
 }

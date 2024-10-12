@@ -37,7 +37,7 @@ export default function Cta() {
             <form className="w-full lg:w-1/2">
               <div className="flex flex-col sm:flex-row justify-center max-w-xs mx-auto sm:max-w-md lg:max-w-none">
 
-                <a className="btn text-white bg-teal-500 hover:bg-teal-400 shrink-0" href="#0">Contact</a>
+                <a className="btn text-white bg-teal-500 hover:bg-teal-400 shrink-0" href="/contact">Contact</a>
               </div>
               {/* Success message */}
               {/* <p className="text-center lg:text-left lg:absolute mt-2 opacity-75 text-sm">Thanks for subscribing!</p> */}

@@ -12,7 +12,7 @@ export default function FeaturesGallery() {
           {/* Section header */}
           <div className="max-w-3xl mx-auto text-center pb-12 md:pb-20">
             <h2 className="h2 font-red-hat-display mb-4">Remember the Internet Before Ads Took Over? </h2>
-            <p className="text-xl text-gray-600 dark:text-gray-400">We strive to create applications that function seamlessly without the unnecessary clutter. We don’t share your data, don’t collect your information, and don’t bombard you with unwanted ads. Our mission is to enhance your online experience, providing you with high-quality tools without the intrusive ads you don’t want or need.</p>
+            <p className="text-xl text-gray-600 dark:text-gray-400">We strive to create applications that function seamlessly without the unnecessary clutter. We don’t share your data, don’t collect your information, and don’t bombard you with unwanted ads. <span className="text-teal-500">Our mission is simple.</span> To enhance your online experience, providing you with high-quality tools without the intrusive ads you don’t want or need.</p>
           </div>
 
           {/* Items */}

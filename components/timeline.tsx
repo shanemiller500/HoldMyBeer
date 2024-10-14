@@ -54,11 +54,11 @@ export default function Timeline() {
                   <article className="p-6 bg-white dark:bg-gray-800 shadow-2xl flex flex-col">
                     <header>
                       <h3 className="h4 font-red-hat-display mb-1">
-                        <a href="#0">Redundant</a>
+                        <a href="#0">Industry Trends</a>
                       </h3>
                     </header>
                     <div className="text-gray-600 dark:text-gray-400 grow">
-                      <p>Like many software developers, I was made redundant at the beginning of 2024 after a decade of loyal service at a major company.</p>
+                      <p>In early 2024, the software development team was laid off after ten years of dedicated service at a major company, reflecting a broader industry trend.</p>
                     </div>
                    
                   </article>
@@ -69,7 +69,7 @@ export default function Timeline() {
                       </h3>
                     </header>
                     <div className="text-gray-600 dark:text-gray-400 grow">
-                      <p>While exploring AI and developing a portfolio, I created an innovative tool that transforms swear words into polite and kind expressions. It was a fun and creative project that showcased the power of AI in enhancing communication.</p>
+                      <p>While delving into AI and expanding a portfolio, an innovative tool was engineered to transform swear words into polite and kind expressions. This creative project underscored the role of AI in enhancing communication.</p>
                     </div>
 
                   </article>
@@ -104,7 +104,7 @@ export default function Timeline() {
                       </h3>
                     </header>
                     <div className="text-gray-600 dark:text-gray-400 grow">
-                      <p>After persistent efforts, I finally secured an interview! During the interview, I was encouraged to either continue my job search & work for someone else or pursue my own company. It was very clear what they wanted me to choose, a bold move was made two hours later, UMail was born.</p>
+                      <p>Following relentless dedication, an interview was successfully obtained. In the meeting, the option to either pursue employment with others or to establish a personal venture was offered. The preferred path was unmistakable, culminating in the bold creation of UMail a few hours later.</p>
                     </div>
                    
                   </article>
@@ -116,7 +116,7 @@ export default function Timeline() {
                       </h3>
                     </header>
                     <div className="text-gray-600 dark:text-gray-400 grow">
-                      <p>UMail swiftly evolved into an extremely robust AI system poised to revolutionize the world of communication and productivity.</p>
+                      <p>UMail rapidly developed into a highly robust AI platform, set to transform global communication and significantly enhance productivity. With its advanced automation, personalized interactions, and seamless integrations, UMail is revolutionizing the way individuals and organizations connect and collaborate.</p>
                     </div>
                     
                   </article>

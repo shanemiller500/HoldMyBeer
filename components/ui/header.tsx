@@ -16,12 +16,16 @@ export default function Header() {
               <Logo />
             </Link>
           </div> */}
-          <Link href="/" className="block" aria-label="Cruip">
-          <p className='text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-gray-100 px-5 py-2 flex items-center transition duration-150 ease-in-out'>Hold My Beer CO</p>
-            </Link>
+                      <Link className="block" href="/" aria-label="Cruip">
+       
+       <img className="mx-auto" src="/images/hmbco.png" width={250} height={250} alt="Hero" /> 
+ 
+              
+             </Link>
+
        
           {/* Desktop navigation */}
-          <nav className="hidden md:flex md:grow">
+          <nav className="hidden md:flex">
             {/* Desktop menu links */}
             <ul className="flex grow flex-wrap items-center font-medium">
               <li>

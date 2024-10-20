@@ -36,9 +36,12 @@ export default function Footer() {
             {/* 1st block */}
             <div className="md:col-span-2 lg:col-span-3">
               {/* Logo */}
-              <Link href="/" className="block" aria-label="Cruip">
-          <p className='text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-gray-100 px-5 py-2 flex items-center transition duration-150 ease-in-out'>Hold My Beer CO</p>
-            </Link>
+              <Link className="block" href="/" aria-label="Cruip">
+       
+       <img className="mx-auto" src="/images/hmbco.png" width={250} height={250} alt="Hero" /> 
+ 
+              
+             </Link>
        
             </div>
 

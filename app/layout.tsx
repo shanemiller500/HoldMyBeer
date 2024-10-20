@@ -42,7 +42,7 @@ export default function RootLayout({
   const pathname = usePathname()
 
   // Retrieve the GA Tracking ID from environment variables
-  const GA_TRACKING_ID = process.env.NEXT_PUBLIC_GA_TRACKING_ID
+  const GA_TRACKING_ID = process.env.NEXT_GA_TRACKING_ID
 
   useEffect(() => {
     // Initialize AOS for animations

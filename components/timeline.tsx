@@ -217,6 +217,17 @@ export default function Timeline() {
                     </div>
                  
                   </article>
+                  
+                  <article className="p-6 bg-white dark:bg-gray-800 shadow-2xl flex flex-col">
+                    <header>
+                      <h3 className="h4 font-red-hat-display mb-1">
+                        <a href="#0">Early Search Engine Advances</a>
+                      </h3>
+                    </header>
+                    <div className="text-gray-600 dark:text-gray-400 grow">
+                    <p>Our mission is simple: get you the answer you need, right away—no fluff, no clutter. Say goodbye to endless scrolling and irrelevant "Sponsered" results. With this powerful AI-driven search engine, you’ll get straight to the point, finding exactly what your looking for without the unnecessary noise.</p>                    </div>
+                 
+                  </article>
                 </div>
               </div>
 

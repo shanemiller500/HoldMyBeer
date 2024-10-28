@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function TransparencyPolicyPage() {
   return (
-    <section className="min-h-screen flex items-center justify-center bg-white dark:bg-gray-900 px-4 sm:px-6 py-12">
+    <section className="min-h-screen mt-10 flex items-center justify-center bg-white dark:bg-gray-900 px-4 sm:px-6 py-12">
       <div className="max-w-5xl mx-auto text-gray-800 dark:text-gray-200 p-8 rounded-lg shadow-lg bg-white dark:bg-gray-800 mt-10">
         {/* Transparency Policy Content */}
         <div className="mb-12 text-center">
@@ -155,7 +155,7 @@ export default function TransparencyPolicyPage() {
              {/* Section 7: MIXPanel */}
           <div>
             <h2 className="text-2xl font-semibold mb-2 text-teal-500">7. Providing data to Mixpanel for Marketing</h2>
-            <p className="mb-4">HMB-CO provides data to Mixpanel for marketing purposes, which helps us understand user behavior and engagement with our applications. The information collected include:</p>
+            <p className="mb-4">HMB-CO provides data to our Mixpanel dashboard for our marketing team, which helps us understand user behavior and engagement with our applications. The information collected include:</p>
       
             <ul className="space-y-2">
               <li className="flex items-center">

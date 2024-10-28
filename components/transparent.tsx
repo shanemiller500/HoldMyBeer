@@ -96,41 +96,10 @@ export default function TransparencyPolicyPage() {
             </ul>
           </div>
 
-          {/* Section 4: Session Data */}
+         
+          {/* Section 4: Optional Information */}
           <div>
-            <h2 className="text-2xl font-semibold mb-2 text-teal-500">4. Session Data</h2>
-            <p className="mb-4">
-              We collect data on session starts to monitor how many sessions each user has. This helps us understand user engagement and improve user experience.
-            </p>
-            <ul className="space-y-2">
-              <li className="flex items-center">
-                <svg className=" w-4 h-4 text-teal-500 mr-2 flex-shrink-0" viewBox="0 0 20 20" fill="currentColor">
-                  <path d="M10 2a8 8 0 100 16 8 8 0 000-16zM9 9V7a1 1 0 012 0v2h2a1 1 0 110 2h-2v2a1 1 0 11-2 0v-2H7a1 1 0 110-2h2z" />
-                </svg>
-                <span>Tracks the number of sessions per user</span>
-              </li>
-            </ul>
-          </div>
-
-          {/* Section 5: Usage Clicks */}
-          <div>
-            <h2 className="text-2xl font-semibold mb-2 text-teal-500">5. Usage Clicks</h2>
-            <p className="mb-4">
-              We monitor when users click on our products to understand user interest and improve product offerings.
-            </p>
-            <ul className="space-y-2">
-              <li className="flex items-center">
-                <svg className=" w-4 h-4 text-teal-500 mr-2 flex-shrink-0" viewBox="0 0 20 20" fill="currentColor">
-                  <path d="M10 2a8 8 0 100 16 8 8 0 000-16zM9 9V7a1 1 0 012 0v2h2a1 1 0 110 2h-2v2a1 1 0 11-2 0v-2H7a1 1 0 110-2h2z" />
-                </svg>
-                <span>Tracks clicks on our products</span>
-              </li>
-            </ul>
-          </div>
-
-          {/* Section 6: Optional Information */}
-          <div>
-            <h2 className="text-2xl font-semibold mb-2 text-teal-500">6. Optional Information</h2>
+            <h2 className="text-2xl font-semibold mb-2 text-teal-500">4. Optional Information</h2>
             <p className="mb-4">
               Providing additional information such as your website, linkedin profile, Job status and phone number is optional. We use this information to create personalized user signatures and express our gratitude.
             </p>
@@ -144,9 +113,9 @@ export default function TransparencyPolicyPage() {
             </ul>
           </div>
 
-          {/* Section 7: Opt-Out of Sharing with AI Learning */}
+          {/* Section 5: Opt-Out of Sharing with AI Learning */}
           <div>
-            <h2 className="text-2xl font-semibold mb-2 text-teal-500">7. Opt-Out of Sharing with AI Learning</h2>
+            <h2 className="text-2xl font-semibold mb-2 text-teal-500">5. Opt-Out of Sharing with AI Learning</h2>
             <p className="mb-4"> All our applications are configured to <span className="text-teal-500"> opt out </span> of sharing data for AI learning by default. When data is sent for enhancement, it is transmitted  <span className="text-teal-500">anonymously</span> from the organization, without being linked to any individual user. </p>
       
             <ul className="space-y-2">
@@ -165,7 +134,7 @@ export default function TransparencyPolicyPage() {
           </div>
 
           <div>
-            <h2 className="text-2xl font-semibold mb-2 text-teal-500">8. Voice Collection</h2>
+            <h2 className="text-2xl font-semibold mb-2 text-teal-500">6. Voice Collection</h2>
             <p className="mb-4"> Voice collection is optional. If you opt in, we capture brief, 2-second snippets (one to two words). These help us improve voice synthesis and accent recognition for more natural-sounding experiences. All data is anonymized and stored securely without any user association. </p>
             <ul className="space-y-2">
                 <li className="flex items-center">
@@ -183,9 +152,9 @@ export default function TransparencyPolicyPage() {
             </ul>
             </div>
 
-             {/* Section 9: MIXPanel */}
+             {/* Section 7: MIXPanel */}
           <div>
-            <h2 className="text-2xl font-semibold mb-2 text-teal-500">9. Providing data to Mixpanel for Marketing</h2>
+            <h2 className="text-2xl font-semibold mb-2 text-teal-500">7. Providing data to Mixpanel for Marketing</h2>
             <p className="mb-4">HMB-CO provides data to Mixpanel for marketing purposes, which helps us understand user behavior and engagement with our applications. The information collected include:</p>
       
             <ul className="space-y-2">

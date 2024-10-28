@@ -74,9 +74,9 @@ export default function MobileMenu() {
           leaveTo="opacity-0"
         >
           <div className="py-6 pr-4 pl-20">
-          <Link href="/" className="block" aria-label="Cruip">
-          <p className='text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-gray-100 px-5 py-2 flex items-center transition duration-150 ease-in-out'>Hold My Beer CO</p>
-            </Link>
+          <Link className="block" href="/" aria-label="Cruip">   
+            <img className="mx-auto" src="/images/hmbco.png" width={200} height={200} alt="Hero" />            
+          </Link>
             {/* Links */}
             <ul>
               <li>
@@ -86,6 +86,15 @@ export default function MobileMenu() {
                   onClick={() => setMobileNavOpen(false)}
                 >
                   About
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/transparent"
+                  className="flex text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-gray-100 py-2"
+                  onClick={() => setMobileNavOpen(false)}
+                >
+                  Transparency Policy
                 </Link>
               </li>
               

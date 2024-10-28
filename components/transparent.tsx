@@ -182,6 +182,50 @@ export default function TransparencyPolicyPage() {
                 </li>
             </ul>
             </div>
+
+             {/* Section 9: MIXPanel */}
+          <div>
+            <h2 className="text-2xl font-semibold mb-2 text-teal-500">9. Providing data to Mixpanel for Marketing</h2>
+            <p className="mb-4">HMB-CO provides data to Mixpanel for marketing purposes, which helps us understand user behavior and engagement with our applications. The information collected include:</p>
+      
+            <ul className="space-y-2">
+              <li className="flex items-center">
+                <svg className=" w-4 h-4 text-teal-500 mr-2 flex-shrink-0" viewBox="0 0 20 20" fill="currentColor">
+                  <path d="M10 2a8 8 0 100 16 8 8 0 000-16zM9 9V7a1 1 0 012 0v2h2a1 1 0 110 2h-2v2a1 1 0 11-2 0v-2H7a1 1 0 110-2h2z" />
+                </svg>
+                <span>
+                <span className="text-teal-500">Attribution Data </span> - Identifies which marketing campaigns brought users to the app.
+                </span>
+              </li>
+
+              <li className="flex items-center">
+                <svg className=" w-4 h-4 text-teal-500 mr-2 flex-shrink-0" viewBox="0 0 20 20" fill="currentColor">
+                  <path d="M10 2a8 8 0 100 16 8 8 0 000-16zM9 9V7a1 1 0 012 0v2h2a1 1 0 110 2h-2v2a1 1 0 11-2 0v-2H7a1 1 0 110-2h2z" />
+                </svg>
+                <span>
+                <span className="text-teal-500">Session Data </span>Session Data - Session start and end times to see how long users stay in the app.
+                </span>
+              </li>
+
+              <li className="flex items-center">
+                <svg className=" w-4 h-4 text-teal-500 mr-2 flex-shrink-0" viewBox="0 0 20 20" fill="currentColor">
+                  <path d="M10 2a8 8 0 100 16 8 8 0 000-16zM9 9V7a1 1 0 012 0v2h2a1 1 0 110 2h-2v2a1 1 0 11-2 0v-2H7a1 1 0 110-2h2z" />
+                </svg>
+                <span>
+                <span className="text-teal-500">User Interactions </span> -Tracks user interactions, including clicks, downloads, and feature usage, to provide insights into how users engage with the app.
+                </span>
+              </li>
+
+              <li className="flex items-center">
+                <svg className=" w-4 h-4 text-teal-500 mr-2 flex-shrink-0" viewBox="0 0 20 20" fill="currentColor">
+                  <path d="M10 2a8 8 0 100 16 8 8 0 000-16zM9 9V7a1 1 0 012 0v2h2a1 1 0 110 2h-2v2a1 1 0 11-2 0v-2H7a1 1 0 110-2h2z" />
+                </svg>
+                <span>
+                <span className="text-teal-500">Device Information </span> - Basic details like device type, OS version, and model to ensure compatibility and optimize performance.
+                </span>
+              </li>
+            </ul>
+          </div>
         </div>
 
         

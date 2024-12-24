@@ -10,8 +10,8 @@ export default function HeroHome() {
           <div className="md:grid md:grid-cols-12 md:gap-12 lg:gap-20 items-center">
 
             {/* Content */}
-            <div className="md:col-span-7 lg:col-span-7 mb-8 md:mb-0 text-center md:text-left">
-            <p className="text-xl text-gray-600 dark:text-gray-400" data-aos="fade-down" data-aos-delay="150">Aren't you tired of being bombarded with ads? Well,  </p>
+            <div className="md:col-span-9 lg:col-span-9 mb-8 md:mb-0 text-center md:text-left">
+            {/* <p className="text-xl text-gray-600 dark:text-gray-400" data-aos="fade-down" data-aos-delay="150">Aren't you tired of being bombarded with ads? Well,  </p> */}
 
               <h1 className="h1 lg:text-6xl mb-4 font-red-hat-display font-black" data-aos="fade-down">Hold My Beer... <span className="text-teal-500">Watch this!</span></h1>
               {/* CTA form */}
@@ -21,51 +21,36 @@ export default function HeroHome() {
                   <svg className="w-3 h-3 fill-current text-teal-400 mr-2 shrink-0" viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg">
                     <path d="M10.28 2.28L3.989 8.575 1.695 6.28A1 1 0 00.28 7.695l3 3a1 1 0 001.414 0l7-7A1 1 0 0010.28 2.28z" />
                   </svg>
-                  <span>No data sharing</span>
+                  <span>We never sell user data</span>
                 </li>
                 <li className="flex items-center mb-2">
                   <svg className="w-3 h-3 fill-current text-teal-400 mr-2 shrink-0" viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg">
                     <path d="M10.28 2.28L3.989 8.575 1.695 6.28A1 1 0 00.28 7.695l3 3a1 1 0 001.414 0l7-7A1 1 0 0010.28 2.28z" />
                   </svg>
-                  <span>Complete Privacy</span>
+                  <span>We do not sell advertising.</span>
                 </li>
                 <li className="flex items-center mb-2">
                   <svg className="w-3 h-3 fill-current text-teal-400 mr-2 shrink-0" viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg">
                     <path d="M10.28 2.28L3.989 8.575 1.695 6.28A1 1 0 00.28 7.695l3 3a1 1 0 001.414 0l7-7A1 1 0 0010.28 2.28z" />
                   </svg>
-                  <span>No "Sponsored" Spam</span>
+                  <span>No pop-ups, banners, or ads on our apps or websites</span>
                 </li>
                 <li className="flex items-center mb-2">
                   <svg className="w-3 h-3 fill-current text-teal-400 mr-2 shrink-0" viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg">
                     <path d="M10.28 2.28L3.989 8.575 1.695 6.28A1 1 0 00.28 7.695l3 3a1 1 0 001.414 0l7-7A1 1 0 0010.28 2.28z" />
                   </svg>
-                  <span>No Sharing with AI Learning
+                  <span>We develop software that is drive by privacy & security first.
                   </span>
                 </li>
                 <li className="flex items-center mb-2">
                   <svg className="w-3 h-3 fill-current text-teal-400 mr-2 shrink-0" viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg">
                     <path d="M10.28 2.28L3.989 8.575 1.695 6.28A1 1 0 00.28 7.695l3 3a1 1 0 001.414 0l7-7A1 1 0 0010.28 2.28z" />
                   </svg>
-                  <span>No Pop-ups, No Banners, No Ads
+                  <span>Your data is never shared with AI to enhance AI learning models
                   </span>
                 </li>
               </ul>
-            </div>
-
-            {/* Mobile mockup */}
-            {/* <div className="md:col-span-5 lg:col-span-5 text-center md:text-right" data-aos="fade-up" data-aos-delay="450">
-
-              <ModalVideoIphone
-                thumb={VideoThumb}
-                thumbWidth={290}
-                thumbHeight={624}
-                thumbAlt="Modal video thumbnail"
-                video="/videos/video.mp4"
-                videoWidth={1920}
-                videoHeight={1080} />
-
-            </div> */}
-
+            </div>       
           </div>
 
         </div>

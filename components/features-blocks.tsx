@@ -71,7 +71,7 @@ export default function FeaturesBlocks() {
                 <h3 className="text-xl font-bold font-red-hat-display text-white">ApplyPro.ai</h3>
               </div>
               <p className="mt-4 text-white opacity-90 flex-grow">
-                Research-backed Cover Letters & Tailored Resumes in seconds!
+                Research-backed Cover Letters & Tailored Resumes in seconds! Get your free 6 months unlimited subscription from now untill December 31st 2024
               </p>
               <div className="mt-4">
                 <svg
@@ -140,7 +140,7 @@ export default function FeaturesBlocks() {
                 <h3 className="text-xl font-bold font-red-hat-display text-white">Talent Acquisition Platform (2025)</h3>
               </div>
               <p className="mt-4 text-white opacity-90 flex-grow">
-              An AI-powered recruitment tool that efficiently scans bulk resumes, ranks candidates by key criteria, and generates concise summaries for hiring managers and recruiters.              </p>
+              An AI-powered recruitment tool that efficiently bulk scans resumes, ranks candidates by key criteria, and generates concise summaries for hiring managers and recruiters.              </p>
               <div className="mt-4">
                 <svg
                   className="w-6 h-6 text-white transform group-hover:translate-x-1 transition-transform duration-300"

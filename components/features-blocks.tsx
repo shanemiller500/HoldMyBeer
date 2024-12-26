@@ -40,7 +40,7 @@ export default function FeaturesBlocks() {
           {/* Left Arrow */}
           <button
             onClick={() => scroll('left')}
-            className="absolute left-0 top-1/2 transform -translate-y-1/2 bg-teal-500 text-white p-2 rounded-full shadow-lg hover:bg-teal-600 focus:outline-none focus:ring-2 focus:ring-teal-400 z-10"
+            className="absolute left-0 top-1/2 transform -translate-y-1/2 bg-gray-900 text-white p-2 rounded-full shadow-lg hover:bg-gray-600 focus:outline-none focus:ring-2 focus:ring-teal-400 z-10"
             aria-label="Scroll Left"
           >
             <FaChevronLeft />
@@ -103,7 +103,7 @@ export default function FeaturesBlocks() {
                     fillRule="nonzero"
                   />
                 </svg>
-                <h3 className="text-xl font-bold font-red-hat-display text-white">UMail.ai (2025)</h3>
+                <h3 className="text-xl font-bold font-red-hat-display text-white">In Testing: UMail.ai</h3>
               </div>
               <p className="mt-4 text-white opacity-90 flex-grow">
                 A clutter-free, sponsored-free smart email client, ready to integrate with your Gmail account. (Microsoft integration coming soon)
@@ -137,7 +137,7 @@ export default function FeaturesBlocks() {
     d="M48 16h-8V8a8 8 0 10-16 0v8H16a4 4 0 00-4 4v36a4 4 0 004 4h32a4 4 0 004-4V20a4 4 0 00-4-4zm-20 0V8a4 4 0 118 0v8h-8zm24 44H16V20h32v40zM24 28a6 6 0 1112 0 6 6 0 01-12 0zm16 0a6 6 0 1112 0 6 6 0 01-12 0z"
   />
 </svg>
-                <h3 className="text-xl font-bold font-red-hat-display text-white">Talent Acquisition Platform (2025)</h3>
+                <h3 className="text-xl font-bold font-red-hat-display text-white">Coming Soon: Talent Acquisition Platform</h3>
               </div>
               <p className="mt-4 text-white opacity-90 flex-grow">
               An AI-powered recruitment tool that efficiently bulk scans resumes, ranks candidates by key criteria, and generates concise summaries for hiring managers and recruiters.              </p>
@@ -169,10 +169,10 @@ export default function FeaturesBlocks() {
                     fillRule="nonzero"
                   />
                 </svg>
-                <h3 className="text-xl font-bold font-red-hat-display text-white">AI Allergy Check App (2025)</h3>
+                <h3 className="text-xl font-bold font-red-hat-display text-white">Coming Soon: AI Allergy Check App</h3>
               </div>
               <p className="mt-4 text-white opacity-90 flex-grow">
-                No name yet, Stay tuned! Check labels with ease and love the results.
+              Effortless scanning. Instant, personalized insights. Unlock safe choices with a simple scan. Check labels with ease and love the results. Stay tuned for the revolution in allergy management!
               </p>
               <div className="mt-4">
                 <svg
@@ -204,7 +204,7 @@ export default function FeaturesBlocks() {
                     fillRule="nonzero"
                   />
                 </svg>
-                <h3 className="text-xl font-bold font-red-hat-display text-white">AI Search Engine (2025)</h3>
+                <h3 className="text-xl font-bold font-red-hat-display text-white">Coming Soon: AI Search Engine</h3>
               </div>
               <p className="mt-4 text-white opacity-90 flex-grow">
                 Looking for the right answer instantly? Our extremely powerful Search Engine gets straight to the point without clickbait, tracking, and sponsored links.
@@ -229,7 +229,7 @@ export default function FeaturesBlocks() {
           {/* Right Arrow */}
           <button
             onClick={() => scroll('right')}
-            className="absolute right-0 top-1/2 transform -translate-y-1/2 bg-teal-500 text-white p-2 rounded-full shadow-lg hover:bg-teal-600 focus:outline-none focus:ring-2 focus:ring-teal-400 z-10"
+            className="absolute right-0 top-1/2 transform -translate-y-1/2 bg-gray-900 text-white p-2 rounded-full shadow-lg hover:bg-gray-600 focus:outline-none focus:ring-2 focus:ring-teal-400 z-10"
             aria-label="Scroll Right"
           >
             <FaChevronRight />

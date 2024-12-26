@@ -27,20 +27,24 @@ export default function Timeline() {
                   <div className="absolute inset-0 w-0.5 h-full bg-gray-300 dark:bg-gray-700"></div>
                 </div>
                 <button className="flex items-center justify-between font-medium text-gray-500 dark:text-gray-400 w-20 py-3 pr-2 text-left" onClick={() => setYear('2020')}>
-                  <span className="block w-12 truncate">January 2020</span>
+                  <span className="block w-12 truncate">January 2024</span>
                   <span className={`block w-3.5 h-3.5 bg-gray-400 dark:bg-gray-700 border-2 border-white dark:border-gray-900 rounded-full ${year === '2020' && 'bg-teal-500 dark:bg-teal-500'}`}></span>
                 </button>
                 <button className="flex items-center justify-between font-medium text-gray-500 dark:text-gray-400 w-20 py-3 pr-2 text-left" onClick={() => setYear('2019')}>
-                  <span className="block w-12 truncate">May 2019</span>
+                  <span className="block w-12 truncate">May 2024</span>
                   <span className={`block w-3.5 h-3.5 bg-gray-400 dark:bg-gray-700 border-2 border-white dark:border-gray-900 rounded-full ${year === '2019' && 'bg-teal-500 dark:bg-teal-500'}`}></span>
                 </button>
                 <button className="flex items-center justify-between font-medium text-gray-500 dark:text-gray-400 w-20 py-3 pr-2 text-left" onClick={() => setYear('2018')}>
-                  <span className="block w-12 truncate">September 2018</span>
+                  <span className="block w-12 truncate">September 2024</span>
                   <span className={`block w-3.5 h-3.5 bg-gray-400 dark:bg-gray-700 border-2 border-white dark:border-gray-900 rounded-full ${year === '2018' && 'bg-teal-500 dark:bg-teal-500'}`}></span>
                 </button>
                 <button className="flex items-center justify-between font-medium text-gray-500 dark:text-gray-400 w-20 py-3 pr-2 text-left" onClick={() => setYear('2017')}>
-                  <span className="block w-12 truncate">October 2017</span>
+                  <span className="block w-12 truncate">October 2024</span>
                   <span className={`block w-3.5 h-3.5 bg-gray-400 dark:bg-gray-700 border-2 border-white dark:border-gray-900 rounded-full ${year === '2017' && 'bg-teal-500 dark:bg-teal-500'}`}></span>
+                </button>
+                <button className="flex items-center justify-between font-medium text-gray-500 dark:text-gray-400 w-20 py-3 pr-2 text-left" onClick={() => setYear('2024')}>
+                  <span className="block w-12 truncate">December 2024</span>
+                  <span className={`block w-3.5 h-3.5 bg-gray-400 dark:bg-gray-700 border-2 border-white dark:border-gray-900 rounded-full ${year === '2024' && 'bg-teal-500 dark:bg-teal-500'}`}></span>
                 </button>
                 {/* <button className="flex items-center justify-between font-medium text-gray-500 dark:text-gray-400 w-20 py-3 pr-2 text-left" onClick={() => setYear('2016')}>
                   <span className="block w-12 truncate">November 2016</span>
@@ -228,6 +232,45 @@ export default function Timeline() {
                     <p>Our mission is simple: get you the answer you need, right away—no fluff, no clutter. Say goodbye to endless scrolling and irrelevant "Sponsered" results. With this powerful AI-driven search engine, you’ll get straight to the point, finding exactly what your looking for without the unnecessary noise.</p>                    </div>
                  
                   </article>
+                </div>
+              </div>
+
+                            {/* 2024's articles */}
+                            <div className={`grow ${year !== '2024' && 'hidden'}`}>
+                <div className="grid md:grid-cols-2 gap-6">
+                  <article className="p-6 bg-white dark:bg-gray-800 shadow-2xl flex flex-col">
+                    <header>
+                      <h3 className="h4 font-red-hat-display mb-1">
+                        <a href="#0">ApplyPro is Live</a>
+                      </h3>
+                    </header>
+                    <div className="text-gray-600 dark:text-gray-400 grow">
+                      <p>We’re thrilled to announce that ApplyPro is available worldwide. To celebrate our December soft launch, all new users who sign up this month will receive 6 months of unlimited service absolutely free. Our recent tests showcase an outstanding 96-98% pass rate through ATS systems—the highest scores globally for ATS compatibility. Join ApplyPro today and maximize your application success!</p>
+                    </div>
+                   
+                  </article>
+                  <article className="p-6 bg-white dark:bg-gray-800 shadow-2xl flex flex-col">
+                    <header>
+                      <h3 className="h4 font-red-hat-display mb-1">
+                        <a href="#0">Introducing Our Talent Acquisition Platform</a>
+                      </h3>
+                    </header>
+                    <div className="text-gray-600 dark:text-gray-400 grow">
+                      <p>This AI-powered recruitment tool efficiently bulk scans resumes, ranks candidates based on essential criteria, and generates concise summaries for hiring managers and recruiters. Streamline your hiring process, identify top talent quickly, and make informed decisions with our cutting-edge technology.</p>
+                    </div>
+                 
+                  </article>
+                  
+                  {/* <article className="p-6 bg-white dark:bg-gray-800 shadow-2xl flex flex-col">
+                    <header>
+                      <h3 className="h4 font-red-hat-display mb-1">
+                        <a href="#0">Early Search Engine Advances</a>
+                      </h3>
+                    </header>
+                    <div className="text-gray-600 dark:text-gray-400 grow">
+                    <p>Our mission is simple: get you the answer you need, right away—no fluff, no clutter. Say goodbye to endless scrolling and irrelevant "Sponsered" results. With this powerful AI-driven search engine, you’ll get straight to the point, finding exactly what your looking for without the unnecessary noise.</p>                    </div>
+                 
+                  </article> */}
                 </div>
               </div>
 

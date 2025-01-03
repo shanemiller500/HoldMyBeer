@@ -2,9 +2,8 @@
 
 import { useState } from 'react'
 
-export default function Timeline() { 
-      
-  const [year, setYear] = useState<string>('2020')
+export default function Timeline() {
+  const [year, setYear] = useState<string>('Jan2024') // Default to January 2024
 
   return (
     <section>
@@ -14,7 +13,9 @@ export default function Timeline() {
           {/* Section header */}
           <div className="max-w-3xl mx-auto text-center pb-12 md:pb-20">
             <h2 className="h2 font-red-hat-display mb-4">Our Remarkable Achievements</h2>
-            <p className="text-xl text-gray-600 dark:text-gray-400">Discover the incredible milestones we've reached in such a short time since May 2024.</p>
+            <p className="text-xl text-gray-600 dark:text-gray-400">
+              Discover the incredible milestones we've reached in such a short time since May 2024.
+            </p>
           </div>
 
           {/* Section content */}
@@ -22,38 +23,110 @@ export default function Timeline() {
             <div className="flex items-start">
 
               {/* Timeline buttons */}
-              <div className="relative mr-4 sm:mr-12 lg:mr-32">
-                <div className="absolute inset-0 my-6 ml-16 pointer-events-none -z-1" aria-hidden="true">
+              {/*
+                Using a custom-scrollbar class to hide the scrollbar:
+                1) 'overflow-y-auto' + 'max-h-96' for vertical scrolling
+                2) Inline styles to hide scrollbar on Firefox & IE
+                3) CSS below to hide scrollbar on WebKit browsers
+              */}
+              <div
+                className="relative mr-4 sm:mr-12 lg:mr-32 max-h-96 custom-scrollbar"
+                style={{
+                  msOverflowStyle: 'none',  // IE, Edge
+                  scrollbarWidth: 'none',    // Firefox
+                }}
+              >
+                <div
+                  className="absolute inset-0 my-6 ml-16 pointer-events-none -z-1"
+                  aria-hidden="true"
+                >
                   <div className="absolute inset-0 w-0.5 h-full bg-gray-300 dark:bg-gray-700"></div>
                 </div>
-                <button className="flex items-center justify-between font-medium text-gray-500 dark:text-gray-400 w-20 py-3 pr-2 text-left" onClick={() => setYear('2020')}>
+
+                {/* January 2024 */}
+                <button
+                  className="flex items-center justify-between font-medium text-gray-500 dark:text-gray-400 w-20 py-3 pr-2 text-left"
+                  onClick={() => setYear('Jan2024')}
+                >
                   <span className="block w-12 truncate">January 2024</span>
-                  <span className={`block w-3.5 h-3.5 bg-gray-400 dark:bg-gray-700 border-2 border-white dark:border-gray-900 rounded-full ${year === '2020' && 'bg-teal-500 dark:bg-teal-500'}`}></span>
+                  <span
+                    className={`block w-3.5 h-3.5 bg-gray-400 dark:bg-gray-700 border-2 border-white dark:border-gray-900 rounded-full ${
+                      year === 'Jan2024' && 'bg-teal-500 dark:bg-teal-500'
+                    }`}
+                  ></span>
                 </button>
-                <button className="flex items-center justify-between font-medium text-gray-500 dark:text-gray-400 w-20 py-3 pr-2 text-left" onClick={() => setYear('2019')}>
+
+                {/* May 2024 */}
+                <button
+                  className="flex items-center justify-between font-medium text-gray-500 dark:text-gray-400 w-20 py-3 pr-2 text-left"
+                  onClick={() => setYear('May2024')}
+                >
                   <span className="block w-12 truncate">May 2024</span>
-                  <span className={`block w-3.5 h-3.5 bg-gray-400 dark:bg-gray-700 border-2 border-white dark:border-gray-900 rounded-full ${year === '2019' && 'bg-teal-500 dark:bg-teal-500'}`}></span>
+                  <span
+                    className={`block w-3.5 h-3.5 bg-gray-400 dark:bg-gray-700 border-2 border-white dark:border-gray-900 rounded-full ${
+                      year === 'May2024' && 'bg-teal-500 dark:bg-teal-500'
+                    }`}
+                  ></span>
                 </button>
-                <button className="flex items-center justify-between font-medium text-gray-500 dark:text-gray-400 w-20 py-3 pr-2 text-left" onClick={() => setYear('2018')}>
+
+                {/* September 2024 */}
+                <button
+                  className="flex items-center justify-between font-medium text-gray-500 dark:text-gray-400 w-20 py-3 pr-2 text-left"
+                  onClick={() => setYear('Sep2024')}
+                >
                   <span className="block w-12 truncate">September 2024</span>
-                  <span className={`block w-3.5 h-3.5 bg-gray-400 dark:bg-gray-700 border-2 border-white dark:border-gray-900 rounded-full ${year === '2018' && 'bg-teal-500 dark:bg-teal-500'}`}></span>
+                  <span
+                    className={`block w-3.5 h-3.5 bg-gray-400 dark:bg-gray-700 border-2 border-white dark:border-gray-900 rounded-full ${
+                      year === 'Sep2024' && 'bg-teal-500 dark:bg-teal-500'
+                    }`}
+                  ></span>
                 </button>
-                <button className="flex items-center justify-between font-medium text-gray-500 dark:text-gray-400 w-20 py-3 pr-2 text-left" onClick={() => setYear('2017')}>
+
+                {/* October 2024 */}
+                <button
+                  className="flex items-center justify-between font-medium text-gray-500 dark:text-gray-400 w-20 py-3 pr-2 text-left"
+                  onClick={() => setYear('Oct2024')}
+                >
                   <span className="block w-12 truncate">October 2024</span>
-                  <span className={`block w-3.5 h-3.5 bg-gray-400 dark:bg-gray-700 border-2 border-white dark:border-gray-900 rounded-full ${year === '2017' && 'bg-teal-500 dark:bg-teal-500'}`}></span>
+                  <span
+                    className={`block w-3.5 h-3.5 bg-gray-400 dark:bg-gray-700 border-2 border-white dark:border-gray-900 rounded-full ${
+                      year === 'Oct2024' && 'bg-teal-500 dark:bg-teal-500'
+                    }`}
+                  ></span>
                 </button>
-                <button className="flex items-center justify-between font-medium text-gray-500 dark:text-gray-400 w-20 py-3 pr-2 text-left" onClick={() => setYear('2024')}>
+
+                {/* December 2024 */}
+                <button
+                  className="flex items-center justify-between font-medium text-gray-500 dark:text-gray-400 w-20 py-3 pr-2 text-left"
+                  onClick={() => setYear('Dec2024')}
+                >
                   <span className="block w-12 truncate">December 2024</span>
-                  <span className={`block w-3.5 h-3.5 bg-gray-400 dark:bg-gray-700 border-2 border-white dark:border-gray-900 rounded-full ${year === '2024' && 'bg-teal-500 dark:bg-teal-500'}`}></span>
+                  <span
+                    className={`block w-3.5 h-3.5 bg-gray-400 dark:bg-gray-700 border-2 border-white dark:border-gray-900 rounded-full ${
+                      year === 'Dec2024' && 'bg-teal-500 dark:bg-teal-500'
+                    }`}
+                  ></span>
                 </button>
-                {/* <button className="flex items-center justify-between font-medium text-gray-500 dark:text-gray-400 w-20 py-3 pr-2 text-left" onClick={() => setYear('2016')}>
-                  <span className="block w-12 truncate">November 2016</span>
-                  <span className={`block w-3.5 h-3.5 bg-gray-400 dark:bg-gray-700 border-2 border-white dark:border-gray-900 rounded-full ${year === '2016' && 'bg-teal-500 dark:bg-teal-500'}`}></span>
-                </button> */}
+
+                {/* Year Divider */}
+                <span className="block w-12 truncate m-5">2025</span>
+
+                {/* January 2025 */}
+                <button
+                  className="flex items-center justify-between font-medium text-gray-500 dark:text-gray-400 w-20 py-3 pr-2 text-left"
+                  onClick={() => setYear('Jan2025')}
+                >
+                  <span className="block w-12 truncate">January 2025</span>
+                  <span
+                    className={`block w-3.5 h-3.5 bg-gray-400 dark:bg-gray-700 border-2 border-white dark:border-gray-900 rounded-full ${
+                      year === 'Jan2025' && 'bg-teal-500 dark:bg-teal-500'
+                    }`}
+                  ></span>
+                </button>
               </div>
 
-              {/* 2020's articles */}
-              <div className={`grow ${year !== '2020' && 'hidden'}`}>
+              {/* ================== January 2024 (year === 'Jan2024') ================== */}
+              <div className={`grow ${year !== 'Jan2024' && 'hidden'}`}>
                 <div className="grid md:grid-cols-2 gap-4 sm:gap-6">
                   <article className="p-6 bg-white dark:bg-gray-800 shadow-2xl flex flex-col">
                     <header>
@@ -62,10 +135,13 @@ export default function Timeline() {
                       </h3>
                     </header>
                     <div className="text-gray-600 dark:text-gray-400 grow">
-                      <p>In early 2024, the software development team was laid off after ten years of dedicated service at a major company, reflecting a broader industry trend.</p>
+                      <p>
+                        In early 2024, the software development team was laid off after ten years
+                        of dedicated service at a major company, reflecting a broader industry trend.
+                      </p>
                     </div>
-                   
                   </article>
+
                   <article className="p-6 bg-white dark:bg-gray-800 shadow-2xl flex flex-col">
                     <header>
                       <h3 className="h4 font-red-hat-display mb-1">
@@ -73,34 +149,19 @@ export default function Timeline() {
                       </h3>
                     </header>
                     <div className="text-gray-600 dark:text-gray-400 grow">
-                      <p>While delving into AI and expanding a portfolio, an innovative tool was engineered to transform swear words into polite and kind expressions. This creative project underscored the role of AI in enhancing communication.</p>
+                      <p>
+                        While delving into AI and expanding a portfolio, an innovative tool was
+                        engineered to transform swear words into polite and kind expressions.
+                        This creative project underscored the role of AI in enhancing communication.
+                      </p>
                     </div>
-
                   </article>
-
-                  {/* <article className="p-6 bg-white dark:bg-gray-800 shadow-2xl flex flex-col">
-                    <header>
-                      <h3 className="h4 font-red-hat-display mb-1">
-                        <a href="#0">Mobile Builder Enabled</a>
-                      </h3>
-                    </header>
-                    <div className="text-gray-600 dark:text-gray-400 grow">
-                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
-                    </div>
-                    <a className="inline-flex items-center font-medium text-teal-500 hover:underline mt-2" href="#0">
-                      <span>Learn More</span>
-                      <svg className="w-3 h-3 shrink-0 mt-px ml-2" viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg">
-                        <path className="fill-current" d="M6.602 11l-.875-.864L9.33 6.534H0v-1.25h9.33L5.727 1.693l.875-.875 5.091 5.091z" />
-                      </svg>
-                    </a>
-                  </article> */}
                 </div>
               </div>
 
-              {/* 2019's articles */}
-              <div className={`grow ${year !== '2019' && 'hidden'}`}>
-                <div className="grid md:grid-cols-2 gap-6">
-
+              {/* ================== May 2024 (year === 'May2024') ================== */}
+              <div className={`grow ${year !== 'May2024' && 'hidden'}`}>
+                <div className="grid md:grid-cols-2 gap-4 sm:gap-6">
                   <article className="p-6 bg-white dark:bg-gray-800 shadow-2xl flex flex-col">
                     <header>
                       <h3 className="h4 font-red-hat-display mb-1">
@@ -108,9 +169,13 @@ export default function Timeline() {
                       </h3>
                     </header>
                     <div className="text-gray-600 dark:text-gray-400 grow">
-                      <p>Following relentless dedication, an interview was successfully obtained. In the meeting, the option to either pursue employment with others or to establish a personal venture was offered. The preferred path was unmistakable, culminating in the bold creation of UMail a few hours later.</p>
+                      <p>
+                        Following relentless dedication, an interview was successfully obtained.
+                        In the meeting, the option to either pursue employment with others or to
+                        establish a personal venture was offered. The preferred path was unmistakable,
+                        culminating in the bold creation of UMail a few hours later.
+                      </p>
                     </div>
-                   
                   </article>
 
                   <article className="p-6 bg-white dark:bg-gray-800 shadow-2xl flex flex-col">
@@ -120,33 +185,19 @@ export default function Timeline() {
                       </h3>
                     </header>
                     <div className="text-gray-600 dark:text-gray-400 grow">
-                      <p>UMail rapidly developed into a highly robust AI platform, set to transform global communication and significantly enhance productivity. With its advanced automation, personalized interactions, and seamless integrations, UMail is revolutionizing the way individuals and organizations connect and collaborate.</p>
+                      <p>
+                        UMail rapidly developed into a highly robust AI platform, set to transform
+                        global communication and significantly enhance productivity. With its advanced
+                        automation, personalized interactions, and seamless integrations, UMail is
+                        revolutionizing the way individuals and organizations connect and collaborate.
+                      </p>
                     </div>
-                    
                   </article>
-
-                  
-                  {/* <article className="p-6 bg-white dark:bg-gray-800 shadow-2xl flex flex-col">
-                    <header>
-                      <h3 className="h4 font-red-hat-display mb-1">
-                        <a href="#0">Mobile Builder Enabled</a>
-                      </h3>
-                    </header>
-                    <div className="text-gray-600 dark:text-gray-400 grow">
-                      <p>Sed do eiusmod tempor incididunt, Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                    </div>
-                    <a className="inline-flex items-center font-medium text-teal-500 hover:underline mt-2" href="#0">
-                      <span>Learn More</span>
-                      <svg className="w-3 h-3 shrink-0 mt-px ml-2" viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg">
-                        <path className="fill-current" d="M6.602 11l-.875-.864L9.33 6.534H0v-1.25h9.33L5.727 1.693l.875-.875 5.091 5.091z" />
-                      </svg>
-                    </a>
-                  </article> */}
                 </div>
               </div>
 
-              {/* 2018's articles */}
-              <div className={`grow ${year !== '2018' && 'hidden'}`}>
+              {/* ================== September 2024 (year === 'Sep2024') ================== */}
+              <div className={`grow ${year !== 'Sep2024' && 'hidden'}`}>
                 <div className="grid md:grid-cols-2 gap-6">
                   <article className="p-6 bg-white dark:bg-gray-800 shadow-2xl flex flex-col">
                     <header>
@@ -155,10 +206,14 @@ export default function Timeline() {
                       </h3>
                     </header>
                     <div className="text-gray-600 dark:text-gray-400 grow">
-                      <p>While tirelessly working on UMail and adding feature after feature, we noticed some gaps. How could research-backed cover letters and customized resumes enhance communication like never before? This realization pushed us to innovate further.</p>
+                      <p>
+                        While tirelessly working on UMail and adding feature after feature, we noticed
+                        some gaps. How could research-backed cover letters and customized resumes enhance
+                        communication like never before? This realization pushed us to innovate further.
+                      </p>
                     </div>
-                    
                   </article>
+
                   <article className="p-6 bg-white dark:bg-gray-800 shadow-2xl flex flex-col">
                     <header>
                       <h3 className="h4 font-red-hat-display mb-1">
@@ -166,10 +221,13 @@ export default function Timeline() {
                       </h3>
                     </header>
                     <div className="text-gray-600 dark:text-gray-400 grow">
-                      <p>After insightful meetings with mentors, things started to align. Within a few hours, a new app was born: ApplyPro.ai, designed to revolutionize the job application process.</p>
+                      <p>
+                        After insightful meetings with mentors, things started to align. Within a few hours,
+                        a new app was born: ApplyPro.ai, designed to revolutionize the job application process.
+                      </p>
                     </div>
-                   
                   </article>
+
                   <article className="p-6 bg-white dark:bg-gray-800 shadow-2xl flex flex-col">
                     <header>
                       <h3 className="h4 font-red-hat-display mb-1">
@@ -177,9 +235,12 @@ export default function Timeline() {
                       </h3>
                     </header>
                     <div className="text-gray-600 dark:text-gray-400 grow">
-                      <p>Significant advancements in UMail's integrations led to the establishment of our Minimum Viable Product (MVP). There's still much to accomplish, but reaching this milestone is a huge step forward!</p>
+                      <p>
+                        Significant advancements in UMail's integrations led to the establishment of
+                        our Minimum Viable Product (MVP). There's still much to accomplish, but reaching
+                        this milestone is a huge step forward!
+                      </p>
                     </div>
-                   
                   </article>
 
                   <article className="p-6 bg-white dark:bg-gray-800 shadow-2xl flex flex-col">
@@ -189,15 +250,18 @@ export default function Timeline() {
                       </h3>
                     </header>
                     <div className="text-gray-600 dark:text-gray-400 grow">
-                      <p>UMail welcomed its first Alpha test users, achieving this milestone several months ahead of schedule. Feedback from these users is invaluable as we refine our platform.</p>
+                      <p>
+                        UMail welcomed its first Alpha test users, achieving this milestone several
+                        months ahead of schedule. Feedback from these users is invaluable as we refine
+                        our platform.
+                      </p>
                     </div>
-                   
                   </article>
                 </div>
               </div>
 
-              {/* 2017's articles */}
-              <div className={`grow ${year !== '2017' && 'hidden'}`}>
+              {/* ================== October 2024 (year === 'Oct2024') ================== */}
+              <div className={`grow ${year !== 'Oct2024' && 'hidden'}`}>
                 <div className="grid md:grid-cols-2 gap-6">
                   <article className="p-6 bg-white dark:bg-gray-800 shadow-2xl flex flex-col">
                     <header>
@@ -206,10 +270,15 @@ export default function Timeline() {
                       </h3>
                     </header>
                     <div className="text-gray-600 dark:text-gray-400 grow">
-                      <p>With the fundamentals firmly in place, ApplyPro.ai's ascent was swift and efficient. It stands as the ONLY resume tool that does not share data with AI learning, featuring research-backed cover letters and supporting links right in the toolbar.</p>
+                      <p>
+                        With the fundamentals firmly in place, ApplyPro.ai's ascent was swift and
+                        efficient. It stands as the ONLY resume tool that does not share data with
+                        AI learning, featuring research-backed cover letters and supporting links
+                        right in the toolbar.
+                      </p>
                     </div>
-                   
                   </article>
+
                   <article className="p-6 bg-white dark:bg-gray-800 shadow-2xl flex flex-col">
                     <header>
                       <h3 className="h4 font-red-hat-display mb-1">
@@ -217,11 +286,14 @@ export default function Timeline() {
                       </h3>
                     </header>
                     <div className="text-gray-600 dark:text-gray-400 grow">
-                      <p>ApplyPro.ai underwent extensive building and testing, making it well-prepared for Beta testing. While there's still more to add, the platform is now ready to be used by our early adopters.</p>
+                      <p>
+                        ApplyPro.ai underwent extensive building and testing, making it well-prepared
+                        for Beta testing. While there's still more to add, the platform is now ready
+                        to be used by our early adopters.
+                      </p>
                     </div>
-                 
                   </article>
-                  
+
                   <article className="p-6 bg-white dark:bg-gray-800 shadow-2xl flex flex-col">
                     <header>
                       <h3 className="h4 font-red-hat-display mb-1">
@@ -229,14 +301,36 @@ export default function Timeline() {
                       </h3>
                     </header>
                     <div className="text-gray-600 dark:text-gray-400 grow">
-                    <p>Our mission is simple: get you the answer you need, right away—no fluff, no clutter. Say goodbye to endless scrolling and irrelevant "Sponsered" results. With this powerful AI-driven search engine, you’ll get straight to the point, finding exactly what your looking for without the unnecessary noise.</p>                    </div>
-                 
+                      <p>
+                        Our mission is simple: get you the answer you need, right away—no fluff, no clutter.
+                        Say goodbye to endless scrolling and irrelevant "Sponsored" results. With this powerful
+                        AI-driven search engine, you’ll get straight to the point, finding exactly what you're
+                        looking for without the unnecessary noise.
+                      </p>
+                    </div>
+                  </article>
+
+                  {/* NEW CARD about contracting a marketing team */}
+                  <article className="p-6 bg-white dark:bg-gray-800 shadow-2xl flex flex-col">
+                    <header>
+                      <h3 className="h4 font-red-hat-display mb-1">
+                        <a href="#0">Contracting a Marketing Team</a>
+                      </h3>
+                    </header>
+                    <div className="text-gray-600 dark:text-gray-400 grow">
+                      <p>
+                        During October 2024, we officially contracted an experienced marketing team
+                        to accelerate our global reach. The onboarding process was seamless, integrating
+                        them into our mission and leveraging their expertise to amplify brand awareness
+                        and user engagement.
+                      </p>
+                    </div>
                   </article>
                 </div>
               </div>
 
-                            {/* 2024's articles */}
-                            <div className={`grow ${year !== '2024' && 'hidden'}`}>
+              {/* ================== December 2024 (year === 'Dec2024') ================== */}
+              <div className={`grow ${year !== 'Dec2024' && 'hidden'}`}>
                 <div className="grid md:grid-cols-2 gap-6">
                   <article className="p-6 bg-white dark:bg-gray-800 shadow-2xl flex flex-col">
                     <header>
@@ -245,10 +339,16 @@ export default function Timeline() {
                       </h3>
                     </header>
                     <div className="text-gray-600 dark:text-gray-400 grow">
-                      <p>We’re thrilled to announce that ApplyPro is available worldwide. To celebrate our December soft launch, all new users who sign up this month will receive 6 months of unlimited service absolutely free. Our recent tests showcase an outstanding 96-98% pass rate through ATS systems—the highest scores globally for ATS compatibility. Join ApplyPro today and maximize your application success!</p>
+                      <p>
+                        We’re thrilled to announce that ApplyPro is available worldwide. To celebrate
+                        our December soft launch, all new users who sign up this month will receive
+                        6 months of unlimited service absolutely free. Our recent tests showcase an
+                        outstanding 96-98% pass rate through ATS systems—the highest scores globally
+                        for ATS compatibility. Join ApplyPro today and maximize your application success!
+                      </p>
                     </div>
-                   
                   </article>
+
                   <article className="p-6 bg-white dark:bg-gray-800 shadow-2xl flex flex-col">
                     <header>
                       <h3 className="h4 font-red-hat-display mb-1">
@@ -256,83 +356,68 @@ export default function Timeline() {
                       </h3>
                     </header>
                     <div className="text-gray-600 dark:text-gray-400 grow">
-                      <p>This AI-powered recruitment tool efficiently bulk scans resumes, ranks candidates based on essential criteria, and generates concise summaries for hiring managers and recruiters. Streamline your hiring process, identify top talent quickly, and make informed decisions with our cutting-edge technology.</p>
+                      <p>
+                        This AI-powered recruitment tool efficiently bulk scans resumes, ranks candidates
+                        based on essential criteria, and generates concise summaries for hiring managers
+                        and recruiters. Streamline your hiring process, identify top talent quickly, and
+                        make informed decisions with our cutting-edge technology.
+                      </p>
                     </div>
-                 
                   </article>
-                  
-                  {/* <article className="p-6 bg-white dark:bg-gray-800 shadow-2xl flex flex-col">
-                    <header>
-                      <h3 className="h4 font-red-hat-display mb-1">
-                        <a href="#0">Early Search Engine Advances</a>
-                      </h3>
-                    </header>
-                    <div className="text-gray-600 dark:text-gray-400 grow">
-                    <p>Our mission is simple: get you the answer you need, right away—no fluff, no clutter. Say goodbye to endless scrolling and irrelevant "Sponsered" results. With this powerful AI-driven search engine, you’ll get straight to the point, finding exactly what your looking for without the unnecessary noise.</p>                    </div>
-                 
-                  </article> */}
                 </div>
               </div>
 
-              {/* 2016's articles */}
-              {/* <div className={`grow ${year !== '2016' && 'hidden'}`}>
+              {/* ================== January 2025 (year === 'Jan2025') ================== */}
+              <div className={`grow ${year !== 'Jan2025' && 'hidden'}`}>
                 <div className="grid md:grid-cols-2 gap-6">
-                  <article className="md:col-span-2 p-6 bg-white dark:bg-gray-800 shadow-2xl flex flex-col">
-                    <header>
-                      <h3 className="h4 font-red-hat-display mb-1">
-                        <a href="#0">Mobile Builder Enabled</a>
-                      </h3>
-                    </header>
-                    <div className="text-gray-600 dark:text-gray-400 grow">
-                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est.</p>
-                    </div>
-                    <a className="inline-flex items-center font-medium text-teal-500 hover:underline mt-2" href="#0">
-                      <span>Learn More</span>
-                      <svg className="w-3 h-3 shrink-0 mt-px ml-2" viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg">
-                        <path className="fill-current" d="M6.602 11l-.875-.864L9.33 6.534H0v-1.25h9.33L5.727 1.693l.875-.875 5.091 5.091z" />
-                      </svg>
-                    </a>
-                  </article>
-                  <article className="p-6 bg-white dark:bg-gray-800 shadow-2xl flex flex-col">
-                    <header>
-                      <h3 className="h4 font-red-hat-display mb-1">
-                        <a href="#0">Series B Fundraising</a>
-                      </h3>
-                    </header>
-                    <div className="text-gray-600 dark:text-gray-400 grow">
-                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
-                    </div>
-                    <a className="inline-flex items-center font-medium text-teal-500 hover:underline mt-2" href="#0">
-                      <span>Learn More</span>
-                      <svg className="w-3 h-3 shrink-0 mt-px ml-2" viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg">
-                        <path className="fill-current" d="M6.602 11l-.875-.864L9.33 6.534H0v-1.25h9.33L5.727 1.693l.875-.875 5.091 5.091z" />
-                      </svg>
-                    </a>
-                  </article>
-                  <article className="p-6 bg-white dark:bg-gray-800 shadow-2xl flex flex-col">
-                    <header>
-                      <h3 className="h4 font-red-hat-display mb-1">
-                        <a href="#0">1M Customers</a>
-                      </h3>
-                    </header>
-                    <div className="text-gray-600 dark:text-gray-400 grow">
-                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
-                    </div>
-                    <a className="inline-flex items-center font-medium text-teal-500 hover:underline mt-2" href="#0">
-                      <span>Learn More</span>
-                      <svg className="w-3 h-3 shrink-0 mt-px ml-2" viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg">
-                        <path className="fill-current" d="M6.602 11l-.875-.864L9.33 6.534H0v-1.25h9.33L5.727 1.693l.875-.875 5.091 5.091z" />
-                      </svg>
-                    </a>
-                  </article>
+                <article className="p-6 bg-white dark:bg-gray-800 shadow-2xl flex flex-col">
+  <header>
+    <h3 className="h4 font-red-hat-display mb-1">
+      <a href="#0">ApplyPro Launches Worldwide</a>
+    </h3>
+  </header>
+  <div className="text-gray-600 dark:text-gray-400 grow">
+    <p>
+      ApplyPro has officially launched, welcoming its first wave of users through a dynamic marketing campaign. We’re thrilled to see new sign-ups daily as we continue refining our platform and delivering unparalleled value to job seekers everywhere.
+    </p>
+  </div>
+</article>
+
+<article className="p-6 bg-white dark:bg-gray-800 shadow-2xl flex flex-col">
+  <header>
+    <h3 className="h4 font-red-hat-display mb-1">
+      <a href="#0">Early Advances with the Talent Acquisition Platform</a>
+    </h3>
+  </header>
+  <div className="text-gray-600 dark:text-gray-400 grow">
+  <p>
+  Our data-driven Talent Acquisition platform streamlines recruiting by bulk-scanning resumes and power-ranking candidates based on job descriptions. With a click, you can generate courteous, customizable email responses, whether a candidate is moving forward or being passed on, ensuring no one is left in the dark.
+</p>
+
+
+  </div>
+</article>
+
+
                 </div>
-              </div> */}
+              </div>
 
             </div>
           </div>
 
         </div>
       </div>
+
+      {/* 
+        Hide scrollbar for WebKit-based browsers (Chrome, Safari, etc.)
+        If you're using a CSS/SCSS file or Tailwind plugin, you can place this there.
+        For inline, we add a small <style jsx> block here:
+      */}
+      <style jsx>{`
+        .custom-scrollbar::-webkit-scrollbar {
+          display: none;
+        }
+      `}</style>
     </section>
   )
 }

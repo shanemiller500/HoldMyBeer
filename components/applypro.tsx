@@ -155,7 +155,8 @@ export default function ApplyProLandingPage() {
             <div className="mt-8 flex justify-center" data-aos="fade-down" data-aos-delay="300">
             <Link
                 className="btn text-white bg-teal-500 hover:bg-teal-400 px-6 py-3 rounded-lg shadow-md transition duration-300"
-                href="/contact"
+                 href="https://applypro.ai"
+              target="_blank"
             >
                 Link to ApplyPro
             </Link>

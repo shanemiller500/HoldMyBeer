@@ -54,8 +54,7 @@ export default function FeaturesBlocks() {
 
                       {/* 2nd Item */}
                       <a
-              href="https://applypro.ai"
-              target="_blank"
+              href="/applyPro"
               rel="noopener noreferrer"
               className="flex-shrink-0 w-80 flex flex-col p-6 group bg-gradient-to-tr from-purple-500 to-purple-400 dark:to-purple-500 rounded-lg shadow-2xl transition-transform transform hover:-translate-y-1 hover:shadow-3xl snap-start"
               aria-label="ApplyPro.ai - Research-backed Cover Letters & Tailored Resumes"

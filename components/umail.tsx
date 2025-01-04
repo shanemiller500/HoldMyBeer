@@ -42,7 +42,7 @@ export default function UMailLandingPage() {
                             data-aos="fade-down"
                             data-aos-delay="100"
                         >
-                            AI-powered email for effortless communication. Transform how you connect globally, work, and express yourself. Built to integrate with your Gmail account. (Microsoft integration coming soon)
+                            AI-powered email for effortless communication. Transform how you connect globally, work, and express yourself. Built to seamlessly integrate with your Gmail & Google Workspace accounts. (Microsoft integration coming soon)
                         </p>
                         <div className="mt-8" data-aos="fade-down" data-aos-delay="200">
 

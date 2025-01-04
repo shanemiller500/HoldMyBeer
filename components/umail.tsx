@@ -31,14 +31,14 @@ export default function UMailLandingPage() {
                             className="mt-10 text-4xl md:text-5xl font-bold text-teal-500 font-red-hat-display"
                             data-aos="fade-down"
                         >
-                            UMail: The Future of Email
+                          The Future of Global Communication
                         </h1>
                         <p
                             className="mt-4 text-gray-600 dark:text-gray-400 text-lg md:text-xl"
                             data-aos="fade-down"
                             data-aos-delay="100"
                         >
-                            AI-powered email for effortless communication. Transform how you connect, work, and express yourself.
+                            AI-powered email for effortless communication. Transform how you connect globally, work, and express yourself. Built to integrate with your Gmail account. (Microsoft integration coming soon)
                         </p>
                         <div className="mt-8" data-aos="fade-down" data-aos-delay="200">
                             {/* Example CTA button (currently commented out)
@@ -387,7 +387,7 @@ export default function UMailLandingPage() {
                         {/* Section header */}
                         <div className="text-center mb-10" data-aos="fade-up">
                             <h2 className="text-3xl md:text-4xl font-bold text-teal-500 mb-4">
-                                UMail Feature Highlights
+                                UMail's Feature Highlights
                             </h2>
                             <p className="text-lg text-gray-600 dark:text-gray-400">
                                 Explore the comprehensive range of features that makes UMail truly exceptional. There are more  on the way, stay tuned!
@@ -570,7 +570,7 @@ export default function UMailLandingPage() {
                             <Link
                                 href="https://u-mail.ai"
                                 target="_blank"
-                                className="btn text-teal-500 bg-white hover:bg-gray-100 px-8 py-4 rounded-lg shadow-md transition duration-300 text-lg font-semibold"
+                                className="btn text-teal-500 bg-gray-900 hover:bg-gray-700 px-8 py-4 rounded-lg shadow-md transition duration-300 text-lg font-semibold"
                             >
                                 Get Started Now
                             </Link>

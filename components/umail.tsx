@@ -13,7 +13,7 @@ import LogoImage from '@/public/images/umailLogo.png'
 export default function UMailLandingPage() {
     // State to manage dark mode toggling
     const [darkMode, setDarkMode] = useState(false)
-    const [buttonText, setButtonText] = useState("Get Started Now");
+    const [buttonText, setButtonText] = useState("Become a Test User Now");
 
 
     return (
@@ -555,6 +555,19 @@ export default function UMailLandingPage() {
                     </div>
                 </section> */}
 
+                   {/* Navigation Arrows */}
+      <div className=" z-20 flex justify-between px-4 sm:px-6 lg:px-8 mb-20">
+        {/* Back Arrow */}
+        <Link href="/applyPro" className="text-teal-500 hover:text-teal-700 flex items-center">
+          <FaArrowLeft className="mr-2" /> ApplyPro
+        </Link>
+
+        {/* Next Arrow */}
+        <Link href="/Talent" className="text-teal-500 hover:text-teal-700 flex items-center">
+        Talent Acquisition Platform<FaArrowRight className="ml-2" />
+        </Link>
+      </div>
+
                 {/* CTA SECTION */}
                 <section className="relative py-16 md:py-20 bg-teal-500">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 text-center">
@@ -578,7 +591,7 @@ export default function UMailLandingPage() {
             target="_blank"
             className="btn text-teal-500 bg-gray-900 hover:bg-gray-700 px-8 py-4 rounded-lg shadow-md transition duration-300 text-lg font-semibold"
             onMouseEnter={() => setButtonText("New website coming soon")}
-            onMouseLeave={() => setButtonText("Get Started Now")}
+            onMouseLeave={() => setButtonText("Become a Test User Now")}
           >
             {buttonText}
           </Link>
@@ -589,18 +602,7 @@ export default function UMailLandingPage() {
     </section>
 
             </main>
-              {/* Navigation Arrows */}
-      <div className=" z-20 flex justify-between px-4 sm:px-6 lg:px-8 mt-20">
-        {/* Back Arrow */}
-        <Link href="/applyPro" className="text-teal-500 hover:text-teal-700 flex items-center">
-          <FaArrowLeft className="mr-2" /> Back
-        </Link>
-
-        {/* Next Arrow */}
-        <Link href="/Talent" className="text-teal-500 hover:text-teal-700 flex items-center">
-          Next <FaArrowRight className="ml-2" />
-        </Link>
-      </div>
+           
         </div>
         
     )

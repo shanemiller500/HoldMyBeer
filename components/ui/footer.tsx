@@ -116,28 +116,28 @@ export default function Footer() {
                 <h6 className="font-medium uppercase mb-2">Products</h6>
                 <ul>
                   <li className="mb-1">
-                    <a className="text-gray-600 dark:text-gray-400 hover:underline transition duration-150 ease-in-out" href="https://applypro.ai" target="_blank">
+                    <a className="text-gray-600 dark:text-gray-400 hover:underline transition duration-150 ease-in-out" href="/applyPro">
                      ApplyPro.ai
                     </a>
                   </li>
                   <li className="mb-1">
-                    <a className="text-gray-600 dark:text-gray-400 hover:underline transition duration-150 ease-in-out" href="https://u-mail.ai" target="_blank">
+                    <a className="text-gray-600 dark:text-gray-400 hover:underline transition duration-150 ease-in-out" href="/umail" >
                       UMail.ai
                     </a>
                   </li>
                   <li className="mb-1">
-                    <a className="text-gray-600 dark:text-gray-400 hover:underline transition duration-150 ease-in-out" href="#0">
-                    Talent Acquisition Platform (COMING SOON)
+                    <a className="text-gray-600 dark:text-gray-400 hover:underline transition duration-150 ease-in-out" href="/Talent">
+                    Talent Acquisition Platform 
                     </a>
                   </li>
                   <li className="mb-1">
-                    <a className="text-gray-600 dark:text-gray-400 hover:underline transition duration-150 ease-in-out" href="#0">
-                    AI Allergy Check App (COMING SOON)
+                    <a className="text-gray-600 dark:text-gray-400 hover:underline transition duration-150 ease-in-out" href="/allergy">
+                    AI Allergy Check App 
                     </a>
                   </li>
                   <li className="mb-1">
-                    <a className="text-gray-600 dark:text-gray-400 hover:underline transition duration-150 ease-in-out" href="#0">
-                     Advanced Search Engine (COMING SOON)
+                    <a className="text-gray-600 dark:text-gray-400 hover:underline transition duration-150 ease-in-out" href="/Search">
+                     Advanced Search Engine
                     </a>
                   </li>
               

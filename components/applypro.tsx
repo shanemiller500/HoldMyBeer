@@ -175,6 +175,18 @@ export default function ApplyProLandingPage() {
            
           </div>
         </section>
+         {/* Navigation Arrows */}
+         <div className=" z-20 flex justify-between px-4 sm:px-6 lg:px-8 mb-20">
+        {/* Back Arrow */}
+        <Link href="/" className="text-teal-500 hover:text-teal-700 flex items-center">
+          <FaArrowLeft className="mr-2" /> Home
+        </Link>
+
+        {/* Next Arrow */}
+        <Link href="/umail" className="text-teal-500 hover:text-teal-700 flex items-center">
+          UMail <FaArrowRight className="ml-2" />
+        </Link>
+      </div>
 
         {/*
           OPTIONAL CTA SECTION
@@ -209,18 +221,7 @@ export default function ApplyProLandingPage() {
 
       </main>
 
-        {/* Navigation Arrows */}
-        <div className=" z-20 flex justify-between px-4 sm:px-6 lg:px-8 mt-20">
-        {/* Back Arrow */}
-        <Link href="/" className="text-teal-500 hover:text-teal-700 flex items-center">
-          <FaArrowLeft className="mr-2" /> Home
-        </Link>
-
-        {/* Next Arrow */}
-        <Link href="/umail" className="text-teal-500 hover:text-teal-700 flex items-center">
-          Next <FaArrowRight className="ml-2" />
-        </Link>
-      </div>
+       
     </div>
   )
 }

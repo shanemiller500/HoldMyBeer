@@ -65,15 +65,15 @@ export default function HeroAbout() {
             </p>
 
             {/* Navigation Arrows */}
-      <div className=" z-20 flex justify-between px-4 sm:px-6 lg:px-8">
+      <div className=" z-20 flex justify-between px-4 sm:px-6 lg:px-8 mt-10">
         {/* Back Arrow */}
         <Link href="/umail" className="text-teal-500 hover:text-teal-700 flex items-center">
-          <FaArrowLeft className="mr-2" /> Back
+          <FaArrowLeft className="mr-2" /> UMail
         </Link>
 
         {/* Next Arrow */}
         <Link href="/allergy" className="text-teal-500 hover:text-teal-700 flex items-center">
-          Next <FaArrowRight className="ml-2" />
+        Allergy App <FaArrowRight className="ml-2" />
         </Link>
       </div>
           </div>

@@ -8,18 +8,7 @@ import HeroImage from '@/public/images/Venue_2.jpg'
 export default function Allergy() {
     return (
       <section className="relative">
-        {/* Navigation Arrows */}
-        <div className="absolute top-4 left-0 right-0 z-20 flex justify-between px-4 sm:px-6 lg:px-8">
-          {/* Back Arrow */}
-          <Link href="/previous-page" className="text-teal-500 hover:text-teal-700 flex items-center" aria-label="Go Back">
-            <FaArrowLeft className="mr-2" /> Back
-          </Link>
-  
-          {/* Next Arrow */}
-          <Link href="/next-page" className="text-teal-500 hover:text-teal-700 flex items-center" aria-label="Go Next">
-            Next <FaArrowRight className="ml-2" />
-          </Link>
-        </div>
+      
   
         {/* Background Image */}
         <div className="absolute inset-0 h-128 pt-16 box-content -z-10">
@@ -78,15 +67,15 @@ export default function Allergy() {
             
             </div>
                            {/* Navigation Arrows */}
-      <div className=" z-20 flex justify-between px-4 sm:px-6 lg:px-8">
+      <div className=" z-20 flex justify-between px-4 sm:px-6 lg:px-8 mt-10">
         {/* Back Arrow */}
         <Link href="/Talent" className="text-teal-500 hover:text-teal-700 flex items-center">
-          <FaArrowLeft className="mr-2" /> Back
+          <FaArrowLeft className="mr-2" /> Talent Acquisition Platform
         </Link>
 
         {/* Next Arrow */}
         <Link href="/Search" className="text-teal-500 hover:text-teal-700 flex items-center">
-          Next <FaArrowRight className="ml-2" />
+        AI Search Engine <FaArrowRight className="ml-2" />
         </Link>
       </div>
           </div>

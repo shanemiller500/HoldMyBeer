@@ -1,5 +1,5 @@
 export const metadata = {
-    title: 'About - HMB-CO',
+    title: 'Transparent - HMB-CO',
     description: 'Page description',
   }
   

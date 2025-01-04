@@ -82,6 +82,149 @@ export default function UMailLandingPage() {
                     </div>
                 </section>
 
+                
+                {/* COMPREHENSIVE FEATURE LIST - ANIMATED */}
+                <section className="relative pb-16 md:pb-20 bg-gray-100 dark:bg-gray-900 mt-20">
+                    <div className="max-w-6xl mx-auto px-4 sm:px-6">
+                        {/* Section header */}
+                        <div className="text-center mb-10" data-aos="fade-up">
+                            <h2 className="text-3xl md:text-4xl font-bold text-teal-500 mb-4">
+                                UMail's Feature Highlights
+                            </h2>
+                            <p className="text-lg text-gray-600 dark:text-gray-400">
+                                Explore the comprehensive range of features that makes UMail truly exceptional. There are more  on the way, stay tuned!
+                            </p>
+                        </div>
+
+                        {/* Animated Feature Circle */}
+                        <div className="max-w-3xl mx-auto" data-aos="fade-up" data-aos-delay="100">
+                            <div className="relative flex justify-center items-center overflow-hidden">
+                                {/* Big circle behind: light layout */}
+                                <svg className="dark:hidden" width="432" height="432" viewBox="0 0 432 432" xmlns="http://www.w3.org/2000/svg">
+                                    <defs>
+                                        <radialGradient cx="50%" cy="50%" fx="50%" fy="50%" r="48.919%" id="umail_light_grad">
+                                            <stop stopColor="#B2F5EA" stopOpacity=".64" offset="0%" />
+                                            <stop stopColor="#B2F5EA" stopOpacity="0" offset="100%" />
+                                        </radialGradient>
+                                    </defs>
+                                    <g fill="none" fillRule="evenodd">
+                                        <circle fill="url(#umail_light_grad)" cx="216" cy="216" r="216" />
+                                        <g transform="translate(22 22)" stroke="#1D1D20">
+                                            <circle strokeOpacity=".04" cx="194" cy="194" r="193.5" />
+                                            <circle strokeOpacity=".08" strokeWidth="2" cx="194" cy="194" r="153" />
+                                            <circle strokeOpacity=".16" strokeWidth="2.5" cx="194" cy="194" r="112.75" />
+                                        </g>
+                                    </g>
+                                </svg>
+
+                                {/* Big circle behind: dark layout */}
+                                <svg className="hidden dark:block" width="432" height="432" viewBox="0 0 432 432" xmlns="http://www.w3.org/2000/svg">
+                                    <defs>
+                                        <radialGradient cx="50%" cy="50%" fx="50%" fy="50%" r="50%" id="umail_dark_grad">
+                                            <stop stopColor="#1D1D21" stopOpacity="0" offset="0%" />
+                                            <stop stopColor="#2E2E33" stopOpacity=".32" offset="100%" />
+                                        </radialGradient>
+                                    </defs>
+                                    <circle cx="216" cy="216" r="216" fill="url(#umail_dark_grad)" fillRule="evenodd" />
+                                </svg>
+
+                                {/* Moving feature "tags" */}
+                                <div className="absolute inset-0">
+                                    {/* 1 */}
+                                    <div className="absolute font-medium px-4 py-2 text-white dark:text-indigo-500 bg-gradient-to-tr from-indigo-500 to-indigo-400 dark:bg-indigo-500 dark:from-transparent dark:to-transparent dark:bg-opacity-25 rounded-full inline-flex items-center justify-center tags-animation mt-12">
+                                        Voice-to-Text Dictation
+                                    </div>
+
+                                    {/* 2 */}
+                                    <div className="absolute font-medium px-4 py-2 text-white dark:text-teal-500 bg-gradient-to-tr from-teal-500 to-teal-400 dark:bg-teal-500 dark:from-transparent dark:to-transparent dark:bg-opacity-25 rounded-full inline-flex items-center justify-center tags-animation tags-1 mt-2">
+                                        Mood &amp; Tone Adjustments
+                                    </div>
+
+                                    {/* 3 */}
+                                    <div className="absolute font-medium px-4 py-2 text-white dark:text-pink-500 bg-gradient-to-tr from-pink-500 to-pink-400 dark:bg-pink-500 dark:from-transparent dark:to-transparent dark:bg-opacity-25 rounded-full inline-flex items-center justify-center tags-animation tags-2 mt-40">
+                                        Customizable Templates
+                                    </div>
+
+                                    {/* 4 */}
+                                    <div className="absolute font-medium px-4 py-2 text-white dark:text-indigo-500 bg-gradient-to-tr from-indigo-500 to-indigo-400 dark:bg-indigo-500 dark:from-transparent dark:to-transparent dark:bg-opacity-25 rounded-full inline-flex items-center justify-center tags-animation tags-4 mt-72">
+                                        Integrated Calendar Scheduling
+                                    </div>
+
+                                    {/* 5 */}
+                                    <div className="absolute font-medium px-4 py-2 text-white dark:text-pink-500 bg-gradient-to-tr from-pink-500 to-pink-400 dark:bg-pink-500 dark:from-transparent dark:to-transparent dark:bg-opacity-25 rounded-full inline-flex items-center justify-center tags-animation tags-4 mt-14">
+                                        Industry-Specific Tools
+                                    </div>
+
+                                    {/* 6 */}
+                                    <div className="absolute font-medium px-4 py-2 text-white dark:text-pink-500 bg-gradient-to-tr from-pink-500 to-pink-400 dark:bg-pink-500 dark:from-transparent dark:to-transparent dark:bg-opacity-25 rounded-full inline-flex items-center justify-center tags-animation tags-5 mt-56">
+                                        Real-Time Collaboration
+                                    </div>
+
+                                    {/* 7 */}
+                                    <div className="absolute font-medium px-4 py-2 text-white dark:text-teal-500 bg-gradient-to-tr from-teal-500 to-teal-400 dark:bg-teal-500 dark:from-transparent dark:to-transparent dark:bg-opacity-25 rounded-full inline-flex items-center justify-center tags-animation tags-6 mt-20 top-52">
+                                        Global Email Translations
+                                    </div>
+
+                                    {/* 8 */}
+                                    <div className="absolute font-medium px-4 py-2 text-white dark:text-purple-500 bg-gradient-to-tr from-purple-500 to-purple-400 dark:bg-purple-500 dark:from-transparent dark:to-transparent dark:bg-opacity-25 rounded-full inline-flex items-center justify-center tags-animation tags-7 mt-40">
+                                        AI-Powered Synonym Assistant
+                                    </div>
+
+                                    {/* 9 */}
+                                    <div className="absolute font-medium px-4 py-2 text-white dark:text-pink-500 bg-gradient-to-tr from-pink-500 to-pink-400 dark:bg-pink-500 dark:from-transparent dark:to-transparent dark:bg-opacity-25 rounded-full inline-flex items-center justify-center tags-animation tags-8 mt-80 top-4">
+                                        Inbox Categorization
+                                    </div>
+
+                                    {/* 10 */}
+                                    <div className="absolute font-medium px-4 py-2 text-white dark:text-yellow-500 bg-gradient-to-tr from-yellow-500 to-yellow-400 dark:bg-yellow-500 dark:from-transparent dark:to-transparent dark:bg-opacity-25 rounded-full inline-flex items-center justify-center tags-animation tags-9 mt-36 top-24">
+                                        Email Star &amp; Marking System
+                                    </div>
+
+                                    {/* 11 */}
+                                    <div className="absolute font-medium px-4 py-2 text-white dark:text-red-500 bg-gradient-to-tr from-red-500 to-red-400 dark:bg-red-500 dark:from-transparent dark:to-transparent dark:bg-opacity-25 rounded-full inline-flex items-center justify-center tags-animation tags-6 mt-30 top-12">
+                                        Custom Message Styles
+                                    </div>
+
+                                    {/* 12 */}
+                                    <div className="absolute font-medium px-4 py-2 text-white dark:text-indigo-500 bg-gradient-to-tr from-indigo-500 to-indigo-400 dark:bg-indigo-500 dark:from-transparent dark:to-transparent dark:bg-opacity-25 rounded-full inline-flex items-center justify-center tags-animation tags-1 mt-28">
+                                        Attachment Management
+                                    </div>
+
+                                    {/* 13 */}
+                                    <div className="absolute font-medium px-4 py-2 text-white dark:text-teal-500 bg-gradient-to-tr from-teal-500 to-teal-400 dark:bg-teal-500 dark:from-transparent dark:to-transparent dark:bg-opacity-25 rounded-full inline-flex items-center justify-center tags-animation tags-12 mt-80 top-8">
+                                        Smart Ghosting (AI Replies)
+                                    </div>
+
+                                    {/* 14 */}
+                                    <div className="absolute font-medium px-4 py-2 text-white dark:text-gray-900 bg-gradient-to-tr from-purple-500 to-purple-400 dark:bg-purple-500 dark:from-transparent dark:to-transparent dark:bg-opacity-25 rounded-full inline-flex items-center justify-center tags-animation tags-13 mt-52">
+                                        Powerful Search &amp; Filters
+                                    </div>
+
+                                    {/* 15 */}
+                                    <div className="absolute font-medium px-4 py-2 text-white dark:text-gray-900 bg-gradient-to-tr from-pink-500 to-pink-400 dark:bg-pink-500 dark:from-transparent dark:to-transparent dark:bg-opacity-25 rounded-full inline-flex items-center justify-center tags-animation tags-7 mt-4 top-20">
+                                        Data Privacy (No AI Training)
+                                    </div>
+
+                                    {/* 16 */}
+                                    <div className="absolute font-medium px-4 py-2 text-white dark:text-gray-900 bg-gradient-to-tr from-red-500 to-red-400 dark:bg-red-500 dark:from-transparent dark:to-transparent dark:bg-opacity-25 rounded-full inline-flex items-center justify-center tags-animation tags-15 mt-72 top-1">
+                                        End-to-End Encryption &amp; Zero Ads
+                                    </div>
+                                </div>
+
+                                {/* Side gradients */}
+                                <div
+                                    className="absolute top-0 bottom-0 left-0 w-20 bg-gradient-to-r from-white dark:from-gray-900"
+                                    aria-hidden="true"
+                                ></div>
+                                <div
+                                    className="absolute top-0 bottom-0 right-0 w-20 bg-gradient-to-l from-white dark:from-gray-900"
+                                    aria-hidden="true"
+                                ></div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
                                 {/* CUSTOM MOOD & TONE */}
                                 <section className="relative pt-10 pb-10 md:pt-16 md:pb-16 bg-gray-100 dark:bg-gray-800">
                     <div className="max-w-5xl mx-auto px-4 sm:px-6">
@@ -379,147 +522,6 @@ export default function UMailLandingPage() {
                     </div>
                 </section>
 
-                {/* COMPREHENSIVE FEATURE LIST - ANIMATED */}
-                <section className="relative pb-16 md:pb-20 bg-gray-100 dark:bg-gray-900">
-                    <div className="max-w-6xl mx-auto px-4 sm:px-6">
-                        {/* Section header */}
-                        <div className="text-center mb-10" data-aos="fade-up">
-                            <h2 className="text-3xl md:text-4xl font-bold text-teal-500 mb-4">
-                                UMail's Feature Highlights
-                            </h2>
-                            <p className="text-lg text-gray-600 dark:text-gray-400">
-                                Explore the comprehensive range of features that makes UMail truly exceptional. There are more  on the way, stay tuned!
-                            </p>
-                        </div>
-
-                        {/* Animated Feature Circle */}
-                        <div className="max-w-3xl mx-auto" data-aos="fade-up" data-aos-delay="100">
-                            <div className="relative flex justify-center items-center overflow-hidden">
-                                {/* Big circle behind: light layout */}
-                                <svg className="dark:hidden" width="432" height="432" viewBox="0 0 432 432" xmlns="http://www.w3.org/2000/svg">
-                                    <defs>
-                                        <radialGradient cx="50%" cy="50%" fx="50%" fy="50%" r="48.919%" id="umail_light_grad">
-                                            <stop stopColor="#B2F5EA" stopOpacity=".64" offset="0%" />
-                                            <stop stopColor="#B2F5EA" stopOpacity="0" offset="100%" />
-                                        </radialGradient>
-                                    </defs>
-                                    <g fill="none" fillRule="evenodd">
-                                        <circle fill="url(#umail_light_grad)" cx="216" cy="216" r="216" />
-                                        <g transform="translate(22 22)" stroke="#1D1D20">
-                                            <circle strokeOpacity=".04" cx="194" cy="194" r="193.5" />
-                                            <circle strokeOpacity=".08" strokeWidth="2" cx="194" cy="194" r="153" />
-                                            <circle strokeOpacity=".16" strokeWidth="2.5" cx="194" cy="194" r="112.75" />
-                                        </g>
-                                    </g>
-                                </svg>
-
-                                {/* Big circle behind: dark layout */}
-                                <svg className="hidden dark:block" width="432" height="432" viewBox="0 0 432 432" xmlns="http://www.w3.org/2000/svg">
-                                    <defs>
-                                        <radialGradient cx="50%" cy="50%" fx="50%" fy="50%" r="50%" id="umail_dark_grad">
-                                            <stop stopColor="#1D1D21" stopOpacity="0" offset="0%" />
-                                            <stop stopColor="#2E2E33" stopOpacity=".32" offset="100%" />
-                                        </radialGradient>
-                                    </defs>
-                                    <circle cx="216" cy="216" r="216" fill="url(#umail_dark_grad)" fillRule="evenodd" />
-                                </svg>
-
-                                {/* Moving feature "tags" */}
-                                <div className="absolute inset-0">
-                                    {/* 1 */}
-                                    <div className="absolute font-medium px-4 py-2 text-white dark:text-indigo-500 bg-gradient-to-tr from-indigo-500 to-indigo-400 dark:bg-indigo-500 dark:from-transparent dark:to-transparent dark:bg-opacity-25 rounded-full inline-flex items-center justify-center tags-animation mt-12">
-                                        Voice-to-Text Dictation
-                                    </div>
-
-                                    {/* 2 */}
-                                    <div className="absolute font-medium px-4 py-2 text-white dark:text-teal-500 bg-gradient-to-tr from-teal-500 to-teal-400 dark:bg-teal-500 dark:from-transparent dark:to-transparent dark:bg-opacity-25 rounded-full inline-flex items-center justify-center tags-animation tags-1 mt-2">
-                                        Mood &amp; Tone Adjustments
-                                    </div>
-
-                                    {/* 3 */}
-                                    <div className="absolute font-medium px-4 py-2 text-white dark:text-pink-500 bg-gradient-to-tr from-pink-500 to-pink-400 dark:bg-pink-500 dark:from-transparent dark:to-transparent dark:bg-opacity-25 rounded-full inline-flex items-center justify-center tags-animation tags-2 mt-40">
-                                        Customizable Templates
-                                    </div>
-
-                                    {/* 4 */}
-                                    <div className="absolute font-medium px-4 py-2 text-white dark:text-indigo-500 bg-gradient-to-tr from-indigo-500 to-indigo-400 dark:bg-indigo-500 dark:from-transparent dark:to-transparent dark:bg-opacity-25 rounded-full inline-flex items-center justify-center tags-animation tags-4 mt-72">
-                                        Integrated Calendar Scheduling
-                                    </div>
-
-                                    {/* 5 */}
-                                    <div className="absolute font-medium px-4 py-2 text-white dark:text-pink-500 bg-gradient-to-tr from-pink-500 to-pink-400 dark:bg-pink-500 dark:from-transparent dark:to-transparent dark:bg-opacity-25 rounded-full inline-flex items-center justify-center tags-animation tags-4 mt-14">
-                                        Industry-Specific Tools
-                                    </div>
-
-                                    {/* 6 */}
-                                    <div className="absolute font-medium px-4 py-2 text-white dark:text-pink-500 bg-gradient-to-tr from-pink-500 to-pink-400 dark:bg-pink-500 dark:from-transparent dark:to-transparent dark:bg-opacity-25 rounded-full inline-flex items-center justify-center tags-animation tags-5 mt-56">
-                                        Real-Time Collaboration
-                                    </div>
-
-                                    {/* 7 */}
-                                    <div className="absolute font-medium px-4 py-2 text-white dark:text-teal-500 bg-gradient-to-tr from-teal-500 to-teal-400 dark:bg-teal-500 dark:from-transparent dark:to-transparent dark:bg-opacity-25 rounded-full inline-flex items-center justify-center tags-animation tags-6 mt-20 top-52">
-                                        Global Email Translations
-                                    </div>
-
-                                    {/* 8 */}
-                                    <div className="absolute font-medium px-4 py-2 text-white dark:text-purple-500 bg-gradient-to-tr from-purple-500 to-purple-400 dark:bg-purple-500 dark:from-transparent dark:to-transparent dark:bg-opacity-25 rounded-full inline-flex items-center justify-center tags-animation tags-7 mt-40">
-                                        AI-Powered Synonym Assistant
-                                    </div>
-
-                                    {/* 9 */}
-                                    <div className="absolute font-medium px-4 py-2 text-white dark:text-pink-500 bg-gradient-to-tr from-pink-500 to-pink-400 dark:bg-pink-500 dark:from-transparent dark:to-transparent dark:bg-opacity-25 rounded-full inline-flex items-center justify-center tags-animation tags-8 mt-80 top-4">
-                                        Inbox Categorization
-                                    </div>
-
-                                    {/* 10 */}
-                                    <div className="absolute font-medium px-4 py-2 text-white dark:text-yellow-500 bg-gradient-to-tr from-yellow-500 to-yellow-400 dark:bg-yellow-500 dark:from-transparent dark:to-transparent dark:bg-opacity-25 rounded-full inline-flex items-center justify-center tags-animation tags-9 mt-36 top-24">
-                                        Email Star &amp; Marking System
-                                    </div>
-
-                                    {/* 11 */}
-                                    <div className="absolute font-medium px-4 py-2 text-white dark:text-red-500 bg-gradient-to-tr from-red-500 to-red-400 dark:bg-red-500 dark:from-transparent dark:to-transparent dark:bg-opacity-25 rounded-full inline-flex items-center justify-center tags-animation tags-6 mt-30 top-12">
-                                        Custom Message Styles
-                                    </div>
-
-                                    {/* 12 */}
-                                    <div className="absolute font-medium px-4 py-2 text-white dark:text-indigo-500 bg-gradient-to-tr from-indigo-500 to-indigo-400 dark:bg-indigo-500 dark:from-transparent dark:to-transparent dark:bg-opacity-25 rounded-full inline-flex items-center justify-center tags-animation tags-1 mt-28">
-                                        Attachment Management
-                                    </div>
-
-                                    {/* 13 */}
-                                    <div className="absolute font-medium px-4 py-2 text-white dark:text-teal-500 bg-gradient-to-tr from-teal-500 to-teal-400 dark:bg-teal-500 dark:from-transparent dark:to-transparent dark:bg-opacity-25 rounded-full inline-flex items-center justify-center tags-animation tags-12 mt-80 top-8">
-                                        Smart Ghosting (AI Replies)
-                                    </div>
-
-                                    {/* 14 */}
-                                    <div className="absolute font-medium px-4 py-2 text-white dark:text-gray-900 bg-gradient-to-tr from-purple-500 to-purple-400 dark:bg-purple-500 dark:from-transparent dark:to-transparent dark:bg-opacity-25 rounded-full inline-flex items-center justify-center tags-animation tags-13 mt-52">
-                                        Powerful Search &amp; Filters
-                                    </div>
-
-                                    {/* 15 */}
-                                    <div className="absolute font-medium px-4 py-2 text-white dark:text-gray-900 bg-gradient-to-tr from-pink-500 to-pink-400 dark:bg-pink-500 dark:from-transparent dark:to-transparent dark:bg-opacity-25 rounded-full inline-flex items-center justify-center tags-animation tags-7 mt-4 top-20">
-                                        Data Privacy (No AI Training)
-                                    </div>
-
-                                    {/* 16 */}
-                                    <div className="absolute font-medium px-4 py-2 text-white dark:text-gray-900 bg-gradient-to-tr from-red-500 to-red-400 dark:bg-red-500 dark:from-transparent dark:to-transparent dark:bg-opacity-25 rounded-full inline-flex items-center justify-center tags-animation tags-15 mt-72 top-1">
-                                        End-to-End Encryption &amp; Zero Ads
-                                    </div>
-                                </div>
-
-                                {/* Side gradients */}
-                                <div
-                                    className="absolute top-0 bottom-0 left-0 w-20 bg-gradient-to-r from-white dark:from-gray-900"
-                                    aria-hidden="true"
-                                ></div>
-                                <div
-                                    className="absolute top-0 bottom-0 right-0 w-20 bg-gradient-to-l from-white dark:from-gray-900"
-                                    aria-hidden="true"
-                                ></div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
 
                 {/* UNMATCHED SECURITY & PRIVACY */}
                 {/* <section className="relative py-16 md:py-20">

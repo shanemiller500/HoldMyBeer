@@ -88,8 +88,7 @@ export default function FeaturesBlocks() {
 
             {/* 1st Item */}
             <a
-              href="https://u-mail.ai"
-              target="_blank"
+              href="/umail"
               rel="noopener noreferrer"
               className="flex-shrink-0 w-80 flex flex-col p-6 group bg-gradient-to-tr from-teal-500 to-teal-400 dark:to-teal-500 rounded-lg shadow-2xl transition-transform transform hover:-translate-y-1 hover:shadow-3xl snap-start"
               aria-label="UMail.ai - A clutter-free, sponsored-free smart email client"

@@ -124,7 +124,7 @@ export default function FeaturesBlocks() {
 
                         {/* 5th Item */}
                         <a
-              href="#0"
+              href="/Talent"
               className="flex-shrink-0 w-80 flex flex-col p-6 group bg-gradient-to-tr from-yellow-500 to-yellow-400 dark:to-yellow-500 rounded-lg shadow-2xl transition-transform transform hover:-translate-y-1 hover:shadow-3xl snap-start"
               aria-label="Privacy Dashboard - Manage all your privacy settings in one place"
             >
@@ -155,7 +155,7 @@ export default function FeaturesBlocks() {
 
             {/* 3rd Item */}
             <a
-              href="#0"
+              href="/allergy"
               className="flex-shrink-0 w-80 flex flex-col p-6 group bg-gradient-to-tr from-indigo-500 to-indigo-400 dark:to-indigo-500 rounded-lg shadow-2xl transition-transform transform hover:-translate-y-1 hover:shadow-3xl snap-start"
               aria-label="AI Allergy Check App - Check labels with ease and love the results"
             >
@@ -190,7 +190,7 @@ export default function FeaturesBlocks() {
 
             {/* 4th Item */}
             <a
-              href="#0"
+              href="/Search"
               className="flex-shrink-0 w-80 flex flex-col p-6 group bg-gradient-to-tr from-pink-500 to-pink-400 dark:to-pink-500 rounded-lg shadow-2xl transition-transform transform hover:-translate-y-1 hover:shadow-3xl snap-start"
               aria-label="AI Search Engine - Powerful search without clickbait and tracking"
             >

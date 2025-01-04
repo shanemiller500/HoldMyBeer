@@ -3,6 +3,8 @@
 import { useState } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
+import { FaArrowLeft, FaArrowRight } from 'react-icons/fa' // Optional: For a better-looking arrow icon
+
 
 // Replace these with your actual images
 import HeroImage from '@/public/images/umailHero.png'
@@ -581,10 +583,25 @@ export default function UMailLandingPage() {
             {buttonText}
           </Link>
         </div>
+         
       </div>
+      
     </section>
 
             </main>
+              {/* Navigation Arrows */}
+      <div className=" z-20 flex justify-between px-4 sm:px-6 lg:px-8 mt-20">
+        {/* Back Arrow */}
+        <Link href="/applyPro" className="text-teal-500 hover:text-teal-700 flex items-center">
+          <FaArrowLeft className="mr-2" /> Back
+        </Link>
+
+        {/* Next Arrow */}
+        <Link href="/Talent" className="text-teal-500 hover:text-teal-700 flex items-center">
+          Next <FaArrowRight className="ml-2" />
+        </Link>
+      </div>
         </div>
+        
     )
 }

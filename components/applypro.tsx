@@ -3,6 +3,8 @@
 import { useState } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
+import { FaArrowLeft, FaArrowRight } from 'react-icons/fa' // Optional: For a better-looking arrow icon
+
 
 // Replace these images with your actual ApplyPro images
 import FeatureImage1 from '@/public/images/applyPro.png'
@@ -206,6 +208,19 @@ export default function ApplyProLandingPage() {
         </section>
 
       </main>
+
+        {/* Navigation Arrows */}
+        <div className=" z-20 flex justify-between px-4 sm:px-6 lg:px-8 mt-20">
+        {/* Back Arrow */}
+        <Link href="/" className="text-teal-500 hover:text-teal-700 flex items-center">
+          <FaArrowLeft className="mr-2" /> Home
+        </Link>
+
+        {/* Next Arrow */}
+        <Link href="/umail" className="text-teal-500 hover:text-teal-700 flex items-center">
+          Next <FaArrowRight className="ml-2" />
+        </Link>
+      </div>
     </div>
   )
 }

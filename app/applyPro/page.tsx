@@ -12,7 +12,6 @@ export const metadata = {
       <>
         <Hero />
 
-        <CtaContact />
       </>
     )
   }

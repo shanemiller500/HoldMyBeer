@@ -11,6 +11,8 @@ import LogoImage from '@/public/images/umailLogo.png'
 export default function UMailLandingPage() {
     // State to manage dark mode toggling
     const [darkMode, setDarkMode] = useState(false)
+    const [buttonText, setButtonText] = useState("Get Started Now");
+
 
     return (
         <div className={darkMode ? 'dark' : ''}>
@@ -41,15 +43,67 @@ export default function UMailLandingPage() {
                             AI-powered email for effortless communication. Transform how you connect globally, work, and express yourself. Built to integrate with your Gmail account. (Microsoft integration coming soon)
                         </p>
                         <div className="mt-8" data-aos="fade-down" data-aos-delay="200">
-                            {/* Example CTA button (currently commented out)
-              <Link
-                href="https://u-mail.ai"
-                target="_blank"
-                className="btn text-white bg-teal-500 hover:bg-teal-400 px-6 py-3 rounded-lg shadow-md transition duration-300"
-              >
-                Join Now
-              </Link> 
-              */}
+
+                        </div>
+                    </div>
+                </section>
+
+                                {/* WHAT IS UMAIL */}
+                                <section className="relative pt-16 pb-10 md:pt-20 md:pb-16 bg-gray-100 dark:bg-gray-900">
+                    <div className="max-w-5xl mx-auto px-4 sm:px-6">
+                        <div className="text-center mb-12" data-aos="fade-up">
+                            <h2 className="text-3xl md:text-4xl font-bold text-teal-500 mb-4">What is UMail?</h2>
+                            <p className="text-lg text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
+                                AI-powered email for effortless communication. UMail’s simple and elegant interface lets you get started in minutes, offering powerful features like <strong>advanced voice-to-text</strong> and <strong>global language translations</strong> to boost your productivity.
+                            </p>
+                        </div>
+                        <div className="grid grid-cols-1 md:grid-cols-3 gap-8" data-aos="fade-up" data-aos-delay="100">
+                            <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md">
+                                <h3 className="text-xl font-semibold text-teal-500 mb-4">Built-in Tools</h3>
+                                <p className="text-gray-600 dark:text-gray-400 mb-4">
+                                    UMail's advanced AI tools streamline your emails with mood &amp; tone optimization, professional messaging, and a built-in synonym spell check &amp; dictionary.
+                                </p>
+                            </div>
+                            <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md">
+                                <h3 className="text-xl font-semibold text-teal-500 mb-4">Optimize Your Time</h3>
+                                <p className="text-gray-600 dark:text-gray-400 mb-4">
+                                    Convert your spoken words into polished messages in real-time. Express any emotion—UMail automatically refines it into a clear, professional tone.
+                                </p>
+                            </div>
+                            <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md">
+                                <h3 className="text-xl font-semibold text-teal-500 mb-4">Global Translations</h3>
+                                <p className="text-gray-600 dark:text-gray-400 mb-4">
+                                    Seamlessly translate emails across multiple languages, enabling effortless international communication.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                                {/* CUSTOM MOOD & TONE */}
+                                <section className="relative pt-10 pb-10 md:pt-16 md:pb-16 bg-gray-100 dark:bg-gray-800">
+                    <div className="max-w-5xl mx-auto px-4 sm:px-6">
+                        <div className="md:grid md:grid-cols-2 md:gap-8 items-center">
+                            {/* Text Content */}
+                            <div className="md:pr-8 order-2 md:order-1" data-aos="fade-right">
+                                <h2 className="text-3xl md:text-4xl font-bold text-teal-500 mb-4">Custom Mood &amp; Tone</h2>
+                                <p className="text-gray-600 dark:text-gray-400 text-lg mb-6">
+                                    Tailor your communication to any situation with any mood you're in. Whether formal, professional, or empathetic. UMail ensures your message hits the right note every time.
+                                </p>
+                                <p className="text-gray-600 dark:text-gray-400 text-lg mb-6">
+                                With UMail’s tone adjustment, you can fully be yourself without worrying about how your message will be perceived. Write (or speak) freely, let your emotions, expressions, and sass shine through and trust UMail to handle the fine-tuning.
+                                </p>
+                            </div>
+                            {/* Image */}
+                            <div className="order-1 md:order-2 mb-8 md:mb-0" data-aos="fade-left">
+                                <Image
+                                    src={LogoImage}
+                                    alt="U-Mail Mood & Tone"
+                                    width={250}
+                                    height={250}
+                                    className="mx-auto"
+                                />
+                            </div>
                         </div>
                     </div>
                 </section>
@@ -98,7 +152,7 @@ export default function UMailLandingPage() {
                                         >
                                             <path d="M10 2a8 8 0 100 16 8 8 0 000-16zM9 9V7a1 1 0 012 0v2h2a1 1 0 110 2h-2v2a1 1 0 11-2 0v-2H7a1 1 0 110-2h2z" />
                                         </svg>
-                                        <span>No AI Training on User Data</span>
+                                        <span>No AI/ML Training on User Data or messages</span>
                                     </li>
                                     <li className="flex items-start">
                                         <svg
@@ -108,7 +162,7 @@ export default function UMailLandingPage() {
                                         >
                                             <path d="M10 2a8 8 0 100 16 8 8 0 000-16zM9 9V7a1 1 0 012 0v2h2a1 1 0 110 2h-2v2a1 1 0 11-2 0v-2H7a1 1 0 110-2h2z" />
                                         </svg>
-                                        <span>Never Sold to Third Parties</span>
+                                        <span>Your Data is Never Sold to Third Parties</span>
                                     </li>
                                 </ul>
                             </div>
@@ -194,114 +248,21 @@ export default function UMailLandingPage() {
                     </div>
                 </section>
 
-                {/* CUSTOM MOOD & TONE */}
-                <section className="relative pt-10 pb-10 md:pt-16 md:pb-16 bg-gray-100 dark:bg-gray-800">
-                    <div className="max-w-5xl mx-auto px-4 sm:px-6">
-                        <div className="md:grid md:grid-cols-2 md:gap-8 items-center">
-                            {/* Text Content */}
-                            <div className="md:pr-8 order-2 md:order-1" data-aos="fade-right">
-                                <h2 className="text-3xl md:text-4xl font-bold text-teal-500 mb-4">Custom Mood &amp; Tone</h2>
-                                <p className="text-gray-600 dark:text-gray-400 text-lg mb-6">
-                                    Tailor your communication to any situation with any mood you're in. Whether formal, professional, or empathetic. UMail ensures your message hits the right note every time.
-                                </p>
-                                <p className="text-gray-600 dark:text-gray-400 text-lg mb-6">
-                                With UMail’s tone adjustment, you can fully be yourself without worrying about how your message will be perceived. Write (or speak) freely, let your emotions, expressions, and sass shine through and trust UMail to handle the fine-tuning.
-                                </p>
-                            </div>
-                            {/* Image */}
-                            <div className="order-1 md:order-2 mb-8 md:mb-0" data-aos="fade-left">
-                                <Image
-                                    src={LogoImage}
-                                    alt="U-Mail Mood & Tone"
-                                    width={250}
-                                    height={250}
-                                    className="mx-auto"
-                                />
-                            </div>
-                        </div>
-                    </div>
-                </section>
-
-                {/* SEAMLESS INTEGRATIONS */}
-                <section className="relative pt-10 pb-10 md:pt-16 md:pb-16">
-                    <div className="max-w-5xl mx-auto px-4 sm:px-6 text-center">
-                        <h2
-                            className="text-3xl md:text-4xl font-bold text-teal-500 mb-6"
-                            data-aos="fade-up"
-                        >
-                            Seamless Integrations
-                        </h2>
-                        <p
-                            className="text-lg text-gray-600 dark:text-gray-400 max-w-3xl mx-auto mb-12"
-                            data-aos="fade-up"
-                            data-aos-delay="100"
-                        >
-                            UMail integrates with your favorite tools Gmail, Google Meet, Zoom, and more so you can stay connected and manage everything from one place.
-                        </p>
-                        <div
-                            className="flex flex-col md:flex-row justify-center items-start gap-8"
-                            data-aos="fade-up"
-                            data-aos-delay="200"
-                        >
-                            <div className="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg shadow-md flex-1">
-                                <h3 className="text-xl font-semibold text-teal-500 mb-2">Calendar Scheduling</h3>
-                                <p className="text-gray-600 dark:text-gray-400 text-sm mb-4">
-                                    Integrated Calendar Scheduling with Google Meet and Zoom for seamless meeting setups.
-                                </p>
-                            </div>
-                            <div className="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg shadow-md flex-1">
-                                <h3 className="text-xl font-semibold text-teal-500 mb-2">Collaboration</h3>
-                                <p className="text-gray-600 dark:text-gray-400 text-sm mb-4">
-                                    Real-Time Collaboration Features let teams work together on drafting, editing, and responding to emails.
-                                </p>
-                            </div>
-                            <div className="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg shadow-md flex-1">
-                                <h3 className="text-xl font-semibold text-teal-500 mb-2">Global Translations</h3>
-                                <p className="text-gray-600 dark:text-gray-400 text-sm mb-4">
-                                    Effortlessly translate your emails into multiple languages, bridging communication gaps.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-
-                {/* WHAT IS UMAIL */}
-                <section className="relative pt-16 pb-10 md:pt-20 md:pb-16 bg-gray-100 dark:bg-gray-900">
-                    <div className="max-w-5xl mx-auto px-4 sm:px-6">
-                        <div className="text-center mb-12" data-aos="fade-up">
-                            <h2 className="text-3xl md:text-4xl font-bold text-teal-500 mb-4">What is UMail?</h2>
-                            <p className="text-lg text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
-                                AI-powered email for effortless communication. UMail’s simple and elegant interface lets you get started in minutes, offering powerful features like <strong>advanced voice-to-text</strong> and <strong>global language translations</strong> to boost your productivity.
-                            </p>
-                        </div>
-                        <div className="grid grid-cols-1 md:grid-cols-3 gap-8" data-aos="fade-up" data-aos-delay="100">
-                            <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md">
-                                <h3 className="text-xl font-semibold text-teal-500 mb-4">Built-in Tools</h3>
-                                <p className="text-gray-600 dark:text-gray-400 mb-4">
-                                    UMail's advanced AI tools streamline your emails with mood &amp; tone optimization, professional messaging, and a built-in synonym spell check &amp; dictionary.
-                                </p>
-                            </div>
-                            <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md">
-                                <h3 className="text-xl font-semibold text-teal-500 mb-4">Optimize Your Time</h3>
-                                <p className="text-gray-600 dark:text-gray-400 mb-4">
-                                    Convert your spoken words into polished messages in real-time. Express any emotion—UMail automatically refines it into a clear, professional tone.
-                                </p>
-                            </div>
-                            <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md">
-                                <h3 className="text-xl font-semibold text-teal-500 mb-4">Global Translations</h3>
-                                <p className="text-gray-600 dark:text-gray-400 mb-4">
-                                    Seamlessly translate emails across multiple languages, enabling effortless international communication.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-
                 {/* ADVANCED CONTROLS */}
                 <section className="relative pt-16 pb-10 md:pt-20 md:pb-16">
                     <div className="max-w-6xl mx-auto px-4 sm:px-6">
                         <div className="md:flex md:items-center md:justify-between mb-12">
-                            <div className="md:w-1/2" data-aos="fade-right">
+                            
+                            <div className="md:w-1/2 mt-8 md:mt-0 mr-20" data-aos="fade-right">
+                                <Image
+                                    src={HeroImage}
+                                    alt="Built for Professionals"
+                                    className="mx-auto"
+                                    priority
+                                />
+                            </div>
+
+                            <div className="md:w-1/2" data-aos="fade-left">
                                 <h2 className="text-3xl md:text-4xl font-bold text-teal-500 mb-4">Built for Professionals</h2>
                                 <p className="text-gray-600 dark:text-gray-400 text-lg mb-6">
                                     UMail’s AI doesn’t just read your text, it helps you craft effortless emails with a single word. Whether you’re a seasoned professional or simply looking to save time, UMail streamlines your writing so you can focus on what matters most.
@@ -369,13 +330,48 @@ export default function UMailLandingPage() {
                                     </li>
                                 </ul>
                             </div>
-                            <div className="md:w-1/2 mt-8 md:mt-0" data-aos="fade-left">
-                                <Image
-                                    src={HeroImage}
-                                    alt="Built for Professionals"
-                                    className="mx-auto"
-                                    priority
-                                />
+                        </div>
+                    </div>
+                </section>
+
+                {/* SEAMLESS INTEGRATIONS */}
+                <section className="relative pt-10 pb-10 md:pt-16 md:pb-16 mb-20">
+                    <div className="max-w-5xl mx-auto px-4 sm:px-6 text-center">
+                        <h2
+                            className="text-3xl md:text-4xl font-bold text-teal-500 mb-6"
+                            data-aos="fade-up"
+                        >
+                            Seamless Integrations
+                        </h2>
+                        <p
+                            className="text-lg text-gray-600 dark:text-gray-400 max-w-3xl mx-auto mb-12"
+                            data-aos="fade-up"
+                            data-aos-delay="100"
+                        >
+                            UMail integrates with your favorite tools Gmail, Google Meet, Zoom, and more so you can stay connected and manage everything from one place.
+                        </p>
+                        <div
+                            className="flex flex-col md:flex-row justify-center items-start gap-8"
+                            data-aos="fade-up"
+                            data-aos-delay="200"
+                        >
+                            <div className="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg shadow-md flex-1">
+                                <h3 className="text-xl font-semibold text-teal-500 mb-2">Calendar Scheduling</h3>
+                                <p className="text-gray-600 dark:text-gray-400 text-sm mb-4">
+                                    Integrated Calendar Scheduling with Google Meet and Zoom for seamless meeting setups.
+                                </p>
+                            </div>
+                            <div className="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg shadow-md flex-1">
+                                <h3 className="text-xl font-semibold text-teal-500 mb-2">Collaboration</h3>
+                                <p className="text-gray-600 dark:text-gray-400 text-sm mb-4">
+                                    Real-Time Collaboration Features let teams work together on drafting, editing, and responding to emails.
+                                </p>
+                            </div>
+                            <div className="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg shadow-md flex-1">
+                                <h3 className="text-xl font-semibold text-teal-500 mb-2">Global Translations</h3>
+                                <p className="text-gray-600 dark:text-gray-400 text-sm mb-4">
+                                    Effortlessly translate your emails into multiple languages, bridging communication gaps.
+                                </p>
                             </div>
                         </div>
                     </div>
@@ -524,7 +520,7 @@ export default function UMailLandingPage() {
                 </section>
 
                 {/* UNMATCHED SECURITY & PRIVACY */}
-                <section className="relative py-16 md:py-20">
+                {/* <section className="relative py-16 md:py-20">
                     <div className="max-w-6xl mx-auto px-4 sm:px-6">
                         <div className="text-center mb-12">
                             <h2 className="text-3xl md:text-4xl font-bold text-teal-500 mb-4" data-aos="fade-up">
@@ -555,28 +551,38 @@ export default function UMailLandingPage() {
                             </div>
                         </div>
                     </div>
-                </section>
+                </section> */}
 
                 {/* CTA SECTION */}
                 <section className="relative py-16 md:py-20 bg-teal-500">
-                    <div className="max-w-4xl mx-auto px-4 sm:px-6 text-center">
-                        <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6" data-aos="fade-up">
-                            Ready to Experience the Future of Email?
-                        </h2>
-                        <p className="text-lg md:text-xl text-gray-900 mb-8" data-aos="fade-up" data-aos-delay="100">
-                            Transform your communication with UMail’s AI-driven tools, end-to-end privacy, and seamless integrations.
-                        </p>
-                        <div data-aos="fade-up" data-aos-delay="200">
-                            <Link
-                                href="https://u-mail.ai"
-                                target="_blank"
-                                className="btn text-teal-500 bg-gray-900 hover:bg-gray-700 px-8 py-4 rounded-lg shadow-md transition duration-300 text-lg font-semibold"
-                            >
-                                Get Started Now
-                            </Link>
-                        </div>
-                    </div>
-                </section>
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 text-center">
+        <h2
+          className="text-3xl md:text-4xl font-bold text-gray-900 mb-6"
+          data-aos="fade-up"
+        >
+          Ready to Experience the Future of Email?
+        </h2>
+        <p
+          className="text-lg md:text-xl text-gray-900 mb-8"
+          data-aos="fade-up"
+          data-aos-delay="100"
+        >
+          Transform your communication with UMail’s AI-driven tools, end-to-end
+          privacy, and seamless integrations.
+        </p>
+        <div data-aos="fade-up" data-aos-delay="200">
+          <Link
+            href="https://u-mail.ai"
+            target="_blank"
+            className="btn text-teal-500 bg-gray-900 hover:bg-gray-700 px-8 py-4 rounded-lg shadow-md transition duration-300 text-lg font-semibold"
+            onMouseEnter={() => setButtonText("New website coming soon")}
+            onMouseLeave={() => setButtonText("Get Started Now")}
+          >
+            {buttonText}
+          </Link>
+        </div>
+      </div>
+    </section>
 
             </main>
         </div>

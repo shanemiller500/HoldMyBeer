@@ -202,10 +202,10 @@ export default function UMailLandingPage() {
                             <div className="md:pr-8 order-2 md:order-1" data-aos="fade-right">
                                 <h2 className="text-3xl md:text-4xl font-bold text-teal-500 mb-4">Custom Mood &amp; Tone</h2>
                                 <p className="text-gray-600 dark:text-gray-400 text-lg mb-6">
-                                    Tailor your communication to any situation with any mood you're in. Whether formal, professional, or empathetic—UMail ensures your message hits the right note every time.
+                                    Tailor your communication to any situation with any mood you're in. Whether formal, professional, or empathetic. UMail ensures your message hits the right note every time.
                                 </p>
                                 <p className="text-gray-600 dark:text-gray-400 text-lg mb-6">
-                                    With UMail's tone adjustment, you can be yourself without worrying about how your message will be received. Write (or speak) freely and let UMail do the fine-tuning.
+                                With UMail’s tone adjustment, you can fully be yourself without worrying about how your message will be perceived. Write (or speak) freely, let your emotions, expressions, and sass shine through and trust UMail to handle the fine-tuning.
                                 </p>
                             </div>
                             {/* Image */}
@@ -236,7 +236,7 @@ export default function UMailLandingPage() {
                             data-aos="fade-up"
                             data-aos-delay="100"
                         >
-                            UMail integrates with your favorite tools—Gmail, Google Meet, Zoom, and more—so you can stay connected and manage everything from one place.
+                            UMail integrates with your favorite tools Gmail, Google Meet, Zoom, and more so you can stay connected and manage everything from one place.
                         </p>
                         <div
                             className="flex flex-col md:flex-row justify-center items-start gap-8"
@@ -531,7 +531,7 @@ export default function UMailLandingPage() {
                                 Unmatched Security &amp; Privacy
                             </h2>
                             <p className="text-lg text-gray-600 dark:text-gray-400" data-aos="fade-up" data-aos-delay="100">
-                                Your emails are yours alone—secure, private, and never shared. Total control, total security.
+                                Your emails are yours alone secure, private, and never shared. Total control, total security.
                             </p>
                         </div>
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-8" data-aos="fade-up" data-aos-delay="200">
@@ -550,7 +550,7 @@ export default function UMailLandingPage() {
                             <div className="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg shadow-md">
                                 <h3 className="text-xl font-semibold text-teal-500 mb-2">Consumer-First Security</h3>
                                 <p className="text-gray-600 dark:text-gray-400 text-sm">
-                                    Your privacy isn’t negotiable. UMail keeps your messages truly personal—no data sharing, no AI training, no exceptions.
+                                    Your privacy isn’t negotiable. UMail keeps your messages truly personal no data sharing, no AI training, no exceptions.
                                 </p>
                             </div>
                         </div>

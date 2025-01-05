@@ -132,7 +132,7 @@ export default function UMailLandingPage() {
                                 <div className="absolute inset-0">
                                     {/* 1 */}
                                     <div className="absolute font-medium px-4 py-2 text-white dark:text-indigo-500 bg-gradient-to-tr from-indigo-500 to-indigo-400 dark:bg-indigo-500 dark:from-transparent dark:to-transparent dark:bg-opacity-25 rounded-full inline-flex items-center justify-center tags-animation mt-12">
-                                        Voice-to-Text Dictation
+                                    Voice & Accent Enhancement
                                     </div>
 
                                     {/* 2 */}
@@ -147,7 +147,7 @@ export default function UMailLandingPage() {
 
                                     {/* 4 */}
                                     <div className="absolute font-medium px-4 py-2 text-white dark:text-indigo-500 bg-gradient-to-tr from-indigo-500 to-indigo-400 dark:bg-indigo-500 dark:from-transparent dark:to-transparent dark:bg-opacity-25 rounded-full inline-flex items-center justify-center tags-animation tags-4 mt-72">
-                                        Integrated Calendar Scheduling
+                                    Multilingual messaging
                                     </div>
 
                                     {/* 5 */}
@@ -162,7 +162,7 @@ export default function UMailLandingPage() {
 
                                     {/* 7 */}
                                     <div className="absolute font-medium px-4 py-2 text-white dark:text-teal-500 bg-gradient-to-tr from-teal-500 to-teal-400 dark:bg-teal-500 dark:from-transparent dark:to-transparent dark:bg-opacity-25 rounded-full inline-flex items-center justify-center tags-animation tags-6 mt-20 top-52">
-                                        Global Email Translations
+                                    Custom Literary Styles
                                     </div>
 
                                     {/* 8 */}
@@ -187,12 +187,12 @@ export default function UMailLandingPage() {
 
                                     {/* 12 */}
                                     <div className="absolute font-medium px-4 py-2 text-white dark:text-indigo-500 bg-gradient-to-tr from-indigo-500 to-indigo-400 dark:bg-indigo-500 dark:from-transparent dark:to-transparent dark:bg-opacity-25 rounded-full inline-flex items-center justify-center tags-animation tags-1 mt-28">
-                                        Attachment Management
+                                    Context-Aware Messaging
                                     </div>
 
                                     {/* 13 */}
                                     <div className="absolute font-medium px-4 py-2 text-white dark:text-teal-500 bg-gradient-to-tr from-teal-500 to-teal-400 dark:bg-teal-500 dark:from-transparent dark:to-transparent dark:bg-opacity-25 rounded-full inline-flex items-center justify-center tags-animation tags-12 mt-80 top-8">
-                                        Smart Ghosting (AI Replies)
+                                        Smart Ghosting (Auto Timed Replies)
                                     </div>
 
                                     {/* 14 */}
@@ -202,12 +202,12 @@ export default function UMailLandingPage() {
 
                                     {/* 15 */}
                                     <div className="absolute font-medium px-4 py-2 text-white dark:text-gray-900 bg-gradient-to-tr from-pink-500 to-pink-400 dark:bg-pink-500 dark:from-transparent dark:to-transparent dark:bg-opacity-25 rounded-full inline-flex items-center justify-center tags-animation tags-7 mt-4 top-20">
-                                        Data Privacy (No AI Training)
+                                    Context based Automated Replies
                                     </div>
 
                                     {/* 16 */}
                                     <div className="absolute font-medium px-4 py-2 text-white dark:text-gray-900 bg-gradient-to-tr from-red-500 to-red-400 dark:bg-red-500 dark:from-transparent dark:to-transparent dark:bg-opacity-25 rounded-full inline-flex items-center justify-center tags-animation tags-15 mt-72 top-1">
-                                        End-to-End Encryption &amp; Zero Ads
+                                    Spelling & Grammar Assistant
                                     </div>
                                 </div>
 

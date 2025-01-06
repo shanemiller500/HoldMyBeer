@@ -522,6 +522,33 @@ export default function UMailLandingPage() {
                     </div>
                 </section>
 
+                {/* TRANSLATE CODES & ACRONYMS */}
+<section className="relative pt-10 pb-10 md:pt-16 md:pb-16 bg-gray-100 dark:bg-gray-800 mb-20">
+    <div className="max-w-5xl mx-auto px-4 sm:px-6">
+        <div className="md:grid md:grid-cols-2 md:gap-8 items-center">
+            {/* Image */}
+            <div className="order-1 md:order-2 mb-8 md:mb-0" data-aos="fade-left">
+                <Image
+                    src={HeroImage} // Replace with your image source
+                    alt="UMail Code & Acronym Translation"
+
+                    className="mx-auto"
+                />
+            </div>
+            {/* Text Content */}
+            <div className="md:pl-8 order-2 md:order-1" data-aos="fade-right">
+                <h2 className="text-3xl md:text-4xl font-bold text-teal-500 mb-4">Translate Codes & Acronyms</h2>
+                <p className="text-gray-600 dark:text-gray-400 text-lg mb-6">
+                    Speak in your industry’s specific terminology, healthcare, law enforcement, military, aviation, and more. UMail effortlessly converts your codes and acronyms into clear, understandable language.
+                </p>
+                <p className="text-gray-600 dark:text-gray-400 text-lg mb-6">
+                Save countless hours and eliminate mountains of paperwork with UMail. Let us translate your code and acronyms into professional language, so you can focus on what matters most with confidence and clarity.                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
 
                 {/* UNMATCHED SECURITY & PRIVACY */}
                 {/* <section className="relative py-16 md:py-20">

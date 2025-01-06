@@ -1,5 +1,5 @@
 export const metadata = {
-  title: 'Home - HMB-CO | AI-Powered Solutions for Modern Businesses',
+  title: 'Home - HMB-CO | Solutions for Modern Humans & Businesses',
   description: 'Discover HMB-CO’s cutting-edge AI applications—like ApplyPro & Umail—that drive innovation, streamline workflows, and accelerate business growth. From productivity to communications, our intelligent solutions empower organizations to thrive in the digital age.',
   keywords: [
     'HMB-CO',
@@ -12,7 +12,6 @@ export const metadata = {
     'AI tools',
     'AI apps',
     'Artificial intelligence',
-    'Machine learning',
     'Generative AI',
     'Natural language processing',
     'AI-powered solutions',
@@ -31,7 +30,8 @@ export const metadata = {
     'Scalable AI platforms',
     'Autonomous agents',
     'Business process automation',
-    'Innovation in AI'
+    'Innovation in AI',
+    'Awesomeness',
   ]
   .join(', '),
 
@@ -39,7 +39,7 @@ export const metadata = {
   openGraph: {
     type: 'website',
     url: 'https://holdmybeer.info/',
-    title: 'HMBCO | AI-Powered Solutions for Modern Businesses',
+    title: 'HMBCO |Solutions for Modern Humans & Businesses',
     description: 'Revolutionize your business with HMB-CO’s suite of AI applications like ApplyPro & Umail. Streamline workflows, empower collaboration, and unlock new growth opportunities using cutting-edge technology.',
     images: [
       {
@@ -49,7 +49,7 @@ export const metadata = {
         alt: 'HMB-CO banner',
       },
     ],
-    siteName: 'HMB-CO',
+    siteName: 'holdmybeer.info',
   },
 
   // // Twitter Card

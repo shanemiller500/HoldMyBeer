@@ -563,7 +563,7 @@ export default function UMailLandingPage() {
               className="text-3xl md:text-4xl font-bold text-gray-900 mb-6"
               data-aos="fade-up"
             >
-              Ready to Experience the Future of Email?
+              Ready to Experience the Future of Communications?
             </h2>
             <p
               className="text-lg md:text-xl text-gray-900 mb-8"

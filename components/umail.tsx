@@ -67,7 +67,7 @@ export default function UMailLandingPage() {
               <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md">
                 <h3 className="text-xl font-semibold text-teal-500 mb-4">Optimize Your Time</h3>
                 <p className="text-gray-600 dark:text-gray-400 mb-4">
-                  Convert your spoken words into polished messages in real-time. Express any emotion—UMail automatically refines it into a clear, professional tone.
+                  Convert your spoken words into polished messages in real-time. Express any emotion, UMail automatically refines it into a clear, professional tone.
                 </p>
               </div>
               <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md">

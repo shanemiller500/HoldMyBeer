@@ -9,6 +9,7 @@ declare global {
 import { useEffect } from 'react'
 import { usePathname } from 'next/navigation'
 import Script from 'next/script' // Added import for Script
+import { Analytics } from "@vercel/analytics/react"
 
 import './css/style.css'
 
@@ -82,6 +83,7 @@ export default function RootLayout({
             <Header />
             <main className="grow">
               {children}
+              <Analytics />
             </main>
             <Footer />
           </div>

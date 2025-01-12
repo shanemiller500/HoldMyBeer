@@ -28,11 +28,12 @@ export default function FeaturesBlocks() {
             Apps Made for People Who Care About Privacy
           </h2>
           <p className="mt-4 text-lg text-gray-600 dark:text-gray-400">
-            The apps below are either nearing production or well within the capabilities of our current team. As we grow, we’ll onboard more developers and accelerate the release of new applications. Stay tuned — 
-            <span className="text-teal-500 font-semibold">
-              {" "}this is just the beginning of a new era in how we use the internet ad-free.
-            </span>
-          </p>
+  The applications listed below are either already released, nearing production, or well within the capabilities of our current team. As we grow, we will onboard more people and accelerate the release of new applications. Stay tuned — 
+  <span className="text-teal-500 font-semibold">
+    this is just the beginning of a new era in how we use the internet ad-free.
+  </span>
+</p>
+
         </div>
 
         {/* Scroll Container with Navigation Arrows */}

@@ -80,6 +80,79 @@ export default function UMailLandingPage() {
           </div>
         </section>
 
+{/* Custom Solutions for Any Industry */}
+<section className="relative pt-16 pb-10 md:pt-20 md:pb-16 px-4 sm:px-6">
+  <div className="max-w-6xl mx-auto">
+    <div className="md:flex md:items-center md:justify-between mb-12">
+      
+      {/* Image Section */}
+      <div className="md:w-1/2 mt-8 md:mt-0 mr-0 md:mr-20 mb-8 md:mb-0" data-aos="fade-right">
+        <Image
+          src={HeroImage}
+          alt="Custom Solutions for Any Industry"
+          className="mx-auto w-full max-w-lg h-auto"
+          priority
+        />
+      </div>
+
+      {/* Content Section */}
+      <div className="md:w-1/2" data-aos="fade-left">
+        <h2 className="text-3xl md:text-4xl font-bold text-teal-500 mb-4">
+          Custom Solutions for Any Industry
+        </h2>
+        <p className="text-gray-600 dark:text-gray-400 text-lg mb-6">
+          UMail offers tailored solutions for industries like healthcare, law enforcement, military support, HR departments, and more. We customize our products to streamline processes, eliminate middlemen, and save valuable time, allowing you and your team to focus on growing your business.
+        </p>
+        <ul className="mt-4 space-y-4">
+          <li className="flex items-start">
+            <svg
+              className="w-6 h-6 text-teal-500 mr-3 flex-shrink-0"
+              viewBox="0 0 20 20"
+              fill="currentColor"
+            >
+              <path d="M10 2a8 8 0 100 16 8 8 0 000-16zM9 9V7a1 1 0 012 0v2h2a1 1 0 110 2h-2v2a1 1 0 11-2 0v-2H7a1 1 0 110-2h2z" />
+            </svg>
+            <span>Healthcare: Streamline patient communications and administrative tasks.</span>
+          </li>
+          <li className="flex items-start">
+            <svg
+              className="w-6 h-6 text-teal-500 mr-3 flex-shrink-0"
+              viewBox="0 0 20 20"
+              fill="currentColor"
+            >
+              <path d="M10 2a8 8 0 100 16 8 8 0 000-16zM9 9V7a1 1 0 012 0v2h2a1 1 0 110 2h-2v2a1 1 0 11-2 0v-2H7a1 1 0 110-2h2z" />
+            </svg>
+            <span>Law Enforcement & Military: Enhance operational efficiency with secure communications.</span>
+          </li>
+          <li className="flex items-start">
+            <svg
+              className="w-6 h-6 text-teal-500 mr-3 flex-shrink-0"
+              viewBox="0 0 20 20"
+              fill="currentColor"
+            >
+              <path d="M10 2a8 8 0 100 16 8 8 0 000-16zM9 9V7a1 1 0 012 0v2h2a1 1 0 110 2h-2v2a1 1 0 11-2 0v-2H7a1 1 0 110-2h2z" />
+            </svg>
+            <span>HR Departments: Manage employee communications and severance packages seamlessly.</span>
+          </li>
+          <li className="flex items-start">
+            <svg
+              className="w-6 h-6 text-teal-500 mr-3 flex-shrink-0"
+              viewBox="0 0 20 20"
+              fill="currentColor"
+            >
+              <path d="M10 2a8 8 0 100 16 8 8 0 000-16zM9 9V7a1 1 0 012 0v2h2a1 1 0 110 2h-2v2a1 1 0 11-2 0v-2H7a1 1 0 110-2h2z" />
+            </svg>
+            <span>Business Growth: Reduce overhead and focus on scaling your operations.</span>
+          </li>
+        </ul>
+       
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
         {/* COMPREHENSIVE FEATURE LIST - ANIMATED */}
         <section className="relative pb-16 md:pb-20 bg-gray-100 dark:bg-gray-900 mt-20 px-4 sm:px-6">
           <div className="max-w-6xl mx-auto">

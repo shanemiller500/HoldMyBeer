@@ -70,7 +70,7 @@ export default function FeaturesBlocks() {
                 <h3 className="text-xl font-bold font-red-hat-display text-white">ApplyPro.ai</h3>
               </div>
               <p className="mt-4 text-white opacity-90 flex-grow">
-                Research-backed Cover Letters & Tailored Resumes in seconds! Get your free 6 months unlimited subscription from now untill December 31st 2024
+                 ApplyPro is live world wide! Create research-backed cover letters and tailored resumes in seconds. Sign up today and accelerate your career journey.
               </p>
               <div className="mt-4">
                 <svg

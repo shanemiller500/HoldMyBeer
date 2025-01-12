@@ -33,14 +33,14 @@ export default function UMailLandingPage() {
       className="mt-10 text-3xl md:text-5xl font-bold text-teal-500 font-red-hat-display"
       data-aos="fade-down"
     >
-      The Future of Global Communication
+      AI-Powered Solutions for Effortless Communication.
     </h1>
     <p
       className="mt-4 text-gray-600 dark:text-gray-400 text-lg md:text-xl"
       data-aos="fade-down"
       data-aos-delay="100"
     >
-      AI-powered email for effortless communication. Transform how you connect
+      The future of global communication. UMail transforms how you connect
       globally, work, and express yourself. Built to seamlessly integrate with
       your Gmail & Google Workspace accounts. (Microsoft integration coming soon)
     </p>
@@ -101,7 +101,7 @@ export default function UMailLandingPage() {
           Custom Solutions for Any Industry
         </h2>
         <p className="text-gray-600 dark:text-gray-400 text-lg mb-6">
-          UMail offers tailored solutions for industries like healthcare, law enforcement, military support, HR departments, and more. We customize our products to streamline processes, eliminate middlemen, and save valuable time, allowing you and your team to focus on growing your business.
+          UMail offers tailored solutions for industries like Healthcare, Law Enforcement, Military support, HR Departments, and more. We customize our products to streamline processes, eliminate middlemen and save valuable time, allowing you and your team to focus on growing your business.
         </p>
         <ul className="mt-4 space-y-4">
           <li className="flex items-start">

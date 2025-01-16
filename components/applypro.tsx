@@ -8,7 +8,7 @@ import { FaArrowLeft, FaArrowRight } from 'react-icons/fa' // Optional: For a be
 
 // Replace these images with your actual ApplyPro images
 import FeatureImage1 from '@/public/images/applyPro.png'
-import FeatureImage2 from '@/public/images/applyProLogo.png'
+import FeatureImage2 from '@/public/images/ApplyPro_dude.jpg'
 
 export default function ApplyProLandingPage() {
   // State to manage dark mode toggling
@@ -121,13 +121,23 @@ export default function ApplyProLandingPage() {
       </div>
 
 
-      <div className="relative w-full ml-20" data-aos="fade-left">
-        <Image
-          src={FeatureImage1}
-          alt="ApplyPro Feature Illustration"
-          priority
-        />
+      <div className="relative w-full " data-aos="fade-left">
+              {/* Video Section */}
+     
+        <video
+          src="/videos/ApplyPro1.mp4"
+          autoPlay
+          muted
+          loop
+          playsInline
+          className="mx-auto w-full max-w-lg h-auto"
+          // Optionally, add controls if needed
+          // controls
+        >
+          Your browser does not support the video tag.
+        </video>
       </div>
+     
     </div>
   </div>
 </section>
@@ -142,12 +152,13 @@ export default function ApplyProLandingPage() {
               
               {/* Left Column (Image) */}
               <div
-                className="relative order-2 md:order-1 mt-8 md:mt-0 mr-20"
+                className="mx-auto w-full max-w-lg h-auto"
                 data-aos="fade-right"
               >
                 <Image
                   src={FeatureImage2}
                   alt="ApplyPro Logo"
+                  className="mx-auto w-full max-w-lg h-auto mr-10"
                 />
               </div>
 

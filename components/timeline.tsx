@@ -50,9 +50,8 @@ export default function Timeline() {
                 >
                   <span className="block w-12 truncate">January 2024</span>
                   <span
-                    className={`block w-3.5 h-3.5 bg-gray-400 dark:bg-gray-700 border-2 border-white dark:border-gray-900 rounded-full ${
-                      year === 'Jan2024' && 'bg-teal-500 dark:bg-teal-500'
-                    }`}
+                    className={`block w-3.5 h-3.5 bg-gray-400 dark:bg-gray-700 border-2 border-white dark:border-gray-900 rounded-full ${year === 'Jan2024' && 'bg-teal-500 dark:bg-teal-500'
+                      }`}
                   ></span>
                 </button>
 
@@ -63,9 +62,8 @@ export default function Timeline() {
                 >
                   <span className="block w-12 truncate">May 2024</span>
                   <span
-                    className={`block w-3.5 h-3.5 bg-gray-400 dark:bg-gray-700 border-2 border-white dark:border-gray-900 rounded-full ${
-                      year === 'May2024' && 'bg-teal-500 dark:bg-teal-500'
-                    }`}
+                    className={`block w-3.5 h-3.5 bg-gray-400 dark:bg-gray-700 border-2 border-white dark:border-gray-900 rounded-full ${year === 'May2024' && 'bg-teal-500 dark:bg-teal-500'
+                      }`}
                   ></span>
                 </button>
 
@@ -76,9 +74,8 @@ export default function Timeline() {
                 >
                   <span className="block w-12 truncate">September 2024</span>
                   <span
-                    className={`block w-3.5 h-3.5 bg-gray-400 dark:bg-gray-700 border-2 border-white dark:border-gray-900 rounded-full ${
-                      year === 'Sep2024' && 'bg-teal-500 dark:bg-teal-500'
-                    }`}
+                    className={`block w-3.5 h-3.5 bg-gray-400 dark:bg-gray-700 border-2 border-white dark:border-gray-900 rounded-full ${year === 'Sep2024' && 'bg-teal-500 dark:bg-teal-500'
+                      }`}
                   ></span>
                 </button>
 
@@ -89,9 +86,8 @@ export default function Timeline() {
                 >
                   <span className="block w-12 truncate">October 2024</span>
                   <span
-                    className={`block w-3.5 h-3.5 bg-gray-400 dark:bg-gray-700 border-2 border-white dark:border-gray-900 rounded-full ${
-                      year === 'Oct2024' && 'bg-teal-500 dark:bg-teal-500'
-                    }`}
+                    className={`block w-3.5 h-3.5 bg-gray-400 dark:bg-gray-700 border-2 border-white dark:border-gray-900 rounded-full ${year === 'Oct2024' && 'bg-teal-500 dark:bg-teal-500'
+                      }`}
                   ></span>
                 </button>
 
@@ -102,9 +98,8 @@ export default function Timeline() {
                 >
                   <span className="block w-12 truncate">December 2024</span>
                   <span
-                    className={`block w-3.5 h-3.5 bg-gray-400 dark:bg-gray-700 border-2 border-white dark:border-gray-900 rounded-full ${
-                      year === 'Dec2024' && 'bg-teal-500 dark:bg-teal-500'
-                    }`}
+                    className={`block w-3.5 h-3.5 bg-gray-400 dark:bg-gray-700 border-2 border-white dark:border-gray-900 rounded-full ${year === 'Dec2024' && 'bg-teal-500 dark:bg-teal-500'
+                      }`}
                   ></span>
                 </button>
 
@@ -118,9 +113,8 @@ export default function Timeline() {
                 >
                   <span className="block w-12 truncate">January 2025</span>
                   <span
-                    className={`block w-3.5 h-3.5 bg-gray-400 dark:bg-gray-700 border-2 border-white dark:border-gray-900 rounded-full ${
-                      year === 'Jan2025' && 'bg-teal-500 dark:bg-teal-500'
-                    }`}
+                    className={`block w-3.5 h-3.5 bg-gray-400 dark:bg-gray-700 border-2 border-white dark:border-gray-900 rounded-full ${year === 'Jan2025' && 'bg-teal-500 dark:bg-teal-500'
+                      }`}
                   ></span>
                 </button>
               </div>
@@ -370,33 +364,66 @@ export default function Timeline() {
               {/* ================== January 2025 (year === 'Jan2025') ================== */}
               <div className={`grow ${year !== 'Jan2025' && 'hidden'}`}>
                 <div className="grid md:grid-cols-2 gap-6">
-                <article className="p-6 bg-white dark:bg-gray-800 shadow-2xl flex flex-col">
-  <header>
-    <h3 className="h4 font-red-hat-display mb-1">
-      <a href="#0">ApplyPro Launches Worldwide</a>
-    </h3>
-  </header>
-  <div className="text-gray-600 dark:text-gray-400 grow">
-    <p>
-      ApplyPro has officially launched, welcoming its first wave of users through a dynamic marketing campaign. We’re thrilled to see new sign-ups daily as we continue refining our platform and delivering unparalleled value to job seekers everywhere.
-    </p>
-  </div>
-</article>
+                  <article className="p-6 bg-white dark:bg-gray-800 shadow-2xl flex flex-col">
+                    <header>
+                      <h3 className="h4 font-red-hat-display mb-1">
+                        <a href="#0">ApplyPro Launches Worldwide</a>
+                      </h3>
+                    </header>
+                    <div className="text-gray-600 dark:text-gray-400 grow">
+                      <p>
+                        ApplyPro has officially launched, welcoming its first wave of users through a dynamic marketing campaign. We’re thrilled to see new sign-ups daily as we continue refining our platform and delivering unparalleled value to job seekers everywhere.
+                      </p>
+                    </div>
+                  </article>
 
-<article className="p-6 bg-white dark:bg-gray-800 shadow-2xl flex flex-col">
-  <header>
-    <h3 className="h4 font-red-hat-display mb-1">
-      <a href="#0">Early Advances with the Talent Acquisition Platform</a>
-    </h3>
-  </header>
-  <div className="text-gray-600 dark:text-gray-400 grow">
-  <p>
-  Our data-driven Talent Acquisition platform streamlines recruiting by bulk-scanning resumes and power-ranking candidates based on job descriptions. With a click, you can generate courteous, customizable email responses, whether a candidate is moving forward or being passed on, ensuring no one is left in the dark.
-</p>
+                  <article className="p-6 bg-white dark:bg-gray-800 shadow-2xl flex flex-col">
+                    <header>
+                      <h3 className="h4 font-red-hat-display mb-1">
+                        <a href="#0">Early Advances with the Talent Acquisition Platform</a>
+                      </h3>
+                    </header>
+                    <div className="text-gray-600 dark:text-gray-400 grow">
+                      <p>
+                        Our data-driven Talent Acquisition platform streamlines recruiting by bulk-scanning resumes and power-ranking candidates based on job descriptions. 
+                      </p>
 
 
-  </div>
-</article>
+                    </div>
+                  </article>
+
+                  {/* <article className="p-6 bg-white dark:bg-gray-800 shadow-2xl flex flex-col">
+                    <header>
+                      <h3 className="h4 font-red-hat-display mb-1">
+                        <a href="#0">UMail Custom Products</a>
+                      </h3>
+                    </header>
+                    <div className="text-gray-600 dark:text-gray-400 grow">
+                      <p>
+                        UMail is proud to introduce our custom reporting tool designed specifically for law enforcement agencies, currently undergoing early testing by officers.
+                      </p>
+                      <br />
+                      <p>This versatile tool is set to transform the reporting process, potentially reducing paperwork time by over 90%. With more efficient reporting, officers can dedicate more time to patrolling and serving their communities effectively.</p>
+                    </div>
+                  </article> */}
+
+                  <article className="p-6 bg-white dark:bg-gray-800 shadow-2xl flex flex-col">
+                    <header>
+                      <h3 className="h4 font-red-hat-display mb-1">
+                        <a href="#0">ApplyPro's Early Milestones</a>
+                      </h3>
+                    </header>
+                    <div className="text-gray-600 dark:text-gray-400 grow">
+                      <p>
+                        We’re excited to share that ApplyPro reached 100 users in just 15 days since our launch! We’re grateful for the support and are actively developing the V2 User Portal for a more interactive experience, stay tuned for the update.
+                      </p>
+                      <br />
+                      <p>
+                        Thanks to user feedback, ApplyPro is evolving to better serve job seekers. Our platform supports multiple languages and caters to diverse professionals.</p>
+                    </div>
+                  </article>
+
+
 
 
                 </div>

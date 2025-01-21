@@ -13,7 +13,9 @@ export default function HeroHome() {
             <div className="md:col-span-9 lg:col-span-9 mb-8 md:mb-0 text-center md:text-left">
             {/* <p className="text-xl text-gray-600 dark:text-gray-400" data-aos="fade-down" data-aos-delay="150">Aren't you tired of being bombarded with ads? Well,  </p> */}
 
-              <h1 className="h1 lg:text-6xl mb-4 font-red-hat-display font-black" data-aos="fade-down">Hold My Beer... <span className="text-teal-500">Watch this!</span></h1>
+            <h1 className="h1 lg:text-5xl mb-4 font-red-hat-display font-black" data-aos="fade-down">
+              Software crafted with <span className="text-teal-500"> privacy</span> in mind.
+            </h1>
               {/* CTA form */}
               
               <ul className="max-w-sm sm:max-w-md mx-auto md:max-w-none text-gray-600 dark:text-gray-400 mt-8 -mb-2" data-aos="fade-down" data-aos-delay="450">

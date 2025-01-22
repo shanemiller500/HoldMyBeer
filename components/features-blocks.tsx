@@ -62,39 +62,7 @@ export default function FeaturesBlocks() {
           >
 
             {/* 1st Item */}
-            <a
-              href="/umail"
-              rel="noopener noreferrer"
-              onClick={() => handleFeatureClick('UMail.ai', '/umail')}
-              className="flex-shrink-0 w-80 flex flex-col p-6 group bg-gradient-to-tr from-teal-500 to-teal-400 dark:to-teal-500 rounded-lg shadow-2xl transition-transform transform hover:-translate-y-1 hover:shadow-3xl snap-start"
-              aria-label="UMail.ai - A clutter-free, sponsored-free smart email client"
-            >
-              <div className="flex-shrink-0">
-                <svg className="w-10 h-10 text-white mb-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
-                  <path
-                    className="fill-current"
-                    d="M19 18.414l-4 4L9.586 17l.707-.707L12 14.586V8.414l-5-5L4.414 6l6.293 6.293-1.414 1.414L1.586 6 7 .586l7 7v5l8.463-8.463a3.828 3.828 0 115.414 5.414L21 16.414v6.172l5 5L28.586 25l-6.293-6.293 1.414-1.414L31.414 25 26 30.414l-7-7v-5zm-4 1.172L26.463 8.123a1.828 1.828 0 10-2.586-2.586L12.414 17 15 19.586zM11 30v2C4.925 32 0 27.075 0 21h2a9 9 0 009 9zm0-5v2a6 6 0 01-6-6h2a4 4 0 004 4z"
-                    fillRule="nonzero"
-                  />
-                </svg>
-                <h3 className="text-xl font-bold font-red-hat-display text-white">In Testing: UMail.ai</h3>
-              </div>
-              <p className="mt-4 text-white opacity-90 flex-grow">
-                A clutter-free, sponsored-free smart email client, ready to integrate with your Gmail account. (Microsoft integration coming soon)
-              </p>
-              <div className="mt-4">
-                <svg
-                  className="w-6 h-6 text-white transform group-hover:translate-x-1 transition-transform duration-300"
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    className="fill-current"
-                    d="M13 11V5.057L22.72 12 13 18.943V13H2v-2h11zm2 4.057L19.28 12 15 8.943v6.114z"
-                  />
-                </svg>
-              </div>
-            </a>
+           
 
             {/* 2nd Item */}
             <a
@@ -131,7 +99,76 @@ export default function FeaturesBlocks() {
               </div>
             </a>
 
+            <a
+              href="/umail"
+              rel="noopener noreferrer"
+              onClick={() => handleFeatureClick('UMail.ai', '/umail')}
+              className="flex-shrink-0 w-80 flex flex-col p-6 group bg-gradient-to-tr from-teal-500 to-teal-400 dark:to-teal-500 rounded-lg shadow-2xl transition-transform transform hover:-translate-y-1 hover:shadow-3xl snap-start"
+              aria-label="UMail.ai - A clutter-free, sponsored-free smart email client"
+            >
+              <div className="flex-shrink-0">
+                <svg className="w-10 h-10 text-white mb-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+                  <path
+                    className="fill-current"
+                    d="M19 18.414l-4 4L9.586 17l.707-.707L12 14.586V8.414l-5-5L4.414 6l6.293 6.293-1.414 1.414L1.586 6 7 .586l7 7v5l8.463-8.463a3.828 3.828 0 115.414 5.414L21 16.414v6.172l5 5L28.586 25l-6.293-6.293 1.414-1.414L31.414 25 26 30.414l-7-7v-5zm-4 1.172L26.463 8.123a1.828 1.828 0 10-2.586-2.586L12.414 17 15 19.586zM11 30v2C4.925 32 0 27.075 0 21h2a9 9 0 009 9zm0-5v2a6 6 0 01-6-6h2a4 4 0 004 4z"
+                    fillRule="nonzero"
+                  />
+                </svg>
+                <h3 className="text-xl font-bold font-red-hat-display text-white">In Testing: UMail.ai</h3>
+              </div>
+              <p className="mt-4 text-white opacity-90 flex-grow">
+                A clutter-free, sponsored-free smart email client, ready to integrate with your Gmail account. (Microsoft integration coming soon)
+              </p>
+              <div className="mt-4">
+                <svg
+                  className="w-6 h-6 text-white transform group-hover:translate-x-1 transition-transform duration-300"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    className="fill-current"
+                    d="M13 11V5.057L22.72 12 13 18.943V13H2v-2h11zm2 4.057L19.28 12 15 8.943v6.114z"
+                  />
+                </svg>
+              </div>
+            </a>
+
             {/* 3rd Item */}
+
+            <a
+              href="/Talent"
+              onClick={() => handleFeatureClick('Talent Acquisition Platform', '/Talent')}
+              className="flex-shrink-0 w-80 flex flex-col p-6 group bg-gradient-to-tr from-yellow-500 to-yellow-400 dark:to-yellow-500 rounded-lg shadow-2xl transition-transform transform hover:-translate-y-1 hover:shadow-3xl snap-start"
+              aria-label="Talent Acquisition Platform - Manage recruitment efficiently"
+            >
+              <div className="flex-shrink-0">
+                <svg className="w-10 h-10 text-white mb-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+                  <path
+                    className="fill-current"
+                    d="M48 16h-8V8a8 8 0 10-16 0v8H16a4 4 0 00-4 4v36a4 4 0 004 4h32a4 4 0 004-4V20a4 4 0 00-4-4zm-20 0V8a4 4 0 118 0v8h-8zm24 44H16V20h32v40zM24 28a6 6 0 1112 0 6 6 0 01-12 0zm16 0a6 6 0 1112 0 6 6 0 01-12 0z"
+                  />
+                </svg>
+                <h3 className="text-xl font-bold font-red-hat-display text-white">Coming Soon: Talent Acquisition Platform</h3>
+              </div>
+              <p className="mt-4 text-white opacity-90 flex-grow">
+                An AI-powered recruitment tool that efficiently bulk scans resumes, ranks candidates by key criteria, and generates concise summaries for hiring managers and recruiters.
+              </p>
+              <div className="mt-4">
+                <svg
+                  className="w-6 h-6 text-white transform group-hover:translate-x-1 transition-transform duration-300"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    className="fill-current"
+                    d="M13 11V5.057L22.72 12 13 18.943V13H2v-2h11zm2 4.057L19.28 12 15 8.943v6.114z"
+                  />
+                </svg>
+              </div>
+            </a>
+            
+            {/* 4th Item */}
+           
             <a
               href="/allergy"
               onClick={() => handleFeatureClick('AI Allergy Check App', '/allergy')}
@@ -165,7 +202,8 @@ export default function FeaturesBlocks() {
               </div>
             </a>
 
-            {/* 4th Item */}
+
+            {/* 5th Item */}
             <a
               href="/Search"
               onClick={() => handleFeatureClick('AI Search Engine', '/Search')}
@@ -184,39 +222,6 @@ export default function FeaturesBlocks() {
               </div>
               <p className="mt-4 text-white opacity-90 flex-grow">
                 Looking for the right answer instantly? Our extremely powerful Search Engine gets straight to the point without clickbait, tracking, and sponsored links.
-              </p>
-              <div className="mt-4">
-                <svg
-                  className="w-6 h-6 text-white transform group-hover:translate-x-1 transition-transform duration-300"
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    className="fill-current"
-                    d="M13 11V5.057L22.72 12 13 18.943V13H2v-2h11zm2 4.057L19.28 12 15 8.943v6.114z"
-                  />
-                </svg>
-              </div>
-            </a>
-
-            {/* 5th Item */}
-            <a
-              href="/Talent"
-              onClick={() => handleFeatureClick('Talent Acquisition Platform', '/Talent')}
-              className="flex-shrink-0 w-80 flex flex-col p-6 group bg-gradient-to-tr from-yellow-500 to-yellow-400 dark:to-yellow-500 rounded-lg shadow-2xl transition-transform transform hover:-translate-y-1 hover:shadow-3xl snap-start"
-              aria-label="Talent Acquisition Platform - Manage recruitment efficiently"
-            >
-              <div className="flex-shrink-0">
-                <svg className="w-10 h-10 text-white mb-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
-                  <path
-                    className="fill-current"
-                    d="M48 16h-8V8a8 8 0 10-16 0v8H16a4 4 0 00-4 4v36a4 4 0 004 4h32a4 4 0 004-4V20a4 4 0 00-4-4zm-20 0V8a4 4 0 118 0v8h-8zm24 44H16V20h32v40zM24 28a6 6 0 1112 0 6 6 0 01-12 0zm16 0a6 6 0 1112 0 6 6 0 01-12 0z"
-                  />
-                </svg>
-                <h3 className="text-xl font-bold font-red-hat-display text-white">Coming Soon: Talent Acquisition Platform</h3>
-              </div>
-              <p className="mt-4 text-white opacity-90 flex-grow">
-                An AI-powered recruitment tool that efficiently bulk scans resumes, ranks candidates by key criteria, and generates concise summaries for hiring managers and recruiters.
               </p>
               <div className="mt-4">
                 <svg

@@ -25,7 +25,7 @@ export default function FeaturesBlocks() {
   };
 
   return (
-    <section className="relative bg-white dark:bg-gray-900 py-12 md:py-20 border-t border-gray-200 dark:border-gray-800">
+    <section className="relative bg-white dark:bg-gray-900  md:py-10 border-t border-gray-200 dark:border-gray-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}

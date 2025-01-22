@@ -13,7 +13,7 @@ export default function Tabs() {
   }
 
   return (
-    <section className="relative border-t border-transparent dark:border-gray-800 py-12 md:py-20">
+    <section className="relative border-t border-transparent dark:border-gray-800 py-12 ">
       {/* Background gradient */}
       <div
         className="absolute inset-0 h-128 dark:opacity-25 bg-gradient-to-b from-gray-100 to-white dark:from-gray-800 dark:to-gray-900 pointer-events-none"
@@ -21,16 +21,16 @@ export default function Tabs() {
       ></div>
       {/* End background gradient */}
       <div className="relative max-w-6xl mx-auto px-4 sm:px-6">
-        <div className="py-12 md:py-20">
+        <div className="py-10 ">
 
           {/* Section header */}
           <div className="max-w-3xl mx-auto text-center pb-12 md:pb-16">
             {/* Updated Heading */}
-            <h3 className="text-2xl md:text-3xl font-semibold text-gray-800 dark:text-gray-200 mb-4">
-              <span className="text-teal-500">Hold My Beer Co</span>: Your Privacy, Our Priority
+            <h3 className="text-2xl md:text-3xl font-semibold text-gray-800 dark:text-gray-200 mb-5">
+              <span className="text-teal-500">Hold My Beer Co</span>
             </h3>
             {/* Updated Introduction Paragraph */}
-            <p className="text-lg md:text-xl text-gray-600 dark:text-gray-400">
+            <p className="text-lg md:text-xl text-gray-600 dark:text-gray-400 mb-5">
               Despite the allure of "free" services, your data often bears the true cost. For over two decades, the tech industry has proven that if the product is free, you become the product. Many companies exploit your personal data for profit. Here's how we stand apart:
             </p>
           </div>

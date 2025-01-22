@@ -27,6 +27,7 @@
     "contentlayer": "^0.3.2",
     "date-fns": "^3.6.0",
     "mixpanel": "^0.18.0",
+    "mixpanel-browser": "^2.58.0",
     "next": "^14.0.3",
     "next-contentlayer": "^0.3.4",
     "next-mdx-remote": "^5.0.0",

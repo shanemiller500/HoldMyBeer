@@ -11,9 +11,11 @@ export default function FeaturesGallery() {
 
           {/* Section header */}
           <div className="max-w-3xl mx-auto text-center pb-12 md:pb-20">
-            <h2 className="h2 font-red-hat-display mb-4">Remember the Internet Before Ads Took Over? </h2>
-            <p className="text-xl text-gray-600 dark:text-gray-400">We strive to create applications that function seamlessly without the unnecessary clutter. We don’t share your data, don’t collect your information, and don’t bombard you with popups, banners & unwanted ads. <span className="text-teal-500">Our mission is simple.</span> To enhance your online experience, providing you with high-quality tools without the intrusive BS we don’t want or need.</p>
-          </div>
+  <h2 className="h2 font-red-hat-display mb-4">Remember the Internet Before Ads Took Over?</h2>
+  <p className="text-xl text-gray-600 dark:text-gray-400">
+    At <strong className='text-teal-500'>Hold My Beer CO</strong>, we believe in a cleaner, more enjoyable online experience. Our applications run smoothly without unnecessary clutter, ensuring your privacy by never sharing or collecting your data. Say goodbye to intrusive pop-ups, banners, and unwanted ads. <span className="text-teal-500">Our mission is simple:</span> to enhance your online journey with high-quality tools that eliminate the distractions you don’t want or need.
+  </p>
+</div>
 
           {/* Items */}
           <div className="max-w-sm mx-auto grid grid-cols-2 gap-4 gap-y-8 sm:gap-8 md:grid-cols-4 items-start md:max-w-5xl">

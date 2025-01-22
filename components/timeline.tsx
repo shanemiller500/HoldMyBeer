@@ -1,9 +1,16 @@
-'use client'
+'use client';
 
-import { useState } from 'react'
+import { useState } from 'react';
+import { trackEvent } from '@/utils/mixpanel'; // Import the trackEvent function
 
 export default function Timeline() {
-  const [year, setYear] = useState<string>('Jan2024') // Default to January 2024
+  const [year, setYear] = useState<string>('Jan2024'); // Default to January 2024
+
+  // Handler to set the year and track the event
+  const handleYearClick = (selectedYear: string, displayYear: string) => {
+    setYear(selectedYear);
+    trackEvent('Timeline Year Clicked', { year: displayYear });
+  };
 
   return (
     <section>
@@ -46,60 +53,65 @@ export default function Timeline() {
                 {/* January 2024 */}
                 <button
                   className="flex items-center justify-between font-medium text-gray-500 dark:text-gray-400 w-20 py-3 pr-2 text-left"
-                  onClick={() => setYear('Jan2024')}
+                  onClick={() => handleYearClick('Jan2024', 'January 2024')}
                 >
                   <span className="block w-12 truncate">January 2024</span>
                   <span
-                    className={`block w-3.5 h-3.5 bg-gray-400 dark:bg-gray-700 border-2 border-white dark:border-gray-900 rounded-full ${year === 'Jan2024' && 'bg-teal-500 dark:bg-teal-500'
-                      }`}
+                    className={`block w-3.5 h-3.5 bg-gray-400 dark:bg-gray-700 border-2 border-white dark:border-gray-900 rounded-full ${
+                      year === 'Jan2024' ? 'bg-teal-500 dark:bg-teal-500' : ''
+                    }`}
                   ></span>
                 </button>
 
                 {/* May 2024 */}
                 <button
                   className="flex items-center justify-between font-medium text-gray-500 dark:text-gray-400 w-20 py-3 pr-2 text-left"
-                  onClick={() => setYear('May2024')}
+                  onClick={() => handleYearClick('May2024', 'May 2024')}
                 >
                   <span className="block w-12 truncate">May 2024</span>
                   <span
-                    className={`block w-3.5 h-3.5 bg-gray-400 dark:bg-gray-700 border-2 border-white dark:border-gray-900 rounded-full ${year === 'May2024' && 'bg-teal-500 dark:bg-teal-500'
-                      }`}
+                    className={`block w-3.5 h-3.5 bg-gray-400 dark:bg-gray-700 border-2 border-white dark:border-gray-900 rounded-full ${
+                      year === 'May2024' ? 'bg-teal-500 dark:bg-teal-500' : ''
+                    }`}
                   ></span>
                 </button>
 
                 {/* September 2024 */}
                 <button
                   className="flex items-center justify-between font-medium text-gray-500 dark:text-gray-400 w-20 py-3 pr-2 text-left"
-                  onClick={() => setYear('Sep2024')}
+                  onClick={() => handleYearClick('Sep2024', 'September 2024')}
                 >
                   <span className="block w-12 truncate">September 2024</span>
                   <span
-                    className={`block w-3.5 h-3.5 bg-gray-400 dark:bg-gray-700 border-2 border-white dark:border-gray-900 rounded-full ${year === 'Sep2024' && 'bg-teal-500 dark:bg-teal-500'
-                      }`}
+                    className={`block w-3.5 h-3.5 bg-gray-400 dark:bg-gray-700 border-2 border-white dark:border-gray-900 rounded-full ${
+                      year === 'Sep2024' ? 'bg-teal-500 dark:bg-teal-500' : ''
+                    }`}
                   ></span>
                 </button>
 
                 {/* October 2024 */}
                 <button
                   className="flex items-center justify-between font-medium text-gray-500 dark:text-gray-400 w-20 py-3 pr-2 text-left"
-                  onClick={() => setYear('Oct2024')}
+                  onClick={() => handleYearClick('Oct2024', 'October 2024')}
                 >
                   <span className="block w-12 truncate">October 2024</span>
                   <span
-                    className={`block w-3.5 h-3.5 bg-gray-400 dark:bg-gray-700 border-2 border-white dark:border-gray-900 rounded-full ${year === 'Oct2024' && 'bg-teal-500 dark:bg-teal-500'
-                      }`}
+                    className={`block w-3.5 h-3.5 bg-gray-400 dark:bg-gray-700 border-2 border-white dark:border-gray-900 rounded-full ${
+                      year === 'Oct2024' ? 'bg-teal-500 dark:bg-teal-500' : ''
+                    }`}
                   ></span>
                 </button>
 
                 {/* December 2024 */}
                 <button
                   className="flex items-center justify-between font-medium text-gray-500 dark:text-gray-400 w-20 py-3 pr-2 text-left"
-                  onClick={() => setYear('Dec2024')}
+                  onClick={() => handleYearClick('Dec2024', 'December 2024')}
                 >
                   <span className="block w-12 truncate">December 2024</span>
                   <span
-                    className={`block w-3.5 h-3.5 bg-gray-400 dark:bg-gray-700 border-2 border-white dark:border-gray-900 rounded-full ${year === 'Dec2024' && 'bg-teal-500 dark:bg-teal-500'
-                      }`}
+                    className={`block w-3.5 h-3.5 bg-gray-400 dark:bg-gray-700 border-2 border-white dark:border-gray-900 rounded-full ${
+                      year === 'Dec2024' ? 'bg-teal-500 dark:bg-teal-500' : ''
+                    }`}
                   ></span>
                 </button>
 
@@ -109,18 +121,19 @@ export default function Timeline() {
                 {/* January 2025 */}
                 <button
                   className="flex items-center justify-between font-medium text-gray-500 dark:text-gray-400 w-20 py-3 pr-2 text-left"
-                  onClick={() => setYear('Jan2025')}
+                  onClick={() => handleYearClick('Jan2025', 'January 2025')}
                 >
                   <span className="block w-12 truncate">January 2025</span>
                   <span
-                    className={`block w-3.5 h-3.5 bg-gray-400 dark:bg-gray-700 border-2 border-white dark:border-gray-900 rounded-full ${year === 'Jan2025' && 'bg-teal-500 dark:bg-teal-500'
-                      }`}
+                    className={`block w-3.5 h-3.5 bg-gray-400 dark:bg-gray-700 border-2 border-white dark:border-gray-900 rounded-full ${
+                      year === 'Jan2025' ? 'bg-teal-500 dark:bg-teal-500' : ''
+                    }`}
                   ></span>
                 </button>
               </div>
 
               {/* ================== January 2024 (year === 'Jan2024') ================== */}
-              <div className={`grow ${year !== 'Jan2024' && 'hidden'}`}>
+              <div className={`grow ${year !== 'Jan2024' ? 'hidden' : ''}`}>
                 <div className="grid md:grid-cols-2 gap-4 sm:gap-6">
                   <article className="p-6 bg-white dark:bg-gray-800 shadow-2xl flex flex-col">
                     <header>
@@ -154,7 +167,7 @@ export default function Timeline() {
               </div>
 
               {/* ================== May 2024 (year === 'May2024') ================== */}
-              <div className={`grow ${year !== 'May2024' && 'hidden'}`}>
+              <div className={`grow ${year !== 'May2024' ? 'hidden' : ''}`}>
                 <div className="grid md:grid-cols-2 gap-4 sm:gap-6">
                   <article className="p-6 bg-white dark:bg-gray-800 shadow-2xl flex flex-col">
                     <header>
@@ -191,7 +204,7 @@ export default function Timeline() {
               </div>
 
               {/* ================== September 2024 (year === 'Sep2024') ================== */}
-              <div className={`grow ${year !== 'Sep2024' && 'hidden'}`}>
+              <div className={`grow ${year !== 'Sep2024' ? 'hidden' : ''}`}>
                 <div className="grid md:grid-cols-2 gap-6">
                   <article className="p-6 bg-white dark:bg-gray-800 shadow-2xl flex flex-col">
                     <header>
@@ -255,7 +268,7 @@ export default function Timeline() {
               </div>
 
               {/* ================== October 2024 (year === 'Oct2024') ================== */}
-              <div className={`grow ${year !== 'Oct2024' && 'hidden'}`}>
+              <div className={`grow ${year !== 'Oct2024' ? 'hidden' : ''}`}>
                 <div className="grid md:grid-cols-2 gap-6">
                   <article className="p-6 bg-white dark:bg-gray-800 shadow-2xl flex flex-col">
                     <header>
@@ -324,7 +337,7 @@ export default function Timeline() {
               </div>
 
               {/* ================== December 2024 (year === 'Dec2024') ================== */}
-              <div className={`grow ${year !== 'Dec2024' && 'hidden'}`}>
+              <div className={`grow ${year !== 'Dec2024' ? 'hidden' : ''}`}>
                 <div className="grid md:grid-cols-2 gap-6">
                   <article className="p-6 bg-white dark:bg-gray-800 shadow-2xl flex flex-col">
                     <header>
@@ -362,7 +375,7 @@ export default function Timeline() {
               </div>
 
               {/* ================== January 2025 (year === 'Jan2025') ================== */}
-              <div className={`grow ${year !== 'Jan2025' && 'hidden'}`}>
+              <div className={`grow ${year !== 'Jan2025' ? 'hidden' : ''}`}>
                 <div className="grid md:grid-cols-2 gap-6">
                   <article className="p-6 bg-white dark:bg-gray-800 shadow-2xl flex flex-col">
                     <header>
@@ -385,10 +398,8 @@ export default function Timeline() {
                     </header>
                     <div className="text-gray-600 dark:text-gray-400 grow">
                       <p>
-                        Our data-driven Talent Acquisition platform streamlines recruiting by bulk-scanning resumes and power-ranking candidates based on job descriptions. 
+                        Our data-driven Talent Acquisition platform streamlines recruiting by bulk-scanning resumes and power-ranking candidates based on job descriptions.
                       </p>
-
-
                     </div>
                   </article>
 
@@ -419,32 +430,28 @@ export default function Timeline() {
                       </p>
                       <br />
                       <p>
-                        Thanks to user feedback, ApplyPro is evolving to better serve job seekers. Our platform supports multiple languages and caters to diverse professionals.</p>
+                        Thanks to user feedback, ApplyPro is evolving to better serve job seekers. Our platform supports multiple languages and caters to diverse professionals.
+                      </p>
                     </div>
                   </article>
-
-
-
-
                 </div>
               </div>
 
             </div>
           </div>
 
+          {/* 
+            Hide scrollbar for WebKit-based browsers (Chrome, Safari, etc.)
+            If you're using a CSS/SCSS file or Tailwind plugin, you can place this there.
+            For inline, we add a small <style jsx> block here:
+          */}
+          <style jsx>{`
+            .custom-scrollbar::-webkit-scrollbar {
+              display: none;
+            }
+          `}</style>
         </div>
       </div>
-
-      {/* 
-        Hide scrollbar for WebKit-based browsers (Chrome, Safari, etc.)
-        If you're using a CSS/SCSS file or Tailwind plugin, you can place this there.
-        For inline, we add a small <style jsx> block here:
-      */}
-      <style jsx>{`
-        .custom-scrollbar::-webkit-scrollbar {
-          display: none;
-        }
-      `}</style>
     </section>
-  )
+  );
 }

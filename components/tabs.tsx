@@ -1,15 +1,24 @@
 'use client'
 
 import { useState } from 'react'
+import { trackEvent } from '@/utils/mixpanel'
 
 export default function Tabs() {
-
   const [category, setCategory] = useState<string>('1')
+
+  // Handler to set category and track the event
+  const handleTabClick = (categoryId: string, tabName: string) => {
+    setCategory(categoryId)
+    trackEvent('Tab Clicked', { tab: tabName })
+  }
 
   return (
     <section className="relative border-t border-transparent dark:border-gray-800 py-12 md:py-20">
       {/* Background gradient */}
-      <div className="absolute inset-0 h-128 dark:opacity-25 bg-gradient-to-b from-gray-100 to-white dark:from-gray-800 dark:to-gray-900 pointer-events-none" aria-hidden="true"></div>
+      <div
+        className="absolute inset-0 h-128 dark:opacity-25 bg-gradient-to-b from-gray-100 to-white dark:from-gray-800 dark:to-gray-900 pointer-events-none"
+        aria-hidden="true"
+      ></div>
       {/* End background gradient */}
       <div className="relative max-w-6xl mx-auto px-4 sm:px-6">
         <div className="py-12 md:py-20">
@@ -32,14 +41,14 @@ export default function Tabs() {
 
               {/* Category buttons */}
               <div className="lg:col-span-1 lg:pr-8 flex flex-wrap justify-center lg:flex-col lg:justify-start space-y-2">
-                {/* Tech Landscape */}
+                {/* Today’s Tech Landscape */}
                 <button
                   className={`w-full flex items-center px-4 py-3 rounded-lg shadow transition-colors duration-200 ${
                     category === '1'
                       ? 'bg-teal-500 text-white'
                       : 'bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-teal-50 dark:hover:bg-gray-700'
                   }`}
-                  onClick={() => setCategory('1')}
+                  onClick={() => handleTabClick('1', 'Today’s Tech Landscape')}
                   aria-pressed={category === '1'}
                 >
                   <svg className="w-5 h-5 mr-3 flex-shrink-0" viewBox="0 0 24 24" fill="currentColor">
@@ -55,7 +64,7 @@ export default function Tabs() {
                       ? 'bg-teal-500 text-white'
                       : 'bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-teal-50 dark:hover:bg-gray-700'
                   }`}
-                  onClick={() => setCategory('2')}
+                  onClick={() => handleTabClick('2', 'Data Theft')}
                   aria-pressed={category === '2'}
                 >
                   <svg className="w-5 h-5 mr-3 flex-shrink-0" viewBox="0 0 24 24" fill="currentColor">
@@ -71,7 +80,7 @@ export default function Tabs() {
                       ? 'bg-teal-500 text-white'
                       : 'bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-teal-50 dark:hover:bg-gray-700'
                   }`}
-                  onClick={() => setCategory('3')}
+                  onClick={() => handleTabClick('3', 'How We Are Different')}
                   aria-pressed={category === '3'}
                 >
                   <svg className="w-5 h-5 mr-3 flex-shrink-0" viewBox="0 0 24 24" fill="currentColor">
@@ -87,7 +96,7 @@ export default function Tabs() {
                       ? 'bg-teal-500 text-white'
                       : 'bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-teal-50 dark:hover:bg-gray-700'
                   }`}
-                  onClick={() => setCategory('4')}
+                  onClick={() => handleTabClick('4', 'Privacy-Focused Apps')}
                   aria-pressed={category === '4'}
                 >
                   <svg className="w-5 h-5 mr-3 flex-shrink-0" viewBox="0 0 24 24" fill="currentColor">
@@ -131,9 +140,9 @@ export default function Tabs() {
                       <h4 className="text-xl font-semibold text-gray-800 dark:text-gray-200 mb-2">How We Are Different</h4>
                     </header>
                     <div className="text-gray-600 dark:text-gray-400 space-y-4">
-                    <p>
-  Hold My Beer Co. prioritizes your privacy and security above all else. We only collect and store the essential data necessary to ensure our apps operate seamlessly for you. We do not mine or sell your personal information. Your data is never shared with third parties or used for AI training, guaranteeing complete confidentiality and peace of mind.
-</p>
+                      <p>
+                        Hold My Beer Co. prioritizes your privacy and security above all else. We only collect and store the essential data necessary to ensure our apps operate seamlessly for you. We do not mine or sell your personal information. Your data is never shared with third parties or used for AI training, guaranteeing complete confidentiality and peace of mind.
+                      </p>
 
                       <p>
                         Our custom solutions make AI accessible to everyone without the need to worry about personal data being shared with AI and machine learning systems. Our AI learns without compromising your privacy, helping you without selling your personal information.

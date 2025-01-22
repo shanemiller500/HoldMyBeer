@@ -1,4 +1,13 @@
+'use client';
+
+import { trackEvent } from '@/utils/mixpanel'; // Import the trackEvent function
+
 export default function Cta() {
+  // Handler to track CTA button clicks
+  const handleContactClick = () => {
+    trackEvent('CTA Contact Clicked', { label: 'Contact Button' });
+  };
+
   return (
     <section>
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
@@ -7,7 +16,7 @@ export default function Cta() {
         <div className="dark relative bg-gray-800 py-10 px-8 md:py-16 md:px-12">
 
           {/* Background illustration */}
-          <div className="absolute inset-0 left-auto  pointer-events-none" aria-hidden="true">
+          <div className="absolute inset-0 left-auto pointer-events-none" aria-hidden="true">
             <svg className="h-full" width="400" height="232" viewBox="0 0 400 232" xmlns="http://www.w3.org/2000/svg">
               <defs>
                 <radialGradient cx="50%" cy="50%" fx="50%" fy="50%" r="39.386%" id="box-gr-a">
@@ -37,10 +46,15 @@ export default function Cta() {
             <form className="w-full lg:w-1/2">
               <div className="flex flex-col sm:flex-row justify-center max-w-xs mx-auto sm:max-w-md lg:max-w-none">
 
-                <a className="btn text-white bg-teal-500 hover:bg-teal-400 shrink-0" href="/contact">Contact</a>
+                <a
+                  className="btn text-white bg-teal-500 hover:bg-teal-400 shrink-0"
+                  href="/contact"
+                  onClick={handleContactClick} // Attach the onClick handler here
+                >
+                  Contact
+                </a>
               </div>
-              {/* Success message */}
-              {/* <p className="text-center lg:text-left lg:absolute mt-2 opacity-75 text-sm">Thanks for subscribing!</p> */}
+
             </form>
 
           </div>
@@ -48,6 +62,17 @@ export default function Cta() {
         </div>
 
       </div>
+
+      {/* 
+        Hide scrollbar for WebKit-based browsers (Chrome, Safari, etc.)
+        If you're using a CSS/SCSS file or Tailwind plugin, you can place this there.
+        For inline, we add a small <style jsx> block here:
+      */}
+      <style jsx>{`
+        .custom-scrollbar::-webkit-scrollbar {
+          display: none;
+        }
+      `}</style>
     </section>
-  )
+  );
 }

@@ -1,8 +1,7 @@
 import Link from 'next/link'
-import Logo from './logo'
-import Dropdown from '@/components/utils/dropdown'
 import ThemeToggle from './theme-toggle'
 import MobileMenu from './mobile-menu'
+import { trackEvent } from '@/utils/mixpanel';
 
 export default function Header() {
   return (
@@ -10,13 +9,7 @@ export default function Header() {
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
         <div className="flex items-center justify-between h-20">
 
-          {/* Site branding */}
-          {/* <div className="shrink-0 mr-5">
-            <Link href="/" className="block" aria-label="Cruip">
-              <Logo />
-            </Link>
-          </div> */}
-                      <Link className="block" href="/" aria-label="Cruip">
+ <Link className="block" href="/" aria-label="HMB-CO"  onClick={() => trackEvent('Image Logo Clicked')}>
        
        <img className="mx-auto" src="/images/hmbco.png" width={250} height={250} alt="Hero" /> 
  
@@ -31,30 +24,12 @@ export default function Header() {
               <li>
                 <Link
                   href="/about"
+                  onClick={() => trackEvent('About Clicked')}
                   className="text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-gray-100 px-5 py-2 flex items-center transition duration-150 ease-in-out"
                 >
                   About
                 </Link>
-              </li>
-
-              
-              {/* <li>
-                <Link
-                  href="/blog"
-                  className="text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-gray-100 px-5 py-2 flex items-center transition duration-150 ease-in-out"
-                >
-                  Blog
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/testimonials"
-                  className="text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-gray-100 px-5 py-2 flex items-center transition duration-150 ease-in-out"
-                >
-                  Testimonials
-                </Link>
-              </li> */}
-             
+              </li>          
             </ul>
 
             {/* Desktop lights switch */}
@@ -62,11 +37,6 @@ export default function Header() {
 
             {/* Desktop CTA on the right */}
             <ul className="flex justify-end flex-wrap items-center">
-              {/* <li>
-                <Link href="/contact" className="btn-sm text-white bg-teal-500 hover:bg-teal-400 ml-6">
-                  Request code
-                </Link>
-              </li> */}
             </ul>
           </nav>
 

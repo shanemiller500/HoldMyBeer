@@ -5,6 +5,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { FaArrowLeft, FaArrowRight } from 'react-icons/fa' // Optional: For a better-looking arrow icon
 
+import { trackEvent } from '@/utils/mixpanel'; // Import the trackEvent function
 
 // Replace these with your actual images
 import HeroImage from '@/public/images/umailHero.png'
@@ -15,38 +16,47 @@ export default function UMailLandingPage() {
   const [darkMode, setDarkMode] = useState(false)
   const [buttonText, setButtonText] = useState("Become a Test User Now");
 
+  // Handler to track "Contact" button clicks
+  const handleContactClick = () => {
+    trackEvent('CTA Contact Clicked', { label: 'Contact Button' });
+  };
+
+  // Handler to track "Become a Test User Now" button clicks
+  const handleBecomeTestUserClick = () => {
+    trackEvent('CTA Become Test User Clicked', { label: 'Become a Test User Now' });
+  };
+
   return (
     <div className={darkMode ? 'dark' : ''}>
       <main className="bg-white dark:bg-gray-900 transition-colors duration-300">
-{/* HERO SECTION */}
-<section className="relative pt-24 pb-12 md:pt-32 md:pb-20 px-4 sm:px-6">
-  <div className="max-w-4xl mx-auto text-center">
-    <div data-aos="fade-up">
-      <Image
-        className="mx-auto opacity-80 w-full h-auto max-w-lg"
-        src={HeroImage}
-        alt="U-Mail Hero"
-        priority
-      />
-    </div>
-    <h1
-      className="mt-10 text-3xl md:text-5xl font-bold text-teal-500 font-red-hat-display"
-      data-aos="fade-down"
-    >
-      AI-Powered Solutions for Effortless Communication.
-    </h1>
-    <p
-      className="mt-4 text-gray-600 dark:text-gray-400 text-lg md:text-xl"
-      data-aos="fade-down"
-      data-aos-delay="100"
-    >
-      The future of global communication. UMail transforms how you connect
-      globally, work, and express yourself. Built to seamlessly integrate with
-      your Gmail & Google Workspace accounts. (Microsoft integration coming soon)
-    </p>
-  </div>
-</section>
-
+        {/* HERO SECTION */}
+        <section className="relative pt-24 pb-12 md:pt-32 md:pb-20 px-4 sm:px-6">
+          <div className="max-w-4xl mx-auto text-center">
+            <div data-aos="fade-up">
+              <Image
+                className="mx-auto opacity-80 w-full h-auto max-w-lg"
+                src={HeroImage}
+                alt="U-Mail Hero"
+                priority
+              />
+            </div>
+            <h1
+              className="mt-10 text-3xl md:text-5xl font-bold text-teal-500 font-red-hat-display"
+              data-aos="fade-down"
+            >
+              AI-Powered Solutions for Effortless Communication.
+            </h1>
+            <p
+              className="mt-4 text-gray-600 dark:text-gray-400 text-lg md:text-xl"
+              data-aos="fade-down"
+              data-aos-delay="100"
+            >
+              The future of global communication. UMail transforms how you connect
+              globally, work, and express yourself. Built to seamlessly integrate with
+              your Gmail & Google Workspace accounts. (Microsoft integration coming soon)
+            </p>
+          </div>
+        </section>
 
         {/* WHAT IS UMAIL */}
         <section className="relative pt-16 pb-10 md:pt-20 md:pb-16 bg-gray-100 dark:bg-gray-900 px-4 sm:px-6">
@@ -80,78 +90,76 @@ export default function UMailLandingPage() {
           </div>
         </section>
 
-{/* Custom Solutions for Any Industry */}
-<section className="relative pt-16 pb-10 md:pt-20 md:pb-16 px-4 sm:px-6">
-  <div className="max-w-6xl mx-auto">
-    <div className="md:flex md:items-center md:justify-between mb-12">
-      
-      {/* Image Section */}
-      <div className="md:w-1/2 mt-8 md:mt-0 mr-0 md:mr-20 mb-8 md:mb-0" data-aos="fade-right">
-        <Image
-          src={HeroImage}
-          alt="Custom Solutions for Any Industry"
-          className="mx-auto w-full max-w-lg h-auto"
-          priority
-        />
-      </div>
+        {/* Custom Solutions for Any Industry */}
+        <section className="relative pt-16 pb-10 md:pt-20 md:pb-16 px-4 sm:px-6">
+          <div className="max-w-6xl mx-auto">
+            <div className="md:flex md:items-center md:justify-between mb-12">
+              
+              {/* Image Section */}
+              <div className="md:w-1/2 mt-8 md:mt-0 mr-0 md:mr-20 mb-8 md:mb-0" data-aos="fade-right">
+                <Image
+                  src={HeroImage}
+                  alt="Custom Solutions for Any Industry"
+                  className="mx-auto w-full max-w-lg h-auto"
+                  priority
+                />
+              </div>
 
-      {/* Content Section */}
-      <div className="md:w-1/2" data-aos="fade-left">
-        <h2 className="text-3xl md:text-4xl font-bold text-teal-500 mb-4">
-          Custom Solutions for Any Industry
-        </h2>
-        <p className="text-gray-600 dark:text-gray-400 text-lg mb-6">
-          UMail offers tailored solutions for industries like Healthcare, Law Enforcement, Military support, HR Departments, and more. We customize our products to streamline processes, eliminate middlemen and save valuable time, allowing you and your team to focus on growing your business.
-        </p>
-        <ul className="mt-4 space-y-4">
-          <li className="flex items-start">
-            <svg
-              className="w-6 h-6 text-teal-500 mr-3 flex-shrink-0"
-              viewBox="0 0 20 20"
-              fill="currentColor"
-            >
-              <path d="M10 2a8 8 0 100 16 8 8 0 000-16zM9 9V7a1 1 0 012 0v2h2a1 1 0 110 2h-2v2a1 1 0 11-2 0v-2H7a1 1 0 110-2h2z" />
-            </svg>
-            <span>Healthcare: Streamline patient communications and administrative tasks.</span>
-          </li>
-          <li className="flex items-start">
-            <svg
-              className="w-6 h-6 text-teal-500 mr-3 flex-shrink-0"
-              viewBox="0 0 20 20"
-              fill="currentColor"
-            >
-              <path d="M10 2a8 8 0 100 16 8 8 0 000-16zM9 9V7a1 1 0 012 0v2h2a1 1 0 110 2h-2v2a1 1 0 11-2 0v-2H7a1 1 0 110-2h2z" />
-            </svg>
-            <span>Law Enforcement & Military: Enhance operational efficiency with secure communications.</span>
-          </li>
-          <li className="flex items-start">
-            <svg
-              className="w-6 h-6 text-teal-500 mr-3 flex-shrink-0"
-              viewBox="0 0 20 20"
-              fill="currentColor"
-            >
-              <path d="M10 2a8 8 0 100 16 8 8 0 000-16zM9 9V7a1 1 0 012 0v2h2a1 1 0 110 2h-2v2a1 1 0 11-2 0v-2H7a1 1 0 110-2h2z" />
-            </svg>
-            <span>HR Departments: Manage employee communications and severance packages seamlessly.</span>
-          </li>
-          <li className="flex items-start">
-            <svg
-              className="w-6 h-6 text-teal-500 mr-3 flex-shrink-0"
-              viewBox="0 0 20 20"
-              fill="currentColor"
-            >
-              <path d="M10 2a8 8 0 100 16 8 8 0 000-16zM9 9V7a1 1 0 012 0v2h2a1 1 0 110 2h-2v2a1 1 0 11-2 0v-2H7a1 1 0 110-2h2z" />
-            </svg>
-            <span>Business Growth: Reduce overhead and focus on scaling your operations.</span>
-          </li>
-        </ul>
-       
-      </div>
-    </div>
-  </div>
-</section>
-
-
+              {/* Content Section */}
+              <div className="md:w-1/2" data-aos="fade-left">
+                <h2 className="text-3xl md:text-4xl font-bold text-teal-500 mb-4">
+                  Custom Solutions for Any Industry
+                </h2>
+                <p className="text-gray-600 dark:text-gray-400 text-lg mb-6">
+                  UMail offers tailored solutions for industries like Healthcare, Law Enforcement, Military support, HR Departments, and more. We customize our products to streamline processes, eliminate middlemen and save valuable time, allowing you and your team to focus on growing your business.
+                </p>
+                <ul className="mt-4 space-y-4">
+                  <li className="flex items-start">
+                    <svg
+                      className="w-6 h-6 text-teal-500 mr-3 flex-shrink-0"
+                      viewBox="0 0 20 20"
+                      fill="currentColor"
+                    >
+                      <path d="M10 2a8 8 0 100 16 8 8 0 000-16zM9 9V7a1 1 0 012 0v2h2a1 1 0 110 2h-2v2a1 1 0 11-2 0v-2H7a1 1 0 110-2h2z" />
+                    </svg>
+                    <span>Healthcare: Streamline patient communications and administrative tasks.</span>
+                  </li>
+                  <li className="flex items-start">
+                    <svg
+                      className="w-6 h-6 text-teal-500 mr-3 flex-shrink-0"
+                      viewBox="0 0 20 20"
+                      fill="currentColor"
+                    >
+                      <path d="M10 2a8 8 0 100 16 8 8 0 000-16zM9 9V7a1 1 0 012 0v2h2a1 1 0 110 2h-2v2a1 1 0 11-2 0v-2H7a1 1 0 110-2h2z" />
+                    </svg>
+                    <span>Law Enforcement &amp; Military: Enhance operational efficiency with secure communications.</span>
+                  </li>
+                  <li className="flex items-start">
+                    <svg
+                      className="w-6 h-6 text-teal-500 mr-3 flex-shrink-0"
+                      viewBox="0 0 20 20"
+                      fill="currentColor"
+                    >
+                      <path d="M10 2a8 8 0 100 16 8 8 0 000-16zM9 9V7a1 1 0 012 0v2h2a1 1 0 110 2h-2v2a1 1 0 11-2 0v-2H7a1 1 0 110-2h2z" />
+                    </svg>
+                    <span>HR Departments: Manage employee communications and severance packages seamlessly.</span>
+                  </li>
+                  <li className="flex items-start">
+                    <svg
+                      className="w-6 h-6 text-teal-500 mr-3 flex-shrink-0"
+                      viewBox="0 0 20 20"
+                      fill="currentColor"
+                    >
+                      <path d="M10 2a8 8 0 100 16 8 8 0 000-16zM9 9V7a1 1 0 012 0v2h2a1 1 0 110 2h-2v2a1 1 0 11-2 0v-2H7a1 1 0 110-2h2z" />
+                    </svg>
+                    <span>Business Growth: Reduce overhead and focus on scaling your operations.</span>
+                  </li>
+                </ul>
+               
+              </div>
+            </div>
+          </div>
+        </section>
 
         {/* COMPREHENSIVE FEATURE LIST - ANIMATED */}
         <section className="relative pb-16 md:pb-20 bg-gray-100 dark:bg-gray-900 mt-20 px-4 sm:px-6">
@@ -226,7 +234,7 @@ export default function UMailLandingPage() {
                   </div>
 
                   {/* 6 */}
-                  <div className="absolute font-medium px-4 py-2 text-white dark:text-pink-500 bg-gradient-to-tr from-pink-500 to-pink-400 dark:bg-pink-500 dark:from-transparent dark:to-transparent dark:bg-opacity-25 rounded-full inline-flex items-center justify-center tags-animation tags-5 mt-56">
+                  <div className="absolute font-medium px-4 py-2 text-white dark:text-pink-500 bg-gradient-to-tr from-pink-500 to-pink-400 dark:bg-pink-500 dark:from-transparent dark:to-transparent dark:bg-opacity-25 rounded-full inline-flex items-center justify-center tags-animation tags-5 mt-56 top-8">
                     Real-Time Collaboration
                   </div>
 
@@ -236,12 +244,12 @@ export default function UMailLandingPage() {
                   </div>
 
                   {/* 8 */}
-                  <div className="absolute font-medium px-4 py-2 text-white dark:text-purple-500 bg-gradient-to-tr from-purple-500 to-purple-400 dark:bg-purple-500 dark:from-transparent dark:to-transparent dark:bg-opacity-25 rounded-full inline-flex items-center justify-center tags-animation tags-7 mt-40">
+                  <div className="absolute font-medium px-4 py-2 text-white dark:text-pink-500 bg-gradient-to-tr from-pink-500 to-pink-400 dark:bg-pink-500 dark:from-transparent dark:to-transparent dark:bg-opacity-25 rounded-full inline-flex items-center justify-center tags-animation tags-7 mt-40">
                     AI-Powered Synonym Assistant
                   </div>
 
                   {/* 9 */}
-                  <div className="absolute font-medium px-4 py-2 text-white dark:text-pink-500 bg-gradient-to-tr from-pink-500 to-pink-400 dark:bg-pink-500 dark:from-transparent dark:to-transparent dark:bg-opacity-25 rounded-full inline-flex items-center justify-center tags-animation tags-8 mt-80 top-4">
+                  <div className="absolute font-medium px-4 py-2 text-white dark:text-gray-900 bg-gradient-to-tr from-purple-500 to-purple-400 dark:bg-purple-500 dark:from-transparent dark:to-transparent dark:bg-opacity-25 rounded-full inline-flex items-center justify-center tags-animation tags-8 mt-80 top-4">
                     Inbox Categorization
                   </div>
 
@@ -313,7 +321,7 @@ export default function UMailLandingPage() {
               <div className="order-1 md:order-2 mb-8 md:mb-0 flex justify-center" data-aos="fade-left">
                 <Image
                   src={LogoImage}
-                  alt="U-Mail Mood & Tone"
+                  alt="U-Mail Mood &amp; Tone"
                   width={250}
                   height={250}
                   className="mx-auto w-full max-w-[250px] h-auto"
@@ -620,11 +628,11 @@ export default function UMailLandingPage() {
         {/* Navigation Arrows */}
         <div className="z-20 flex flex-col sm:flex-row justify-between items-center px-4 sm:px-6 lg:px-8 mb-20">
           {/* Back Arrow */}
-          <Link href="/applyPro" className="text-teal-500 hover:text-teal-700 flex items-center mb-4 sm:mb-0">
+          <Link href="/applyPro" className="text-teal-500 hover:text-teal-700 flex items-center mb-4 sm:mb-0" onClick={() => trackEvent('Navigation Clicked', { direction: 'Back', target: '/applyPro' })}>
             <FaArrowLeft className="mr-2" /> ApplyPro
           </Link>
           {/* Next Arrow */}
-          <Link href="/Talent" className="text-teal-500 hover:text-teal-700 flex items-center">
+          <Link href="/Talent" className="text-teal-500 hover:text-teal-700 flex items-center" onClick={() => trackEvent('Navigation Clicked', { direction: 'Next', target: '/Talent' })}>
             Talent Acquisition Platform<FaArrowRight className="ml-2" />
           </Link>
         </div>
@@ -652,6 +660,7 @@ export default function UMailLandingPage() {
                 className="btn text-teal-500 bg-gray-900 hover:bg-gray-700 px-8 py-4 rounded-lg shadow-md transition duration-300 text-lg font-semibold"
                 onMouseEnter={() => setButtonText("New website coming soon")}
                 onMouseLeave={() => setButtonText("Become a Test User Now")}
+                onClick={handleBecomeTestUserClick} // Added Mixpanel tracking here
               >
                 {buttonText}
               </Link>

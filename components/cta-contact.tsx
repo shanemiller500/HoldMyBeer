@@ -1,4 +1,13 @@
+'use client';
+
+import { trackEvent } from '@/utils/mixpanel'; // Import the trackEvent function
+
 export default function CtaContact() {  
+  // Handler to track CTA button clicks
+  const handleCtaClick = () => {
+    trackEvent('CTA Contact Clicked', { label: 'Send us a message' });
+  };
+
   return (
     <section>
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
@@ -7,7 +16,7 @@ export default function CtaContact() {
         <div className="dark relative bg-gray-800 py-10 px-8 md:py-16 md:px-12">
 
           {/* Background illustration */}
-          <div className="absolute inset-0 left-auto  pointer-events-none" aria-hidden="true">
+          <div className="absolute inset-0 left-auto pointer-events-none" aria-hidden="true">
             <svg className="h-full" width="400" height="232" viewBox="0 0 400 232" xmlns="http://www.w3.org/2000/svg">
               <defs>
                 <radialGradient cx="50%" cy="50%" fx="50%" fy="50%" r="39.386%" id="box-gr-a">
@@ -34,7 +43,13 @@ export default function CtaContact() {
 
             {/* CTA button */}
             <div className="flex justify-center mt-8">
-              <a className="btn text-white bg-teal-500 hover:bg-teal-400" href="/contact">Send us a message</a>
+              <a
+                className="btn text-white bg-teal-500 hover:bg-teal-400"
+                href="/contact"
+                onClick={handleCtaClick} // Attach the onClick handler here
+              >
+                Send us a message
+              </a>
             </div>
 
           </div>

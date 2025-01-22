@@ -2,6 +2,7 @@
 
 import React, { useRef } from 'react';
 import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
+import { trackEvent } from '@/utils/mixpanel'; // Import the trackEvent function
 
 export default function FeaturesBlocks() {
   const scrollContainerRef = useRef<HTMLDivElement>(null);
@@ -18,6 +19,11 @@ export default function FeaturesBlocks() {
     }
   };
 
+  // Handler to track feature item clicks
+  const handleFeatureClick = (featureName: string, href: string) => {
+    trackEvent('Feature Clicked', { feature: featureName, url: href });
+  };
+
   return (
     <section className="relative bg-white dark:bg-gray-900 py-12 md:py-20 border-t border-gray-200 dark:border-gray-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -28,19 +34,21 @@ export default function FeaturesBlocks() {
             Apps Made for People Who Care About Privacy
           </h2>
           <p className="mt-4 text-lg text-gray-600 dark:text-gray-400">
-  The applications listed below are either already released, nearing production, or well within the capabilities of our current team. As we grow, we will onboard more people and accelerate the release of new applications. Stay tuned — 
-  <span className="text-teal-500 font-semibold">
-    this is just the beginning of a new era in how we use the internet ad-free.
-  </span>
-</p>
-
+            The applications listed below are either already released, nearing production, or well within the capabilities of our current team. As we grow, we will onboard more people and accelerate the release of new applications. Stay tuned — 
+            <span className="text-teal-500 font-semibold">
+              this is just the beginning of a new era in how we use the internet ad-free.
+            </span>
+          </p>
         </div>
 
         {/* Scroll Container with Navigation Arrows */}
         <div className="relative">
           {/* Left Arrow */}
           <button
-            onClick={() => scroll('left')}
+            onClick={() => {
+              scroll('left');
+              trackEvent('Scroll Clicked', { direction: 'left' }); // Optional: Track arrow clicks
+            }}
             className="absolute left-0 top-1/2 transform -translate-y-1/2 bg-gray-900 text-white p-2 rounded-full shadow-lg hover:bg-gray-600 focus:outline-none focus:ring-2 focus:ring-teal-400 z-10"
             aria-label="Scroll Left"
           >
@@ -53,44 +61,11 @@ export default function FeaturesBlocks() {
             className="flex space-x-4 sm:space-x-6 lg:space-x-6 overflow-x-auto pb-4 scrollbar-hide snap-x snap-mandatory"
           >
 
-                      {/* 2nd Item */}
-                      <a
-              href="/applyPro"
-              rel="noopener noreferrer"
-              className="flex-shrink-0 w-80 flex flex-col p-6 group bg-gradient-to-tr from-purple-500 to-purple-400 dark:to-purple-500 rounded-lg shadow-2xl transition-transform transform hover:-translate-y-1 hover:shadow-3xl snap-start"
-              aria-label="ApplyPro.ai - Research-backed Cover Letters & Tailored Resumes"
-            >
-              <div className="flex-shrink-0">
-                <svg className="w-10 h-10 text-white mb-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
-                  <path
-                    className="fill-current"
-                    d="M20.796 20l-1.677 7.264a6 6 0 01-7.302 4.471L0 28.781V11.54l.35-.3 9.457-8.107a3.751 3.751 0 015.29 5.29L11.175 13H28.5a3.5 3.5 0 012.6 1.156c.663.736.984 1.72.878 2.74-.252 1.808-1.817 3.143-3.622 3.104h-7.56zM2 27.22l10.303 2.575a4 4 0 004.868-2.98L19.204 18h9.173c.812.018 1.508-.575 1.615-1.345A1.5 1.5 0 0028.5 15H11.173a2 2 0 01-1.517-3.3l3.922-4.577a1.755 1.755 0 00-.597-2.733 1.751 1.751 0 00-1.872.262L2 12.46v14.76zM28 .585L29.414 2 23 8.414 21.586 7 28 .586zm-8.272 6.627l-1.94-.485 1.484-5.94 1.94.484-1.484 5.94zm3.544 5l-.485-1.94 5.94-1.486.486 1.94-5.94 1.486z"
-                    fillRule="nonzero"
-                  />
-                </svg>
-                <h3 className="text-xl font-bold font-red-hat-display text-white">ApplyPro.ai</h3>
-              </div>
-              <p className="mt-4 text-white opacity-90 flex-grow">
-                 ApplyPro is live world wide! Create research-backed cover letters and tailored resumes in seconds. Sign up today and accelerate your career journey.
-              </p>
-              <div className="mt-4">
-                <svg
-                  className="w-6 h-6 text-white transform group-hover:translate-x-1 transition-transform duration-300"
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    className="fill-current"
-                    d="M13 11V5.057L22.72 12 13 18.943V13H2v-2h11zm2 4.057L19.28 12 15 8.943v6.114z"
-                  />
-                </svg>
-              </div>
-            </a>
-
             {/* 1st Item */}
             <a
               href="/umail"
               rel="noopener noreferrer"
+              onClick={() => handleFeatureClick('UMail.ai', '/umail')}
               className="flex-shrink-0 w-80 flex flex-col p-6 group bg-gradient-to-tr from-teal-500 to-teal-400 dark:to-teal-500 rounded-lg shadow-2xl transition-transform transform hover:-translate-y-1 hover:shadow-3xl snap-start"
               aria-label="UMail.ai - A clutter-free, sponsored-free smart email client"
             >
@@ -121,25 +96,27 @@ export default function FeaturesBlocks() {
               </div>
             </a>
 
-
-
-                        {/* 5th Item */}
-                        <a
-              href="/Talent"
-              className="flex-shrink-0 w-80 flex flex-col p-6 group bg-gradient-to-tr from-yellow-500 to-yellow-400 dark:to-yellow-500 rounded-lg shadow-2xl transition-transform transform hover:-translate-y-1 hover:shadow-3xl snap-start"
-              aria-label="Privacy Dashboard - Manage all your privacy settings in one place"
+            {/* 2nd Item */}
+            <a
+              href="/applyPro"
+              rel="noopener noreferrer"
+              onClick={() => handleFeatureClick('ApplyPro.ai', '/applyPro')}
+              className="flex-shrink-0 w-80 flex flex-col p-6 group bg-gradient-to-tr from-purple-500 to-purple-400 dark:to-purple-500 rounded-lg shadow-2xl transition-transform transform hover:-translate-y-1 hover:shadow-3xl snap-start"
+              aria-label="ApplyPro.ai - Research-backed Cover Letters & Tailored Resumes"
             >
               <div className="flex-shrink-0">
-              <svg className="w-10 h-10 text-white mb-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
-  <path
-    className="fill-current"
-    d="M48 16h-8V8a8 8 0 10-16 0v8H16a4 4 0 00-4 4v36a4 4 0 004 4h32a4 4 0 004-4V20a4 4 0 00-4-4zm-20 0V8a4 4 0 118 0v8h-8zm24 44H16V20h32v40zM24 28a6 6 0 1112 0 6 6 0 01-12 0zm16 0a6 6 0 1112 0 6 6 0 01-12 0z"
-  />
-</svg>
-                <h3 className="text-xl font-bold font-red-hat-display text-white">Coming Soon: Talent Acquisition Platform</h3>
+                <svg className="w-10 h-10 text-white mb-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+                  <path
+                    className="fill-current"
+                    d="M20.796 20l-1.677 7.264a6 6 0 01-7.302 4.471L0 28.781V11.54l.35-.3 9.457-8.107a3.751 3.751 0 015.29 5.29L11.175 13H28.5a3.5 3.5 0 012.6 1.156c.663.736.984 1.72.878 2.74-.252 1.808-1.817 3.143-3.622 3.104h-7.56zM2 27.22l10.303 2.575a4 4 0 004.868-2.98L19.204 18h9.173c.812.018 1.508-.575 1.615-1.345A1.5 1.5 0 0028.5 15H11.173a2 2 0 01-1.517-3.3l3.922-4.577a1.755 1.755 0 00-.597-2.733 1.751 1.751 0 00-1.872.262L2 12.46v14.76zM28 .585L29.414 2 23 8.414 21.586 7 28 .586zm-8.272 6.627l-1.94-.485 1.484-5.94 1.94.484-1.484 5.94zm3.544 5l-.485-1.94 5.94-1.486.486 1.94-5.94 1.486z"
+                    fillRule="nonzero"
+                  />
+                </svg>
+                <h3 className="text-xl font-bold font-red-hat-display text-white">ApplyPro.ai</h3>
               </div>
               <p className="mt-4 text-white opacity-90 flex-grow">
-              An AI-powered recruitment tool that efficiently bulk scans resumes, ranks candidates by key criteria, and generates concise summaries for hiring managers and recruiters.              </p>
+                ApplyPro is live worldwide! Create research-backed cover letters and tailored resumes in seconds. Sign up today and accelerate your career journey.
+              </p>
               <div className="mt-4">
                 <svg
                   className="w-6 h-6 text-white transform group-hover:translate-x-1 transition-transform duration-300"
@@ -157,6 +134,7 @@ export default function FeaturesBlocks() {
             {/* 3rd Item */}
             <a
               href="/allergy"
+              onClick={() => handleFeatureClick('AI Allergy Check App', '/allergy')}
               className="flex-shrink-0 w-80 flex flex-col p-6 group bg-gradient-to-tr from-indigo-500 to-indigo-400 dark:to-indigo-500 rounded-lg shadow-2xl transition-transform transform hover:-translate-y-1 hover:shadow-3xl snap-start"
               aria-label="AI Allergy Check App - Check labels with ease and love the results"
             >
@@ -171,7 +149,7 @@ export default function FeaturesBlocks() {
                 <h3 className="text-xl font-bold font-red-hat-display text-white">Coming Soon: AI Allergy Check App</h3>
               </div>
               <p className="mt-4 text-white opacity-90 flex-grow">
-              Effortless scanning. Instant, personalized insights. Unlock safe choices with a simple scan. Check labels with ease and love the results. Stay tuned for the revolution in allergy management!
+                Effortless scanning. Instant, personalized insights. Unlock safe choices with a simple scan. Check labels with ease and love the results. Stay tuned for the revolution in allergy management!
               </p>
               <div className="mt-4">
                 <svg
@@ -187,11 +165,10 @@ export default function FeaturesBlocks() {
               </div>
             </a>
 
-
-
             {/* 4th Item */}
             <a
               href="/Search"
+              onClick={() => handleFeatureClick('AI Search Engine', '/Search')}
               className="flex-shrink-0 w-80 flex flex-col p-6 group bg-gradient-to-tr from-pink-500 to-pink-400 dark:to-pink-500 rounded-lg shadow-2xl transition-transform transform hover:-translate-y-1 hover:shadow-3xl snap-start"
               aria-label="AI Search Engine - Powerful search without clickbait and tracking"
             >
@@ -222,12 +199,47 @@ export default function FeaturesBlocks() {
               </div>
             </a>
 
-            
+            {/* 5th Item */}
+            <a
+              href="/Talent"
+              onClick={() => handleFeatureClick('Talent Acquisition Platform', '/Talent')}
+              className="flex-shrink-0 w-80 flex flex-col p-6 group bg-gradient-to-tr from-yellow-500 to-yellow-400 dark:to-yellow-500 rounded-lg shadow-2xl transition-transform transform hover:-translate-y-1 hover:shadow-3xl snap-start"
+              aria-label="Talent Acquisition Platform - Manage recruitment efficiently"
+            >
+              <div className="flex-shrink-0">
+                <svg className="w-10 h-10 text-white mb-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+                  <path
+                    className="fill-current"
+                    d="M48 16h-8V8a8 8 0 10-16 0v8H16a4 4 0 00-4 4v36a4 4 0 004 4h32a4 4 0 004-4V20a4 4 0 00-4-4zm-20 0V8a4 4 0 118 0v8h-8zm24 44H16V20h32v40zM24 28a6 6 0 1112 0 6 6 0 01-12 0zm16 0a6 6 0 1112 0 6 6 0 01-12 0z"
+                  />
+                </svg>
+                <h3 className="text-xl font-bold font-red-hat-display text-white">Coming Soon: Talent Acquisition Platform</h3>
+              </div>
+              <p className="mt-4 text-white opacity-90 flex-grow">
+                An AI-powered recruitment tool that efficiently bulk scans resumes, ranks candidates by key criteria, and generates concise summaries for hiring managers and recruiters.
+              </p>
+              <div className="mt-4">
+                <svg
+                  className="w-6 h-6 text-white transform group-hover:translate-x-1 transition-transform duration-300"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    className="fill-current"
+                    d="M13 11V5.057L22.72 12 13 18.943V13H2v-2h11zm2 4.057L19.28 12 15 8.943v6.114z"
+                  />
+                </svg>
+              </div>
+            </a>
+
           </div>
 
           {/* Right Arrow */}
           <button
-            onClick={() => scroll('right')}
+            onClick={() => {
+              scroll('right');
+              trackEvent('Scroll Clicked', { direction: 'right' }); // Optional: Track arrow clicks
+            }}
             className="absolute right-0 top-1/2 transform -translate-y-1/2 bg-gray-900 text-white p-2 rounded-full shadow-lg hover:bg-gray-600 focus:outline-none focus:ring-2 focus:ring-teal-400 z-10"
             aria-label="Scroll Right"
           >

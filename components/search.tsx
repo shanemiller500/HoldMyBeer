@@ -1,14 +1,23 @@
 // components/AISearch.jsx
 
+'use client'
+
 import Image from 'next/image'
 import Link from 'next/link'
 import { FaArrowLeft, FaArrowRight } from 'react-icons/fa'
 
-
 import HeroBg from '@/public/images/venue_3.jpg'
 import HeroImage from '@/public/images/Venue_2.jpg'
 
+// Import the trackEvent function from your Mixpanel utility
+import { trackEvent } from '@/utils/mixpanel';
+
 export default function SearchApp() {
+  // Handler to track navigation arrow clicks
+  const handleNavigationClick = (direction: string, target: string) => {
+    trackEvent('Navigation Clicked', { direction, target });
+  };
+
   return (
     <section className="relative">
 
@@ -70,12 +79,20 @@ export default function SearchApp() {
           {/* Navigation Arrows */}
           <div className="z-20 flex justify-between px-4 sm:px-6 lg:px-8 mt-10">
             {/* Back Arrow */}
-            <Link href="/allergy" className="text-teal-500 hover:text-teal-700 flex items-center">
+            <Link 
+              href="/allergy" 
+              className="text-teal-500 hover:text-teal-700 flex items-center"
+              onClick={() => handleNavigationClick('Back', '/allergy')} // Attach the onClick handler here
+            >
               <FaArrowLeft className="mr-2" /> Allergy App
             </Link>
 
             {/* Next Arrow */}
-            <Link href="/" className="text-teal-500 hover:text-teal-700 flex items-center">
+            <Link 
+              href="/" 
+              className="text-teal-500 hover:text-teal-700 flex items-center"
+              onClick={() => handleNavigationClick('Next', '/')} // Attach the onClick handler here
+            >
               Home <FaArrowRight className="ml-2" />
             </Link>
           </div>

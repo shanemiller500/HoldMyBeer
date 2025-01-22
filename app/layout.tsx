@@ -1,4 +1,6 @@
 'use client'
+import { trackEvent } from '@/utils/mixpanel';
+
 
 declare global {
   interface Window {
@@ -40,6 +42,10 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   const pathname = usePathname() // Moved inside the component
+
+  useEffect(() => { 
+    trackEvent('Page Viewed', { path: pathname }); 
+  }, [pathname]);
 
   useEffect(() => {
     AOS.init({

@@ -5,7 +5,7 @@ import TeamImage01 from '@/public/images/wedding.jpg';
 import { trackEvent } from '@/utils/mixpanel';
 import Link from 'next/link';
 import { FaLinkedinIn } from 'react-icons/fa6';
-import { TbWorldWww } from "react-icons/tb";
+import { SiAwwwards  } from "react-icons/si";
 
 
 const handleLinkedInClick = (memberName: string) => {
@@ -48,6 +48,21 @@ export default function Team() {
                     Shane Miller
                   </h4>
                   <div className="flex space-x-2">
+
+                  <Link 
+                      href="https://shanemiller.ninja"
+                      className="p-1"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label="Web site"
+                      onClick={() => handleLinkedInClick('Shane Miller')}
+                    >
+                      {/* Website style image */}
+                      <SiAwwwards  
+                        size={33} 
+                        className="text-indigo-600 hover:text-indigo-800 transition-colors duration-200"
+                      />
+                    </Link>
                     <Link 
                       href="https://www.linkedin.com/in/shane-miller-ninja/"
                       className="p-2"
@@ -62,20 +77,7 @@ export default function Team() {
                         className="text-indigo-600 hover:text-indigo-800 transition-colors duration-200"
                       />
                     </Link>
-                    <Link 
-                      href="https://shanemiller.ninja"
-                      className="p-2"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      aria-label="Web site"
-                      onClick={() => handleLinkedInClick('Shane Miller')}
-                    >
-                      {/* Website style image */}
-                      <TbWorldWww 
-                        size={24} 
-                        className="text-indigo-600 hover:text-indigo-800 transition-colors duration-200"
-                      />
-                    </Link>
+                    
                   </div>
                 </div>
               </div>

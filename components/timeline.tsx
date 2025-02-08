@@ -130,6 +130,19 @@ export default function Timeline() {
                     }`}
                   ></span>
                 </button>
+
+                                {/* february 2025 */}
+                                <button
+                  className="flex items-center justify-between font-medium text-gray-500 dark:text-gray-400 w-20 py-3 pr-2 text-left"
+                  onClick={() => handleYearClick('Feb2025', 'february 2025')}
+                >
+                  <span className="block w-12 truncate">february 2025</span>
+                  <span
+                    className={`block w-3.5 h-3.5 bg-gray-400 dark:bg-gray-700 border-2 border-white dark:border-gray-900 rounded-full ${
+                      year === 'Feb2025' ? 'bg-teal-500 dark:bg-teal-500' : ''
+                    }`}
+                  ></span>
+                </button>
               </div>
 
               {/* ================== January 2024 (year === 'Jan2024') ================== */}
@@ -434,6 +447,29 @@ export default function Timeline() {
                       </p>
                     </div>
                   </article>
+                </div>
+              </div>
+
+                     {/* ================== february 2025 (year === 'Feb2025') ================== */}
+                     <div className={`grow ${year !== 'Feb2025' ? 'hidden' : ''}`}>
+                <div className="grid md:grid-cols-2 gap-6">
+
+
+                  <article className="p-6 bg-white dark:bg-gray-800 shadow-2xl flex flex-col">
+                    <header>
+                      <h3 className="h4 font-red-hat-display mb-1">
+                        <a href="#0">UMail Custom Products</a>
+                      </h3>
+                    </header>
+                    <div className="text-gray-600 dark:text-gray-400 grow">
+                      <p>
+                        UMail is proud to introduce our custom reporting tool designed specifically for law enforcement agencies, currently undergoing early testing by officers.
+                      </p>
+                      <br />
+                      <p>This versatile tool is set to transform the reporting process, potentially reducing paperwork time by over 90%. With more efficient reporting, officers can dedicate more time to patrolling and serving their communities effectively.</p>
+                    </div>
+                  </article>
+
                 </div>
               </div>
 

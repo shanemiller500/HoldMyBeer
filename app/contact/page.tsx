@@ -256,11 +256,11 @@ export default function ContactFormLogin() {
   };
 
   return (
-    <section className="text-gray-800 mt-10 md:mt-40 dark:text-gray-100">
+    <section className="text-gray-800 mt-20 md:mt-60 dark:text-gray-100">
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <div>
           {/* Section header */}
-          <div className="pb-5 text-center">
+          <div className="pb-5 text-center ">
             <h1 className="pb-5 font-nacelle text-3xl md:text-4xl lg:text-5xl font-semibold">Say Hello</h1>
             <div className="mt-8 flex justify-center items-center text-center text-sm text-gray-500 dark:text-gray-400">  This contact page is powered by&nbsp;<Image 
                 className="" 

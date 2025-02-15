@@ -316,7 +316,7 @@ export default function ContactFormLogin() {
                 className=" btn-outline-primary btn-sm get-in-touch px-4 rounded border border-teal-600 text-teal-600 hover:bg-teal-600 hover:text-white transition"
               >
                 <FontAwesomeIcon icon={faSmile} className="mr-2" />
-                <span className="hidden sm:inline">Mood &amp; Tone</span>
+                <span className="hidden sm:inline text-xs ">Mood &amp; Tone</span>
               </button>
               <button
                 type="button"
@@ -327,7 +327,7 @@ export default function ContactFormLogin() {
                 className="btn btn-outline-primary btn-sm get-in-touch px-4 py-2 rounded border border-teal-600 text-teal-600 hover:bg-teal-600 hover:text-white transition"
               >
                 <FontAwesomeIcon icon={faPenNib} className="mr-2" />
-                <span className="hidden sm:inline">Writing Style</span>
+                <span className="hidden sm:inline text-xs">Writing Style</span>
               </button>
               <button
                 type="button"
@@ -338,7 +338,7 @@ export default function ContactFormLogin() {
                 className="btn btn-outline-primary btn-sm get-in-touch px-4 py-2 rounded border border-teal-600 text-teal-600 hover:bg-teal-600 hover:text-white transition"
               >
                 <FontAwesomeIcon icon={faGlobe} className="mr-2" />
-                <span className="hidden sm:inline">Change Language</span>
+                <span className="hidden sm:inline text-xs">Change Language</span>
               </button>
               {/* Text Refinement Assistant */}
               <TextRefinementAssistant

@@ -107,7 +107,7 @@ const TextRefinementAssistant: React.FC<TextRefinementAssistantProps> = ({
       ) : (
         <>
           <FontAwesomeIcon icon={faMagic} className="mr-2" />
-          <span className="hidden sm:inline">Text Refine</span>
+          <span className="hidden sm:inline text-xs">Text Refine</span>
         </>
       )}
     </button>

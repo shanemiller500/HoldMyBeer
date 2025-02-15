@@ -5,6 +5,7 @@ import { trackEvent } from '@/utils/mixpanel'; // Import the trackEvent function
 
 export default function Timeline() {
   const [year, setYear] = useState<string>('Jan2024'); // Default to January 2024
+  const [is2024Open, setIs2024Open] = useState<boolean>(false); // Track if 2024 dropdown is expanded
 
   // Handler to set the year and track the event
   const handleYearClick = (selectedYear: string, displayYear: string) => {
@@ -16,7 +17,6 @@ export default function Timeline() {
     <section>
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
         <div className="py-12 md:py-20 border-t border-gray-200 dark:border-gray-800">
-
           {/* Section header */}
           <div className="max-w-3xl mx-auto text-center pb-12 md:pb-20">
             <h2 className="h2 font-red-hat-display mb-4">Our Remarkable Achievements</h2>
@@ -28,19 +28,12 @@ export default function Timeline() {
           {/* Section content */}
           <div>
             <div className="flex items-start">
-
-              {/* Timeline buttons */}
-              {/*
-                Using a custom-scrollbar class to hide the scrollbar:
-                1) 'overflow-y-auto' + 'max-h-96' for vertical scrolling
-                2) Inline styles to hide scrollbar on Firefox & IE
-                3) CSS below to hide scrollbar on WebKit browsers
-              */}
+              {/* Left Sidebar with Timeline Navigation */}
               <div
                 className="relative mr-4 sm:mr-12 lg:mr-32 max-h-96 custom-scrollbar"
                 style={{
-                  msOverflowStyle: 'none',  // IE, Edge
-                  scrollbarWidth: 'none',    // Firefox
+                  msOverflowStyle: 'none', // IE, Edge
+                  scrollbarWidth: 'none',   // Firefox
                 }}
               >
                 <div
@@ -50,72 +43,90 @@ export default function Timeline() {
                   <div className="absolute inset-0 w-0.5 h-full bg-gray-300 dark:bg-gray-700"></div>
                 </div>
 
-                {/* January 2024 */}
+                {/* 2024 Dropdown Toggle */}
                 <button
                   className="flex items-center justify-between font-medium text-gray-500 dark:text-gray-400 w-20 py-3 pr-2 text-left"
-                  onClick={() => handleYearClick('Jan2024', 'January 2024')}
+                  onClick={() => setIs2024Open((prev) => !prev)}
                 >
-                  <span className="block w-12 truncate">January 2024</span>
+                  <span className="block w-12 truncate">2024</span>
                   <span
-                    className={`block w-3.5 h-3.5 bg-gray-400 dark:bg-gray-700 border-2 border-white dark:border-gray-900 rounded-full ${
-                      year === 'Jan2024' ? 'bg-teal-500 dark:bg-teal-500' : ''
-                    }`}
-                  ></span>
+                    className="block w-3.5 h-3.5 flex items-center justify-center text-xl"
+                  >
+                    {is2024Open ? '-' : '+'}
+                  </span>
                 </button>
 
-                {/* May 2024 */}
-                <button
-                  className="flex items-center justify-between font-medium text-gray-500 dark:text-gray-400 w-20 py-3 pr-2 text-left"
-                  onClick={() => handleYearClick('May2024', 'May 2024')}
-                >
-                  <span className="block w-12 truncate">May 2024</span>
-                  <span
-                    className={`block w-3.5 h-3.5 bg-gray-400 dark:bg-gray-700 border-2 border-white dark:border-gray-900 rounded-full ${
-                      year === 'May2024' ? 'bg-teal-500 dark:bg-teal-500' : ''
-                    }`}
-                  ></span>
-                </button>
+                {/* 2024 Month Buttons (only visible when dropdown is expanded) */}
+                {is2024Open && (
+                  <div className="ml-4">
+                    {/* January 2024 */}
+                    <button
+                      className="flex items-center justify-between font-medium text-gray-500 dark:text-gray-400 w-20 py-3 pr-2 text-left"
+                      onClick={() => handleYearClick('Jan2024', 'January 2024')}
+                    >
+                      <span className="block w-12 truncate">January 2024</span>
+                      <span
+                        className={`block w-3.5 h-3.5 bg-gray-400 dark:bg-gray-700 border-2 border-white dark:border-gray-900 rounded-full ${
+                          year === 'Jan2024' ? 'bg-teal-500 dark:bg-teal-500' : ''
+                        }`}
+                      ></span>
+                    </button>
 
-                {/* September 2024 */}
-                <button
-                  className="flex items-center justify-between font-medium text-gray-500 dark:text-gray-400 w-20 py-3 pr-2 text-left"
-                  onClick={() => handleYearClick('Sep2024', 'September 2024')}
-                >
-                  <span className="block w-12 truncate">September 2024</span>
-                  <span
-                    className={`block w-3.5 h-3.5 bg-gray-400 dark:bg-gray-700 border-2 border-white dark:border-gray-900 rounded-full ${
-                      year === 'Sep2024' ? 'bg-teal-500 dark:bg-teal-500' : ''
-                    }`}
-                  ></span>
-                </button>
+                    {/* May 2024 */}
+                    <button
+                      className="flex items-center justify-between font-medium text-gray-500 dark:text-gray-400 w-20 py-3 pr-2 text-left"
+                      onClick={() => handleYearClick('May2024', 'May 2024')}
+                    >
+                      <span className="block w-12 truncate">May 2024</span>
+                      <span
+                        className={`block w-3.5 h-3.5 bg-gray-400 dark:bg-gray-700 border-2 border-white dark:border-gray-900 rounded-full ${
+                          year === 'May2024' ? 'bg-teal-500 dark:bg-teal-500' : ''
+                        }`}
+                      ></span>
+                    </button>
 
-                {/* October 2024 */}
-                <button
-                  className="flex items-center justify-between font-medium text-gray-500 dark:text-gray-400 w-20 py-3 pr-2 text-left"
-                  onClick={() => handleYearClick('Oct2024', 'October 2024')}
-                >
-                  <span className="block w-12 truncate">October 2024</span>
-                  <span
-                    className={`block w-3.5 h-3.5 bg-gray-400 dark:bg-gray-700 border-2 border-white dark:border-gray-900 rounded-full ${
-                      year === 'Oct2024' ? 'bg-teal-500 dark:bg-teal-500' : ''
-                    }`}
-                  ></span>
-                </button>
+                    {/* September 2024 */}
+                    <button
+                      className="flex items-center justify-between font-medium text-gray-500 dark:text-gray-400 w-20 py-3 pr-2 text-left"
+                      onClick={() => handleYearClick('Sep2024', 'September 2024')}
+                    >
+                      <span className="block w-12 truncate">September 2024</span>
+                      <span
+                        className={`block w-3.5 h-3.5 bg-gray-400 dark:bg-gray-700 border-2 border-white dark:border-gray-900 rounded-full ${
+                          year === 'Sep2024' ? 'bg-teal-500 dark:bg-teal-500' : ''
+                        }`}
+                      ></span>
+                    </button>
 
-                {/* December 2024 */}
-                <button
-                  className="flex items-center justify-between font-medium text-gray-500 dark:text-gray-400 w-20 py-3 pr-2 text-left"
-                  onClick={() => handleYearClick('Dec2024', 'December 2024')}
-                >
-                  <span className="block w-12 truncate">December 2024</span>
-                  <span
-                    className={`block w-3.5 h-3.5 bg-gray-400 dark:bg-gray-700 border-2 border-white dark:border-gray-900 rounded-full ${
-                      year === 'Dec2024' ? 'bg-teal-500 dark:bg-teal-500' : ''
-                    }`}
-                  ></span>
-                </button>
+                    {/* October 2024 */}
+                    <button
+                      className="flex items-center justify-between font-medium text-gray-500 dark:text-gray-400 w-20 py-3 pr-2 text-left"
+                      onClick={() => handleYearClick('Oct2024', 'October 2024')}
+                    >
+                      <span className="block w-12 truncate">October 2024</span>
+                      <span
+                        className={`block w-3.5 h-3.5 bg-gray-400 dark:bg-gray-700 border-2 border-white dark:border-gray-900 rounded-full ${
+                          year === 'Oct2024' ? 'bg-teal-500 dark:bg-teal-500' : ''
+                        }`}
+                      ></span>
+                    </button>
 
-                {/* Year Divider */}
+                    {/* December 2024 */}
+                    <button
+                      className="flex items-center justify-between font-medium text-gray-500 dark:text-gray-400 w-20 py-3 pr-2 text-left"
+                      onClick={() => handleYearClick('Dec2024', 'December 2024')}
+                    >
+                      <span className="block w-12 truncate">December 2024</span>
+                      <span
+                        className={`block w-3.5 h-3.5 bg-gray-400 dark:bg-gray-700 border-2 border-white dark:border-gray-900 rounded-full ${
+                          year === 'Dec2024' ? 'bg-teal-500 dark:bg-teal-500' : ''
+                        }`}
+                      ></span>
+                    </button>
+                  </div>
+                )}
+
+                {/* 2025 Divider */}
                 <span className="block w-12 truncate m-5">2025</span>
 
                 {/* January 2025 */}
@@ -131,12 +142,12 @@ export default function Timeline() {
                   ></span>
                 </button>
 
-                                {/* february 2025 */}
-                                <button
+                {/* February 2025 */}
+                <button
                   className="flex items-center justify-between font-medium text-gray-500 dark:text-gray-400 w-20 py-3 pr-2 text-left"
-                  onClick={() => handleYearClick('Feb2025', 'february 2025')}
+                  onClick={() => handleYearClick('Feb2025', 'February 2025')}
                 >
-                  <span className="block w-12 truncate">february 2025</span>
+                  <span className="block w-12 truncate">February 2025</span>
                   <span
                     className={`block w-3.5 h-3.5 bg-gray-400 dark:bg-gray-700 border-2 border-white dark:border-gray-900 rounded-full ${
                       year === 'Feb2025' ? 'bg-teal-500 dark:bg-teal-500' : ''
@@ -145,7 +156,8 @@ export default function Timeline() {
                 </button>
               </div>
 
-              {/* ================== January 2024 (year === 'Jan2024') ================== */}
+              {/* ================== Timeline Content ================== */}
+              {/* January 2024 */}
               <div className={`grow ${year !== 'Jan2024' ? 'hidden' : ''}`}>
                 <div className="grid md:grid-cols-2 gap-4 sm:gap-6">
                   <article className="p-6 bg-white dark:bg-gray-800 shadow-2xl flex flex-col">
@@ -179,7 +191,7 @@ export default function Timeline() {
                 </div>
               </div>
 
-              {/* ================== May 2024 (year === 'May2024') ================== */}
+              {/* May 2024 */}
               <div className={`grow ${year !== 'May2024' ? 'hidden' : ''}`}>
                 <div className="grid md:grid-cols-2 gap-4 sm:gap-6">
                   <article className="p-6 bg-white dark:bg-gray-800 shadow-2xl flex flex-col">
@@ -216,7 +228,7 @@ export default function Timeline() {
                 </div>
               </div>
 
-              {/* ================== September 2024 (year === 'Sep2024') ================== */}
+              {/* September 2024 */}
               <div className={`grow ${year !== 'Sep2024' ? 'hidden' : ''}`}>
                 <div className="grid md:grid-cols-2 gap-6">
                   <article className="p-6 bg-white dark:bg-gray-800 shadow-2xl flex flex-col">
@@ -280,7 +292,7 @@ export default function Timeline() {
                 </div>
               </div>
 
-              {/* ================== October 2024 (year === 'Oct2024') ================== */}
+              {/* October 2024 */}
               <div className={`grow ${year !== 'Oct2024' ? 'hidden' : ''}`}>
                 <div className="grid md:grid-cols-2 gap-6">
                   <article className="p-6 bg-white dark:bg-gray-800 shadow-2xl flex flex-col">
@@ -349,7 +361,7 @@ export default function Timeline() {
                 </div>
               </div>
 
-              {/* ================== December 2024 (year === 'Dec2024') ================== */}
+              {/* December 2024 */}
               <div className={`grow ${year !== 'Dec2024' ? 'hidden' : ''}`}>
                 <div className="grid md:grid-cols-2 gap-6">
                   <article className="p-6 bg-white dark:bg-gray-800 shadow-2xl flex flex-col">
@@ -387,7 +399,7 @@ export default function Timeline() {
                 </div>
               </div>
 
-              {/* ================== January 2025 (year === 'Jan2025') ================== */}
+              {/* January 2025 */}
               <div className={`grow ${year !== 'Jan2025' ? 'hidden' : ''}`}>
                 <div className="grid md:grid-cols-2 gap-6">
                   <article className="p-6 bg-white dark:bg-gray-800 shadow-2xl flex flex-col">
@@ -416,21 +428,6 @@ export default function Timeline() {
                     </div>
                   </article>
 
-                  {/* <article className="p-6 bg-white dark:bg-gray-800 shadow-2xl flex flex-col">
-                    <header>
-                      <h3 className="h4 font-red-hat-display mb-1">
-                        <a href="#0">UMail Custom Products</a>
-                      </h3>
-                    </header>
-                    <div className="text-gray-600 dark:text-gray-400 grow">
-                      <p>
-                        UMail is proud to introduce our custom reporting tool designed specifically for law enforcement agencies, currently undergoing early testing by officers.
-                      </p>
-                      <br />
-                      <p>This versatile tool is set to transform the reporting process, potentially reducing paperwork time by over 90%. With more efficient reporting, officers can dedicate more time to patrolling and serving their communities effectively.</p>
-                    </div>
-                  </article> */}
-
                   <article className="p-6 bg-white dark:bg-gray-800 shadow-2xl flex flex-col">
                     <header>
                       <h3 className="h4 font-red-hat-display mb-1">
@@ -450,11 +447,9 @@ export default function Timeline() {
                 </div>
               </div>
 
-                     {/* ================== february 2025 (year === 'Feb2025') ================== */}
-                     <div className={`grow ${year !== 'Feb2025' ? 'hidden' : ''}`}>
+              {/* February 2025 */}
+              <div className={`grow ${year !== 'Feb2025' ? 'hidden' : ''}`}>
                 <div className="grid md:grid-cols-2 gap-6">
-
-
                   <article className="p-6 bg-white dark:bg-gray-800 shadow-2xl flex flex-col">
                     <header>
                       <h3 className="h4 font-red-hat-display mb-1">
@@ -466,26 +461,17 @@ export default function Timeline() {
                         UMail is proud to introduce our custom reporting tool designed specifically for law enforcement agencies, currently undergoing early testing by officers.
                       </p>
                       <br />
-                      <p>This versatile tool is set to transform the reporting process, potentially reducing paperwork time by over 90%. With more efficient reporting, officers can dedicate more time to patrolling and serving their communities effectively.</p>
+                      <p>
+                        This versatile tool is set to transform the reporting process, potentially reducing paperwork time by over 90%. With more efficient reporting, officers can dedicate more time to patrolling and serving their communities effectively.
+                      </p>
                     </div>
                   </article>
-
                 </div>
               </div>
 
             </div>
           </div>
 
-          {/* 
-            Hide scrollbar for WebKit-based browsers (Chrome, Safari, etc.)
-            If you're using a CSS/SCSS file or Tailwind plugin, you can place this there.
-            For inline, we add a small <style jsx> block here:
-          */}
-          <style jsx>{`
-            .custom-scrollbar::-webkit-scrollbar {
-              display: none;
-            }
-          `}</style>
         </div>
       </div>
     </section>

@@ -117,7 +117,7 @@ export default function FeaturesBlocks() {
                 <h3 className="text-xl font-bold font-red-hat-display text-white">In Testing: UMail.ai</h3>
               </div>
               <p className="mt-4 text-white opacity-90 flex-grow">
-                A clutter-free, sponsored-free smart email client, ready to integrate with your Gmail account. (Microsoft integration coming soon)
+                A clutter-free, sponsored-free smart email client, ready to integrate with your Gmail account. (Microsoft & Salesforce integration coming soon)
               </p>
               <div className="mt-4">
                 <svg

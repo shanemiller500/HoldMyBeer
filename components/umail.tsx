@@ -53,7 +53,7 @@ export default function UMailLandingPage() {
             >
               The future of global communication. UMail transforms how you connect
               globally, work, and express yourself. Built to seamlessly integrate with
-              your Gmail & Google Workspace accounts. (Microsoft integration coming soon)
+              your Gmail & Google Workspace accounts. (Microsoft & Salesforce integration coming soon)
             </p>
           </div>
         </section>

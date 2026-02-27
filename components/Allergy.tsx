@@ -1,19 +1,13 @@
-// components/Allergy.jsx
-
 'use client'
 
 import Image from 'next/image'
 import Link from 'next/link'
-import { FaArrowLeft, FaArrowRight } from 'react-icons/fa' // Optional: For a better-looking arrow icon
-
+import { FaArrowLeft, FaArrowRight } from 'react-icons/fa'
 import HeroBg from '@/public/images/venue_3.jpg'
 import HeroImage from '@/public/images/Venue_2.jpg'
-
-// Import the trackEvent function from your Mixpanel utility
 import { trackEvent } from '@/utils/mixpanel';
 
 export default function Allergy() {
-    // Handler to track navigation arrow clicks
     const handleNavigationClick = (direction: string, target: string) => {
         trackEvent('Navigation Clicked', { direction, target });
     };
@@ -84,8 +78,7 @@ export default function Allergy() {
             <Link 
               href="/Talent" 
               className="text-teal-500 hover:text-teal-700 flex items-center"
-              onClick={() => handleNavigationClick('Back', '/Talent')} // Attach the onClick handler here
-            >
+              onClick={() => handleNavigationClick('Back', '/Talent')}             >
               <FaArrowLeft className="mr-2" /> Talent Acquisition Platform
             </Link>
     
@@ -93,8 +86,7 @@ export default function Allergy() {
             <Link 
               href="/Search" 
               className="text-teal-500 hover:text-teal-700 flex items-center"
-              onClick={() => handleNavigationClick('Next', '/Search')} // Attach the onClick handler here
-            >
+              onClick={() => handleNavigationClick('Next', '/Search')}             >
               AI Search Engine <FaArrowRight className="ml-2" />
             </Link>
           </div>

@@ -1,6 +1,4 @@
-import React, { useState } from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faSpinner } from '@fortawesome/free-solid-svg-icons';
+import React from 'react';
 import ReactCountryFlag from "react-country-flag";
 import { trackEvent } from '@/utils/mixpanel';
 
@@ -44,8 +42,6 @@ const languages: Language[] = [
 ];
 
 const LanguageAssistant: React.FC<LanguageAssistantProps> = ({ currentText, onTranslate, onClose }) => {
-  const [loading, setLoading] = useState(false);
-
   const handleLanguageChange = (language: Language) => {
     trackEvent('Language Translation Clicked', { language: language.name });
     onTranslate(language);
@@ -81,11 +77,6 @@ const LanguageAssistant: React.FC<LanguageAssistantProps> = ({ currentText, onTr
           </ul>
         </div>
       </div>
-      {loading && (
-        <div className="absolute inset-0 flex items-center justify-center">
-          <FontAwesomeIcon icon={faSpinner} spin size="3x" className="text-white" />
-        </div>
-      )}
     </div>
   );
 };

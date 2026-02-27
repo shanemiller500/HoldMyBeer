@@ -1,10 +1,9 @@
 'use client';
 
 import Link from 'next/link';
-import { trackEvent } from '@/utils/mixpanel'; // Import the trackEvent function
+import { trackEvent } from '@/utils/mixpanel';
 
 export default function Footer() {
-  // Handler to track footer link clicks
   const handleFooterLinkClick = (linkName: string, href: string) => {
     trackEvent('Footer Link Clicked', { linkName, href });
   };
@@ -62,22 +61,6 @@ export default function Footer() {
 
             {/* 2nd, 3rd, 4th and 5th blocks */}
             <div className="md:col-span-10 lg:col-span-9 grid grid-cols-2 md:grid-cols-4 gap-8">
-              {/* 2nd block (Empty) */}
-              <div className="text-sm">
-                <h6 className="font-medium uppercase mb-2"></h6>
-                <ul>
-                  {/* Add links here if needed */}
-                </ul>
-              </div>
-
-              {/* 3rd block (Empty) */}
-              <div className="text-sm">
-                <h6 className="font-medium uppercase mb-2"></h6>
-                <ul>
-                  {/* Add links here if needed */}
-                </ul>
-              </div>
-
               {/* 4th block */}
               <div className="text-sm">
                 <h6 className="font-medium uppercase mb-2">Company</h6>

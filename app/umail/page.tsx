@@ -1,12 +1,9 @@
 export const metadata = {
     title: 'Umail - HMB-CO',
-    description: 'Page description',
+    description: 'UMail - a clutter-free, ad-free, privacy-first email client powered by AI.',
   }
   
   import Hero from '@/components/umail'
-
-  import CtaContact from '@/components/cta-contact'
-  
   export default function Umail() {
     return (
       <>

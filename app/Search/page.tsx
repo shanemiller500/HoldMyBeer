@@ -1,7 +1,6 @@
-// pages/SearchApp.jsx
 export const metadata = {
     title: 'AI Search App - HMB-CO',
-    description: 'Page description',
+    description: 'AI-powered search engine delivering clean, ad-free, privacy-respecting results.',
   }
 import Hero from '@/components/search'
 

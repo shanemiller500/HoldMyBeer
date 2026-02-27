@@ -76,15 +76,6 @@ export const metadata = {
     siteName: 'holdmybeer.info',
   },
 
-  // // Twitter Card
-  // twitter: {
-  //   card: 'summary_large_image',
-  //   site: '@HMB_CO', // Replace with your Twitter handle
-  //   creator: '@HMB_CO', // Replace with the author's Twitter handle
-  //   title: 'HMB-CO | AI-Powered Solutions for Modern Businesses',
-  //   description: 'Discover HMB-CO’s cutting-edge AI applications—like ApplyPro & Umail—that drive innovation, streamline workflows, and accelerate business growth. From productivity to communications, our intelligent solutions empower organizations to thrive in the digital age.',
-  //   images: ['https://www.hmb-co.com/images/hmb-co-og.jpg'],
-  // },
 }
 
 import PageIllustration from '@/components/page-illustration'

@@ -1,12 +1,9 @@
 export const metadata = {
     title: 'ApplyPro - HMB-CO',
-    description: 'Page description',
+    description: 'ApplyPro - AI-generated, research-backed cover letters and tailored resumes. Land more interviews.',
   }
   
   import Hero from '@/components/applypro'
-
-  import CtaContact from '@/components/cta-contact'
-  
   export default function ApplyPro() {
     return (
       <>

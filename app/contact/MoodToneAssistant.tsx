@@ -53,7 +53,6 @@ const MoodToneAssistant: React.FC<MoodToneAssistantProps> = ({ onEnhance, onDefa
             &times;
           </button>
         </div>
-        <h2 className="text-xl font-semibold mb-4 text-center"></h2>
         {/* Default enhance button */}
         <button
           id="centeringClass"

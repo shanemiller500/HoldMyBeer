@@ -1,4 +1,3 @@
-// app/contact/page.tsx
 'use client';
 import Image from 'next/image'
 import React, { useState, useEffect, useRef } from 'react';
@@ -38,7 +37,6 @@ export default function ContactFormLogin() {
 
   const textAreaRef = useRef<HTMLTextAreaElement>(null);
   const fileInputRef = useRef<HTMLInputElement>(null);
-  // Ref to store the textarea selection range.
   const textAreaSelectionRef = useRef<{ start: number; end: number } | null>(null);
 
   // Auto-adjust the textarea height.
@@ -106,7 +104,6 @@ export default function ContactFormLogin() {
     }
   };
 
-  // --- Enhancement Functions (unchanged) ---
   const displayEnhancedText = async () => {
     if (!formData.description.trim()) {
       showPopup('Add some text to enhance!');
@@ -230,7 +227,6 @@ export default function ContactFormLogin() {
     trackEvent('Contact Page Viewed', { page: 'Contact' });
   }, []);
 
-  // --- Drag & Drop Handlers ---
   const handleDragOver = (e: React.DragEvent<HTMLDivElement>) => {
     e.preventDefault();
     e.stopPropagation();

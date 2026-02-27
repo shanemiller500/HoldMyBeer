@@ -1,34 +1,21 @@
 'use client'
 
-import { useState } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
-import { FaArrowLeft, FaArrowRight } from 'react-icons/fa' // Optional: For a better-looking arrow icon
-
-// Replace these images with your actual ApplyPro images
+import { FaArrowLeft, FaArrowRight } from 'react-icons/fa'
 import FeatureImage1 from '@/public/images/applyPro.png'
 import FeatureImage2 from '@/public/images/ApplyPro_dude.jpg'
-
-// Import the trackEvent function from your Mixpanel utility
 import { trackEvent } from '@/utils/mixpanel';
 
 export default function ApplyProLandingPage() {
-  // State to manage dark mode toggling
-  const [darkMode, setDarkMode] = useState(false)
-
-  // Handler to track navigation arrow clicks
   const handleNavigationClick = (direction: string, target: string) => {
     trackEvent('Navigation Clicked', { direction, target });
   };
 
   return (
-    <div className={darkMode ? 'dark' : ''}>
+    <div>
       <main className="bg-white dark:bg-gray-900 transition-colors duration-300">
 
-        {/* 
-          HERO SECTION 
-          (Uses the style of UMail's hero: large top/bottom padding, centered content, image, etc.)
-        */}
         <section className="relative pt-24 pb-12 md:pt-32 md:pb-20 flex flex-col items-center text-center">
           <div className="max-w-4xl mx-auto px-4 sm:px-6">
             
@@ -46,10 +33,6 @@ export default function ApplyProLandingPage() {
           </div>
         </section>
 
-        {/*
-          WHAT IS APPLYPRO
-          (Mirroring the "What is UMail?" styling: background color, heading, subtext, two-column layout)
-        */}
         <section className="relative pt-16 pb-10 md:pt-20 md:pb-16 bg-gray-100 dark:bg-gray-900">
           <div className="max-w-5xl mx-auto px-4 sm:px-6">
             <div className="md:grid md:grid-cols-2 md:gap-8 items-center">
@@ -129,8 +112,6 @@ export default function ApplyProLandingPage() {
 
 
               <div className="relative w-full " data-aos="fade-left">
-                {/* Video Section */}
-       
                 <video
                   src="/videos/ApplyPro1.mp4"
                   autoPlay
@@ -138,8 +119,6 @@ export default function ApplyProLandingPage() {
                   loop
                   playsInline
                   className="mx-auto w-full max-w-lg h-auto"
-                  // Optionally, add controls if needed
-                  // controls
                 >
                   Your browser does not support the video tag.
                 </video>
@@ -149,10 +128,6 @@ export default function ApplyProLandingPage() {
           </div>
         </section>
 
-        {/*
-          OUR MISSION SECTION
-          (Styling similar to a second content block from UMail—like "Custom Mood & Tone" or "Seamless Integrations")
-        */}
         <section className="relative pt-16 pb-10 md:pt-20 md:pb-16 bg-white dark:bg-gray-900">
           <div className="max-w-5xl mx-auto px-4 sm:px-6">
             <div className="md:grid md:grid-cols-2 md:gap-8 items-center">
@@ -199,8 +174,7 @@ export default function ApplyProLandingPage() {
           <Link 
             href="/" 
             className="text-teal-500 hover:text-teal-700 flex items-center"
-            onClick={() => handleNavigationClick('Back', '/Home')} // Attach the onClick handler here
-          >
+            onClick={() => handleNavigationClick('Back', '/Home')}           >
             <FaArrowLeft className="mr-2" /> Home
           </Link>
 
@@ -208,16 +182,11 @@ export default function ApplyProLandingPage() {
           <Link 
             href="/umail" 
             className="text-teal-500 hover:text-teal-700 flex items-center"
-            onClick={() => handleNavigationClick('Next', '/umail')} // Attach the onClick handler here
-          >
+            onClick={() => handleNavigationClick('Next', '/umail')}           >
             UMail <FaArrowRight className="ml-2" />
           </Link>
         </div>
 
-        {/*
-          OPTIONAL CTA SECTION
-          (Similar style to the big CTA in UMail)
-        */}
         <section className="relative py-16 md:py-20 bg-teal-500">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 text-center">
             <h2

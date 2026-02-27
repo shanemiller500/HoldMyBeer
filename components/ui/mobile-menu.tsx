@@ -3,7 +3,6 @@
 import { useState, useRef, useEffect } from 'react'
 import { Transition } from '@headlessui/react'
 import Link from 'next/link'
-import Logo from './logo'
 import ThemeToggle from './theme-toggle'
 
 export default function MobileMenu() {
@@ -74,7 +73,7 @@ export default function MobileMenu() {
           leaveTo="opacity-0"
         >
           <div className="py-6 pr-4 pl-20">
-          <Link className="block" href="/" aria-label="Cruip">   
+          <Link className="block" href="/" aria-label="HMB-CO">
             <img className="mx-auto" src="/images/hmbco.png" width={200} height={200} alt="Hero" />            
           </Link>
             {/* Links */}

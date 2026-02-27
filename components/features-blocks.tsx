@@ -2,7 +2,7 @@
 
 import React, { useRef } from 'react';
 import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
-import { trackEvent } from '@/utils/mixpanel'; // Import the trackEvent function
+import { trackEvent } from '@/utils/mixpanel';
 
 export default function FeaturesBlocks() {
   const scrollContainerRef = useRef<HTMLDivElement>(null);
@@ -10,7 +10,7 @@ export default function FeaturesBlocks() {
   const scroll = (direction: 'left' | 'right') => {
     const { current } = scrollContainerRef;
     if (current) {
-      const scrollAmount = 300; // Adjust scroll amount as needed
+      const scrollAmount = 300;
       if (direction === 'left') {
         current.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
       } else {
@@ -19,7 +19,6 @@ export default function FeaturesBlocks() {
     }
   };
 
-  // Handler to track feature item clicks
   const handleFeatureClick = (featureName: string, href: string) => {
     trackEvent('Feature Clicked', { feature: featureName, url: href });
   };
@@ -47,8 +46,7 @@ export default function FeaturesBlocks() {
           <button
             onClick={() => {
               scroll('left');
-              trackEvent('Scroll Clicked', { direction: 'left' }); // Optional: Track arrow clicks
-            }}
+              trackEvent('Scroll Clicked', { direction: 'left' });             }}
             className="absolute left-0 top-1/2 transform -translate-y-1/2 bg-gray-900 text-white p-2 rounded-full shadow-lg hover:bg-gray-600 focus:outline-none focus:ring-2 focus:ring-teal-400 z-10"
             aria-label="Scroll Left"
           >
@@ -60,9 +58,6 @@ export default function FeaturesBlocks() {
             ref={scrollContainerRef}
             className="flex space-x-4 sm:space-x-6 lg:space-x-6 overflow-x-auto pb-4 scrollbar-hide snap-x snap-mandatory"
           >
-
-            {/* 1st Item */}
-           
 
             {/* 2nd Item */}
             <a
@@ -133,8 +128,6 @@ export default function FeaturesBlocks() {
               </div>
             </a>
 
-            {/* 3rd Item */}
-
             <a
               href="/Talent"
               onClick={() => handleFeatureClick('Talent Acquisition Platform', '/Talent')}
@@ -167,8 +160,6 @@ export default function FeaturesBlocks() {
               </div>
             </a>
             
-            {/* 4th Item */}
-           
             <a
               href="/allergy"
               onClick={() => handleFeatureClick('AI Allergy Check App', '/allergy')}
@@ -203,7 +194,6 @@ export default function FeaturesBlocks() {
             </a>
 
 
-            {/* 5th Item */}
             <a
               href="/Search"
               onClick={() => handleFeatureClick('AI Search Engine', '/Search')}
@@ -243,8 +233,7 @@ export default function FeaturesBlocks() {
           <button
             onClick={() => {
               scroll('right');
-              trackEvent('Scroll Clicked', { direction: 'right' }); // Optional: Track arrow clicks
-            }}
+              trackEvent('Scroll Clicked', { direction: 'right' });             }}
             className="absolute right-0 top-1/2 transform -translate-y-1/2 bg-gray-900 text-white p-2 rounded-full shadow-lg hover:bg-gray-600 focus:outline-none focus:ring-2 focus:ring-teal-400 z-10"
             aria-label="Scroll Right"
           >

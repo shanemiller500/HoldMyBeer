@@ -1,6 +1,6 @@
 export const metadata = {
   title: 'About - HMB-CO',
-  description: 'Page description',
+  description: 'Learn about HMB-CO, the team behind privacy-first AI applications.',
 }
 
 import Hero from '@/components/hero-about'

@@ -76,12 +76,6 @@ export default function FeaturesGallery() {
             <Image className="col-span-5" src={AboutImage05} width={450} height={270} alt="About grid 05" data-aos="fade-down" data-aos-anchor="[data-aos-id-gallery]" data-aos-delay="400" />
             <Image className="col-span-4" src={AboutImage06} width={240} height={270} alt="About grid 06" data-aos="fade-down" data-aos-anchor="[data-aos-id-gallery]" data-aos-delay="500" />
 
-            {/* <Image className="col-span-4" src={AboutImage01} width={360} height={270} alt="About grid 01" data-aos="fade-down" data-aos-anchor="[data-aos-id-gallery]" />
-            <Image className="col-span-3" src={AboutImage02} width={270} height={270} alt="About grid 02" data-aos="fade-down" data-aos-anchor="[data-aos-id-gallery]" data-aos-delay="100" />
-            <Image className="col-span-5" src={AboutImage03} width={450} height={270} alt="About grid 03" data-aos="fade-down" data-aos-anchor="[data-aos-id-gallery]" data-aos-delay="200" />
-            <Image className="col-span-3" src={AboutImage04} width={270} height={270} alt="About grid 04" data-aos="fade-down" data-aos-anchor="[data-aos-id-gallery]" data-aos-delay="300" />
-            <Image className="col-span-5" src={AboutImage05} width={450} height={270} alt="About grid 05" data-aos="fade-down" data-aos-anchor="[data-aos-id-gallery]" data-aos-delay="400" />
-            <Image className="col-span-4" src={AboutImage06} width={360} height={270} alt="About grid 06" data-aos="fade-down" data-aos-anchor="[data-aos-id-gallery]" data-aos-delay="500" /> */}
           </div>
 
         </div>

@@ -21,9 +21,6 @@ export default function Team() {
           {/* Section header */}
           <div className="max-w-3xl mx-auto text-center pb-12 md:pb-20">
             <h2 className="h2 font-red-hat-display mb-4">The team</h2>
-            {/* <p className="text-xl text-gray-600 dark:text-gray-400">
-              A one man army ready to take on the world
-            </p> */}
           </div>
 
           {/* Team members */}
@@ -57,7 +54,6 @@ export default function Team() {
                       aria-label="Web site"
                       onClick={() => handleLinkedInClick('Shane Miller')}
                     >
-                      {/* Website style image */}
                       <SiAwwwards  
                         size={33} 
                         className="text-indigo-600 hover:text-indigo-800 transition-colors duration-200"
@@ -71,7 +67,6 @@ export default function Team() {
                       aria-label="LinkedIn"
                       onClick={() => handleLinkedInClick('Shane Miller')}
                     >
-                      {/* LinkedIn Icon */}
                       <FaLinkedinIn 
                         size={24} 
                         className="text-indigo-600 hover:text-indigo-800 transition-colors duration-200"
@@ -81,8 +76,6 @@ export default function Team() {
                   </div>
                 </div>
               </div>
-
-              {/* Add more team members here as needed */}
 
             </div>
           </div>

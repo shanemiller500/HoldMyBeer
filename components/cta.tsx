@@ -1,9 +1,8 @@
 'use client';
 
-import { trackEvent } from '@/utils/mixpanel'; // Import the trackEvent function
+import { trackEvent } from '@/utils/mixpanel';
 
 export default function Cta() {
-  // Handler to track CTA button clicks
   const handleContactClick = () => {
     trackEvent('CTA Contact Clicked', { label: 'Contact Button' });
   };
@@ -49,7 +48,7 @@ export default function Cta() {
                 <a
                   className="btn text-white bg-teal-500 hover:bg-teal-400 shrink-0"
                   href="/contact"
-                  onClick={handleContactClick} // Attach the onClick handler here
+                  onClick={handleContactClick}
                 >
                   Contact
                 </a>
@@ -63,16 +62,6 @@ export default function Cta() {
 
       </div>
 
-      {/* 
-        Hide scrollbar for WebKit-based browsers (Chrome, Safari, etc.)
-        If you're using a CSS/SCSS file or Tailwind plugin, you can place this there.
-        For inline, we add a small <style jsx> block here:
-      */}
-      <style jsx>{`
-        .custom-scrollbar::-webkit-scrollbar {
-          display: none;
-        }
-      `}</style>
     </section>
   );
 }

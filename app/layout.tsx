@@ -10,7 +10,7 @@ declare global {
 
 import { useEffect } from 'react'
 import { usePathname } from 'next/navigation'
-import Script from 'next/script' // Added import for Script
+import Script from 'next/script'
 import { Analytics } from "@vercel/analytics/react"
 
 import './css/style.css'
@@ -41,7 +41,7 @@ export default function RootLayout({
 }: {
   children: React.ReactNode
 }) {
-  const pathname = usePathname() // Moved inside the component
+  const pathname = usePathname()
 
   useEffect(() => { 
     trackEvent('Page Viewed', { path: pathname }); 
@@ -61,7 +61,7 @@ export default function RootLayout({
         page_path: pathname,
       })
     }
-  }, [pathname]) // Corrected dependency array placement
+  }, [pathname])
 
   return (
     <html lang="en" suppressHydrationWarning>
@@ -76,7 +76,7 @@ export default function RootLayout({
   name="keywords"
   content="AI, artificial intelligence, websites, apps, technology, web development, app development, innovative solutions"
 />
-<meta name="author" content="HoldMyBeer AI Team" />
+<meta name="author" content="Shane Miller" />
 
 {/* Open Graph / Facebook */}
 <meta property="og:title" content="holdmybeer.info - AI-Powered Websites & Apps" />

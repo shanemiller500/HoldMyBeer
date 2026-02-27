@@ -1,6 +1,6 @@
 export const metadata = {
     title: 'Transparent - HMB-CO',
-    description: 'Page description',
+    description: 'HMB-CO Transparency Policy - our commitment to privacy and no advertising.',
   }
   
   import Hero from '@/components/transparent'

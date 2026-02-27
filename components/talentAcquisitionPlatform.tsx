@@ -1,19 +1,13 @@
-// components/HeroAbout.jsx
-
 'use client'
 
 import Image from 'next/image'
 import Link from 'next/link'
-import { FaArrowLeft, FaArrowRight } from 'react-icons/fa' // Optional: For a better-looking arrow icon
-
+import { FaArrowLeft, FaArrowRight } from 'react-icons/fa'
 import HeroBg from '@/public/images/venue_3.jpg'
 import HeroImage from '@/public/images/Venue_2.jpg'
-
-// Import the trackEvent function from your Mixpanel utility
 import { trackEvent } from '@/utils/mixpanel';
 
 export default function HeroAbout() {
-  // Handler to track navigation arrow clicks
   const handleNavigationClick = (direction: string, target: string) => {
     trackEvent('Navigation Clicked', { direction, target });
   };
@@ -82,8 +76,7 @@ export default function HeroAbout() {
               <Link 
                 href="/umail" 
                 className="text-teal-500 hover:text-teal-700 flex items-center"
-                onClick={() => handleNavigationClick('Back', '/umail')} // Attach the onClick handler here
-              >
+                onClick={() => handleNavigationClick('Back', '/umail')}               >
                 <FaArrowLeft className="mr-2" /> UMail
               </Link>
 
@@ -91,8 +84,7 @@ export default function HeroAbout() {
               <Link 
                 href="/allergy" 
                 className="text-teal-500 hover:text-teal-700 flex items-center"
-                onClick={() => handleNavigationClick('Next', '/allergy')} // Attach the onClick handler here
-              >
+                onClick={() => handleNavigationClick('Next', '/allergy')}               >
                 Allergy App <FaArrowRight className="ml-2" />
               </Link>
             </div>

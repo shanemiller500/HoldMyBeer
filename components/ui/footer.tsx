@@ -69,7 +69,7 @@ export default function Footer() {
                     <a
                       href="/about"
                       onClick={() => handleFooterLinkClick('About Us', '/about')}
-                      className="text-gray-600 dark:text-gray-400 hover:underline transition duration-150 ease-in-out"
+                      className="text-gray-600 dark:text-gray-300 hover:underline transition duration-150 ease-in-out"
                     >
                       About us
                     </a>
@@ -78,7 +78,7 @@ export default function Footer() {
                     <a
                       href="/transparent"
                       onClick={() => handleFooterLinkClick('Transparency Policy', '/transparent')}
-                      className="text-gray-600 dark:text-gray-400 hover:underline transition duration-150 ease-in-out"
+                      className="text-gray-600 dark:text-gray-300 hover:underline transition duration-150 ease-in-out"
                     >
                       Transparency Policy
                     </a>
@@ -94,7 +94,7 @@ export default function Footer() {
                     <a
                       href="/applyPro"
                       onClick={() => handleFooterLinkClick('ApplyPro.ai', '/applyPro')}
-                      className="text-gray-600 dark:text-gray-400 hover:underline transition duration-150 ease-in-out"
+                      className="text-gray-600 dark:text-gray-300 hover:underline transition duration-150 ease-in-out"
                     >
                       ApplyPro.ai
                     </a>
@@ -103,7 +103,7 @@ export default function Footer() {
                     <a
                       href="/umail"
                       onClick={() => handleFooterLinkClick('UMail.ai', '/umail')}
-                      className="text-gray-600 dark:text-gray-400 hover:underline transition duration-150 ease-in-out"
+                      className="text-gray-600 dark:text-gray-300 hover:underline transition duration-150 ease-in-out"
                     >
                       UMail.ai
                     </a>
@@ -112,7 +112,7 @@ export default function Footer() {
                     <a
                       href="/Talent"
                       onClick={() => handleFooterLinkClick('Talent Acquisition Platform', '/Talent')}
-                      className="text-gray-600 dark:text-gray-400 hover:underline transition duration-150 ease-in-out"
+                      className="text-gray-600 dark:text-gray-300 hover:underline transition duration-150 ease-in-out"
                     >
                       Talent Acquisition Platform
                     </a>
@@ -121,7 +121,7 @@ export default function Footer() {
                     <a
                       href="/allergy"
                       onClick={() => handleFooterLinkClick('AI Allergy Check App', '/allergy')}
-                      className="text-gray-600 dark:text-gray-400 hover:underline transition duration-150 ease-in-out"
+                      className="text-gray-600 dark:text-gray-300 hover:underline transition duration-150 ease-in-out"
                     >
                       AI Allergy Check App
                     </a>
@@ -130,7 +130,7 @@ export default function Footer() {
                     <a
                       href="/Search"
                       onClick={() => handleFooterLinkClick('Advanced Search Engine', '/Search')}
-                      className="text-gray-600 dark:text-gray-400 hover:underline transition duration-150 ease-in-out"
+                      className="text-gray-600 dark:text-gray-300 hover:underline transition duration-150 ease-in-out"
                     >
                       Advanced Search Engine
                     </a>
@@ -143,7 +143,7 @@ export default function Footer() {
           {/* Bottom area */}
           <div className="md:flex md:items-center md:justify-between">
             {/* Copyrights note */}
-            <div className="text-gray-600 dark:text-gray-400 text-sm mr-4">
+            <div className="text-gray-600 dark:text-gray-300 text-sm mr-4">
               &copy; {new Date().getFullYear()} Hold My Beer CO. All rights reserved.
             </div>
           </div>

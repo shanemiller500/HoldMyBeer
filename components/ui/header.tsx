@@ -7,20 +7,23 @@ export default function Header() {
   return (
     <header className="absolute w-full z-30">
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
-        <div className="flex items-center justify-between h-20">
+        <div className="flex items-center justify-between h-16 sm:h-20">
 
- <Link className="block" href="/" aria-label="HMB-CO"  onClick={() => trackEvent('Image Logo Clicked')}>
-       
-       <img className="mx-auto" src="/images/hmbco.png" width={250} height={250} alt="Hero" /> 
- 
-              
-             </Link>
+          <Link
+            className="block shrink-0"
+            href="/"
+            aria-label="HMB-CO"
+            onClick={() => trackEvent('Image Logo Clicked')}
+          >
+            <img
+              className="w-28 sm:w-36 md:w-44 h-auto"
+              src="/images/hmbco.png"
+              alt="Hold My Beer Co"
+            />
+          </Link>
 
-       
-          {/* Desktop navigation */}
-          <nav className="hidden md:flex">
-            {/* Desktop menu links */}
-            <ul className="flex grow flex-wrap items-center font-medium">
+          <nav className="hidden md:flex items-center">
+            <ul className="flex items-center font-medium">
               <li>
                 <Link
                   href="/about"
@@ -29,15 +32,9 @@ export default function Header() {
                 >
                   About
                 </Link>
-              </li>          
+              </li>
             </ul>
-
-            {/* Desktop lights switch */}
             <ThemeToggle className="ml-3" />
-
-            {/* Desktop CTA on the right */}
-            <ul className="flex justify-end flex-wrap items-center">
-            </ul>
           </nav>
 
           <MobileMenu />

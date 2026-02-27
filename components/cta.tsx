@@ -3,16 +3,10 @@
 import { trackEvent } from '@/utils/mixpanel';
 
 export default function Cta() {
-  const handleContactClick = () => {
-    trackEvent('CTA Contact Clicked', { label: 'Contact Button' });
-  };
-
   return (
-    <section>
+    <section className="pb-12 md:pb-16">
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
-
-        {/* CTA box */}
-        <div className="dark relative bg-gray-800 py-10 px-8 md:py-16 md:px-12">
+        <div className="dark relative bg-gray-800 rounded-lg py-10 px-8 md:py-16 md:px-12 overflow-hidden">
 
           {/* Background illustration */}
           <div className="absolute inset-0 left-auto pointer-events-none" aria-hidden="true">
@@ -34,34 +28,21 @@ export default function Cta() {
             </svg>
           </div>
 
-          <div className="relative flex flex-col lg:flex-row justify-between items-center">
-
-            {/* CTA content */}
-            <div className="mb-6 lg:mr-16 lg:mb-0 text-center lg:text-left lg:w-1/2">
+          <div className="relative flex flex-col sm:flex-row justify-between items-center gap-6">
+            <div className="text-center sm:text-left">
               <h3 className="h3 font-red-hat-display text-gray-100">Got a question?</h3>
             </div>
-
-            {/* CTA form */}
-            <form className="w-full lg:w-1/2">
-              <div className="flex flex-col sm:flex-row justify-center max-w-xs mx-auto sm:max-w-md lg:max-w-none">
-
-                <a
-                  className="btn text-white bg-teal-500 hover:bg-teal-400 shrink-0"
-                  href="/contact"
-                  onClick={handleContactClick}
-                >
-                  Contact
-                </a>
-              </div>
-
-            </form>
-
+            <a
+              className="btn text-white bg-teal-500 hover:bg-teal-400 shrink-0"
+              href="/contact"
+              onClick={() => trackEvent('CTA Contact Clicked', { label: 'Contact Button' })}
+            >
+              Contact
+            </a>
           </div>
 
         </div>
-
       </div>
-
     </section>
   );
 }

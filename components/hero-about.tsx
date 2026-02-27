@@ -21,7 +21,7 @@ export default function HeroAbout() {
                 <div className="absolute inset-0 bg-gradient-to-t from-white dark:from-gray-900" aria-hidden="true"></div>
               </div>
               <div className="absolute" data-aos="fade-down">
-                <h1 className="h1 lg:text-6xl font-red-hat-display"><span className="text-teal-500"> Engineering</span> Tomorrow’s Intelligence</h1>
+                <h1 className="h1 lg:text-6xl font-red-hat-display">Privacy isn’t a feature.<span className="text-teal-500"> It’s the foundation.</span></h1>
               </div>
               <div className="absolute bottom-0 -mb-8 w-0.5 h-16 bg-gray-300 dark:bg-gray-700" aria-hidden="true"></div>
             </div>

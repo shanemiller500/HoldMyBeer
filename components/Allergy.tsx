@@ -55,22 +55,17 @@ export default function Allergy() {
                 </div>
               </div>
     
-              {/* Enhanced Marketing Details */}
+              {/* Marketing Details */}
               <div className="mt-12 text-center px-4 sm:px-6 lg:px-8">
                 <h2 className="text-3xl font-semibold text-gray-800 dark:text-gray-100">
-                  Revolutionize Your Allergy Management with Our Smart Scanning App
+                  Scan a label. Know in seconds.
                 </h2>
                 <p className="mt-4 text-lg text-gray-700 dark:text-gray-300 max-w-3xl mx-auto">
-                  Say goodbye to long hours in grocery stores checking labels manually. Our Allergy Check App empowers you to make safe food choices effortlessly. With your allergens and unwanted ingredients already saved in your account, all you need to do is scan the label of any food item with your phone. Our advanced technology will instantly analyze the ingredients, even those not listed due to low percentages, ensuring your safety with a simple yes or no notification.
+                  Save your allergens once. Then just scan. The app checks every ingredient including unlisted trace amounts and gives you a clear yes or no before anything goes in your cart.
                 </p>
                 <p className="mt-4 text-lg text-gray-700 dark:text-gray-300 max-w-3xl mx-auto">
-                  We delve deep into ingredient databases, identifying even those components that aren't listed on the labels due to minimal required percentages. Partnering with the FDA open source data, we ensure you receive comprehensive and accurate information, giving you peace of mind with every purchase.
+                  Cross-referenced with FDA open source data, so the information is accurate, not just fast.
                 </p>
-                <p className="mt-4 text-lg text-gray-700 dark:text-gray-300 max-w-3xl mx-auto">
-                  Experience instant, personalized insights that unlock safe choices with a simple scan. Our app analyzes labels with ease and delivers clear yes or no notifications, transforming how you manage your allergies and enhancing your shopping experience like never before.
-                </p>
-    
-              
               </div>
                          {/* Navigation Arrows */}
           <div className=" z-20 flex justify-between px-4 sm:px-6 lg:px-8 mt-10">

@@ -19,9 +19,9 @@ export default function Timeline() {
 
           {/* Section header */}
           <div className="max-w-3xl mx-auto text-center pb-12 md:pb-16">
-            <h2 className="h2 font-red-hat-display mb-4">Our Remarkable Achievements</h2>
+            <h2 className="h2 font-red-hat-display mb-4">How we got here.</h2>
             <p className="text-lg sm:text-xl text-gray-600 dark:text-gray-300">
-              Discover the incredible milestones we've reached in such a short time since May 2024.
+              From layoffs to global launch in under a year.
             </p>
           </div>
 
@@ -135,25 +135,24 @@ export default function Timeline() {
                 <div className="grid md:grid-cols-2 gap-4 sm:gap-6">
                   <article className="p-6 bg-white dark:bg-gray-800 shadow-2xl flex flex-col rounded-lg">
                     <header>
-                      <h3 className="h4 font-red-hat-display mb-1">Industry Trends</h3>
+                      <h3 className="h4 font-red-hat-display mb-1">The Layoffs</h3>
                     </header>
                     <div className="text-gray-600 dark:text-gray-300 grow">
                       <p>
-                        In early 2024, the software development team was laid off after ten years
-                        of dedicated service at a major company, reflecting a broader industry trend.
+                        Early 2024. After ten years at a major company, the team was let go —
+                        part of a wave of tech layoffs hitting the industry hard.
                       </p>
                     </div>
                   </article>
 
                   <article className="p-6 bg-white dark:bg-gray-800 shadow-2xl flex flex-col rounded-lg">
                     <header>
-                      <h3 className="h4 font-red-hat-display mb-1">Portfolio Building</h3>
+                      <h3 className="h4 font-red-hat-display mb-1">First Build</h3>
                     </header>
                     <div className="text-gray-600 dark:text-gray-300 grow">
                       <p>
-                        While delving into AI and expanding a portfolio, an innovative tool was
-                        engineered to transform swear words into polite and kind expressions.
-                        This creative project underscored the role of AI in enhancing communication.
+                        While job hunting, the first tool got built — a swear word to polite phrase
+                        converter. Small project. Proved the concept. Kept building.
                       </p>
                     </div>
                   </article>
@@ -165,28 +164,25 @@ export default function Timeline() {
                 <div className="grid md:grid-cols-2 gap-4 sm:gap-6">
                   <article className="p-6 bg-white dark:bg-gray-800 shadow-2xl flex flex-col rounded-lg">
                     <header>
-                      <h3 className="h4 font-red-hat-display mb-1">Relentless Job Searching</h3>
+                      <h3 className="h4 font-red-hat-display mb-1">The Interview</h3>
                     </header>
                     <div className="text-gray-600 dark:text-gray-300 grow">
                       <p>
-                        Following relentless dedication, an interview was successfully obtained.
-                        In the meeting, the option to either pursue employment with others or to
-                        establish a personal venture was offered. The preferred path was unmistakable,
-                        culminating in the bold creation of UMail a few hours later.
+                        After months of applications, an interview finally landed. In the room:
+                        take the job, or build something of your own. The answer was obvious.
+                        UMail was started a few hours later.
                       </p>
                     </div>
                   </article>
 
                   <article className="p-6 bg-white dark:bg-gray-800 shadow-2xl flex flex-col rounded-lg">
                     <header>
-                      <h3 className="h4 font-red-hat-display mb-1">The Genesis of UMail</h3>
+                      <h3 className="h4 font-red-hat-display mb-1">UMail Begins</h3>
                     </header>
                     <div className="text-gray-600 dark:text-gray-300 grow">
                       <p>
-                        UMail rapidly developed into a highly robust AI platform, set to transform
-                        global communication and significantly enhance productivity. With its advanced
-                        automation, personalized interactions, and seamless integrations, UMail is
-                        revolutionizing the way individuals and organizations connect and collaborate.
+                        UMail started as a Gmail productivity layer — voice-to-text, tone adjustment,
+                        real-time translations. One feature at a time, it became something much bigger.
                       </p>
                     </div>
                   </article>
@@ -198,38 +194,37 @@ export default function Timeline() {
                 <div className="grid md:grid-cols-2 gap-4 sm:gap-6">
                   <article className="p-6 bg-white dark:bg-gray-800 shadow-2xl flex flex-col rounded-lg">
                     <header>
-                      <h3 className="h4 font-red-hat-display mb-1">Something Was Missing</h3>
+                      <h3 className="h4 font-red-hat-display mb-1">A Gap in the Market</h3>
                     </header>
                     <div className="text-gray-600 dark:text-gray-300 grow">
                       <p>
-                        While tirelessly working on UMail and adding feature after feature, we noticed
-                        some gaps. How could research-backed cover letters and customized resumes enhance
-                        communication like never before? This realization pushed us to innovate further.
+                        Building UMail made the problem clearer: job seekers weren't just struggling
+                        to communicate — they were struggling to get noticed. Cover letters and
+                        tailored resumes were the missing piece.
                       </p>
                     </div>
                   </article>
 
                   <article className="p-6 bg-white dark:bg-gray-800 shadow-2xl flex flex-col rounded-lg">
                     <header>
-                      <h3 className="h4 font-red-hat-display mb-1">The Birth of ApplyPro.ai</h3>
+                      <h3 className="h4 font-red-hat-display mb-1">ApplyPro.ai is Born</h3>
                     </header>
                     <div className="text-gray-600 dark:text-gray-300 grow">
                       <p>
-                        After insightful meetings with mentors, things started to align. Within a few hours,
-                        a new app was born: ApplyPro.ai, designed to revolutionize the job application process.
+                        A few mentor conversations later, ApplyPro.ai launched — research-backed
+                        cover letters and job-tailored resumes, built for the specific posting, not a template.
                       </p>
                     </div>
                   </article>
 
                   <article className="p-6 bg-white dark:bg-gray-800 shadow-2xl flex flex-col rounded-lg">
                     <header>
-                      <h3 className="h4 font-red-hat-display mb-1">MVP Milestone</h3>
+                      <h3 className="h4 font-red-hat-display mb-1">UMail MVP</h3>
                     </header>
                     <div className="text-gray-600 dark:text-gray-300 grow">
                       <p>
-                        Significant advancements in UMail's integrations led to the establishment of
-                        our Minimum Viable Product (MVP). There's still much to accomplish, but reaching
-                        this milestone is a huge step forward!
+                        UMail hit MVP. Not finished — never finished — but solid enough to put
+                        in front of real users.
                       </p>
                     </div>
                   </article>
@@ -240,9 +235,8 @@ export default function Timeline() {
                     </header>
                     <div className="text-gray-600 dark:text-gray-300 grow">
                       <p>
-                        UMail welcomed its first Alpha test users, achieving this milestone several
-                        months ahead of schedule. Feedback from these users is invaluable as we refine
-                        our platform.
+                        First alpha users onboarded, months ahead of schedule. Real feedback
+                        from real people using it in the wild.
                       </p>
                     </div>
                   </article>
@@ -258,10 +252,9 @@ export default function Timeline() {
                     </header>
                     <div className="text-gray-600 dark:text-gray-300 grow">
                       <p>
-                        With the fundamentals firmly in place, ApplyPro.ai's ascent was swift and
-                        efficient. It stands as the ONLY resume tool that does not share data with
-                        AI learning, featuring research-backed cover letters and supporting links
-                        right in the toolbar.
+                        ApplyPro.ai reached MVP. The only resume tool that doesn't share data with
+                        model training — research-backed cover letters with supporting links built
+                        right into the toolbar.
                       </p>
                     </div>
                   </article>
@@ -272,37 +265,32 @@ export default function Timeline() {
                     </header>
                     <div className="text-gray-600 dark:text-gray-300 grow">
                       <p>
-                        ApplyPro.ai underwent extensive building and testing, making it well-prepared
-                        for Beta testing. While there's still more to add, the platform is now ready
-                        to be used by our early adopters.
+                        ApplyPro opened to early adopters for Beta. More to build — but it works,
+                        and people are using it.
                       </p>
                     </div>
                   </article>
 
                   <article className="p-6 bg-white dark:bg-gray-800 shadow-2xl flex flex-col rounded-lg">
                     <header>
-                      <h3 className="h4 font-red-hat-display mb-1">Early Search Engine Advances</h3>
+                      <h3 className="h4 font-red-hat-display mb-1">Search Engine: Early Work</h3>
                     </header>
                     <div className="text-gray-600 dark:text-gray-300 grow">
                       <p>
-                        Our mission is simple: get you the answer you need, right away—no fluff, no clutter.
-                        Say goodbye to endless scrolling and irrelevant "Sponsored" results. With this powerful
-                        AI-driven search engine, you'll get straight to the point, finding exactly what you're
-                        looking for without the unnecessary noise.
+                        Started early development on a search engine built around one rule: no ads,
+                        no sponsored results — ranked on relevance only.
                       </p>
                     </div>
                   </article>
 
                   <article className="p-6 bg-white dark:bg-gray-800 shadow-2xl flex flex-col rounded-lg">
                     <header>
-                      <h3 className="h4 font-red-hat-display mb-1">Contracting a Marketing Team</h3>
+                      <h3 className="h4 font-red-hat-display mb-1">Marketing Team Onboarded</h3>
                     </header>
                     <div className="text-gray-600 dark:text-gray-300 grow">
                       <p>
-                        During October 2024, we officially contracted an experienced marketing team
-                        to accelerate our global reach. The onboarding process was seamless, integrating
-                        them into our mission and leveraging their expertise to amplify brand awareness
-                        and user engagement.
+                        Brought on an experienced marketing team to grow the user base globally.
+                        Onboarded and running by end of October.
                       </p>
                     </div>
                   </article>
@@ -314,29 +302,24 @@ export default function Timeline() {
                 <div className="grid md:grid-cols-2 gap-4 sm:gap-6">
                   <article className="p-6 bg-white dark:bg-gray-800 shadow-2xl flex flex-col rounded-lg">
                     <header>
-                      <h3 className="h4 font-red-hat-display mb-1">ApplyPro is Live</h3>
+                      <h3 className="h4 font-red-hat-display mb-1">ApplyPro Goes Live</h3>
                     </header>
                     <div className="text-gray-600 dark:text-gray-300 grow">
                       <p>
-                        We're thrilled to announce that ApplyPro is available worldwide. To celebrate
-                        our December soft launch, all new users who sign up this month will receive
-                        6 months of unlimited service absolutely free. Our recent tests showcase an
-                        outstanding 96-98% pass rate through ATS systems—the highest scores globally
-                        for ATS compatibility. Join ApplyPro today and maximize your application success!
+                        ApplyPro launched globally. 96–98% ATS pass rate in testing — the highest
+                        recorded for ATS compatibility. First-month users received 6 months free.
                       </p>
                     </div>
                   </article>
 
                   <article className="p-6 bg-white dark:bg-gray-800 shadow-2xl flex flex-col rounded-lg">
                     <header>
-                      <h3 className="h4 font-red-hat-display mb-1">Introducing Our Talent Acquisition Platform</h3>
+                      <h3 className="h4 font-red-hat-display mb-1">Talent Acquisition Platform</h3>
                     </header>
                     <div className="text-gray-600 dark:text-gray-300 grow">
                       <p>
-                        This AI-powered recruitment tool efficiently bulk scans resumes, ranks candidates
-                        based on essential criteria, and generates concise summaries for hiring managers
-                        and recruiters. Streamline your hiring process, identify top talent quickly, and
-                        make informed decisions with our cutting-edge technology.
+                        Started building the Talent Acquisition Platform — bulk resume scanning,
+                        candidate ranking by job criteria, and auto-generated summaries for hiring managers.
                       </p>
                     </div>
                   </article>
@@ -348,36 +331,36 @@ export default function Timeline() {
                 <div className="grid md:grid-cols-2 gap-4 sm:gap-6">
                   <article className="p-6 bg-white dark:bg-gray-800 shadow-2xl flex flex-col rounded-lg">
                     <header>
-                      <h3 className="h4 font-red-hat-display mb-1">ApplyPro Launches Worldwide</h3>
+                      <h3 className="h4 font-red-hat-display mb-1">ApplyPro Worldwide</h3>
                     </header>
                     <div className="text-gray-600 dark:text-gray-300 grow">
                       <p>
-                        ApplyPro has officially launched, welcoming its first wave of users through a dynamic marketing campaign. We're thrilled to see new sign-ups daily as we continue refining our platform and delivering unparalleled value to job seekers everywhere.
+                        ApplyPro officially live. Marketing campaign running. New sign-ups daily
+                        across the globe.
                       </p>
                     </div>
                   </article>
 
                   <article className="p-6 bg-white dark:bg-gray-800 shadow-2xl flex flex-col rounded-lg">
                     <header>
-                      <h3 className="h4 font-red-hat-display mb-1">Early Advances with the Talent Acquisition Platform</h3>
+                      <h3 className="h4 font-red-hat-display mb-1">Talent Acquisition: In Progress</h3>
                     </header>
                     <div className="text-gray-600 dark:text-gray-300 grow">
                       <p>
-                        Our data-driven Talent Acquisition platform streamlines recruiting by bulk-scanning resumes and power-ranking candidates based on job descriptions.
+                        Talent Acquisition Platform in active development — bulk resume scanning
+                        and job-description-based candidate ranking taking shape.
                       </p>
                     </div>
                   </article>
 
                   <article className="p-6 bg-white dark:bg-gray-800 shadow-2xl flex flex-col rounded-lg">
                     <header>
-                      <h3 className="h4 font-red-hat-display mb-1">ApplyPro's Early Milestones</h3>
+                      <h3 className="h4 font-red-hat-display mb-1">100 Users in 15 Days</h3>
                     </header>
                     <div className="text-gray-600 dark:text-gray-300 grow">
                       <p>
-                        We're excited to share that ApplyPro reached 100 users in just 15 days since our launch! We're grateful for the support and are actively developing the V2 User Portal for a more interactive experience, stay tuned for the update.
-                      </p>
-                      <p className="mt-3">
-                        Thanks to user feedback, ApplyPro is evolving to better serve job seekers. Our platform supports multiple languages and caters to diverse professionals.
+                        100 users in 15 days from launch. V2 User Portal in development.
+                        Multilingual support added based on early user feedback.
                       </p>
                     </div>
                   </article>
@@ -389,14 +372,12 @@ export default function Timeline() {
                 <div className="grid md:grid-cols-2 gap-4 sm:gap-6">
                   <article className="p-6 bg-white dark:bg-gray-800 shadow-2xl flex flex-col rounded-lg">
                     <header>
-                      <h3 className="h4 font-red-hat-display mb-1">UMail Custom Products</h3>
+                      <h3 className="h4 font-red-hat-display mb-1">UMail for Law Enforcement</h3>
                     </header>
                     <div className="text-gray-600 dark:text-gray-300 grow">
                       <p>
-                        UMail is proud to introduce our custom reporting tool designed specifically for law enforcement agencies, currently undergoing early testing by officers.
-                      </p>
-                      <p className="mt-3">
-                        This versatile tool is set to transform the reporting process, potentially reducing paperwork time by over 90%. With more efficient reporting, officers can dedicate more time to patrolling and serving their communities effectively.
+                        UMail's custom reporting tool for law enforcement is in early testing with
+                        active officers. Initial data suggests it could cut report paperwork by over 90%.
                       </p>
                     </div>
                   </article>

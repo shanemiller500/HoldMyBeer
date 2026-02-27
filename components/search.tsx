@@ -54,19 +54,16 @@ export default function SearchApp() {
             </div>
           </div>
 
-          {/* Enhanced Marketing Details */}
+          {/* Marketing Details */}
           <div className="mt-12 text-center px-4 sm:px-6 lg:px-8">
             <h2 className="text-3xl font-semibold text-gray-800 dark:text-gray-100">
-              Find the Right Answers Instantly with Our Powerful AI Search Engine
+              Search that actually works.
             </h2>
             <p className="mt-4 text-lg text-gray-700 dark:text-gray-300 max-w-3xl mx-auto">
-              Looking for the right answer instantly? Our extremely powerful AI Search Engine gets straight to the point, delivering accurate results without clickbait, tracking, or sponsored links. Experience a clean, efficient search that respects your privacy and provides exactly what you need.
+              No ads. No sponsored results. No clickbait. Just the answer — fast, clean, and ranked on relevance, not who paid to be there.
             </p>
             <p className="mt-4 text-lg text-gray-700 dark:text-gray-300 max-w-3xl mx-auto">
-              Our search engine leverages advanced algorithms to understand your queries deeply, ensuring you receive relevant and precise information every time. Say goodbye to irrelevant results and intrusive ads—just pure, unadulterated search excellence.
-            </p>
-            <p className="mt-4 text-lg text-gray-700 dark:text-gray-300 max-w-3xl mx-auto">
-              Experience the future of searching with a tool designed to make your life easier. Whether you're researching, shopping, booking a flight, or seeking quick answers, our AI Search Engine is your go-to solution for efficient and trustworthy information retrieval, no click bate & no sponsered spam results.
+              Your searches stay yours. No tracking, no profile building, no data sold.
             </p>
           </div>
 

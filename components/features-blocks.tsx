@@ -44,7 +44,7 @@ const cards = [
   {
     href: '/Search',
     name: 'AI Search',
-    status: 'Coming Soon',
+    status: 'In Testing',
     gradient: 'from-pink-600 to-pink-400',
     description: 'Search results without sponsored links, clickbait, or anything tracking you.',
     viewBox: '0 0 32 32',

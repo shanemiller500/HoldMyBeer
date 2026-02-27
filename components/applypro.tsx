@@ -39,74 +39,26 @@ export default function ApplyProLandingPage() {
 
               <div className="mb-8 md:mb-0" data-aos="fade-right">
                 <h2 className="text-3xl md:text-4xl font-bold text-teal-500 mb-4 font-red-hat-display">
-                  What is ApplyPro?
+                  Get noticed. Get interviews.
                 </h2>
-                <p className="text-lg text-gray-600 dark:text-gray-400 mb-6">
-                  ApplyPro is your ultimate application toolkit, designed to save you time and maximize your chances of success. 
-                   ApplyPro creates tailored, ATS-friendly resumes and company-specific, research-backed cover letters. 
-                  The intuitive toolbar even includes quick links for company research to help you stand out & help you customize your documents. Whether you're applying for a job, a college, or any major opportunity, ApplyPro optimizes every step, making it easier to get interviews and win opportunities.
+                <p className="text-lg text-gray-600 dark:text-gray-300 mb-6">
+                  Tailored resumes and research-backed cover letters — built for the specific job, not a template.
                 </p>
                 <ul className="space-y-4">
-                  <li className="flex items-start">
-                    <svg
-                      className="w-6 h-6 text-teal-500 mr-3 flex-shrink-0"
-                      viewBox="0 0 20 20"
-                      fill="currentColor"
-                    >
-                      <path d="M10 2a8 8 0 100 16 8 8 0 000-16zM9 9V7a1 1 0 012 0v2h2a1 1 0 110 2h-2v2a1 1 0 11-2 0v-2H7a1 1 0 110-2h2z" />
-                    </svg>
-                    <span className="text-gray-600 dark:text-gray-400">
-                      Job-Specific, Keyword-Optimized Resumes
-                    </span>
-                  </li>
-                  <li className="flex items-start">
-                    <svg
-                      className="w-6 h-6 text-teal-500 mr-3 flex-shrink-0"
-                      viewBox="0 0 20 20"
-                      fill="currentColor"
-                    >
-                      <path d="M10 2a8 8 0 100 16 8 8 0 000-16zM9 9V7a1 1 0 012 0v2h2a1 1 0 110 2h-2v2a1 1 0 11-2 0v-2H7a1 1 0 110-2h2z" />
-                    </svg>
-                    <span className="text-gray-600 dark:text-gray-400">
-                      AI-Generated Cover Letters with Built-In Research Links
-                    </span>
-                  </li>
-                  <li className="flex items-start">
-                    <svg
-                      className="w-6 h-6 text-teal-500 mr-3 flex-shrink-0"
-                      viewBox="0 0 20 20"
-                      fill="currentColor"
-                    >
-                      <path d="M10 2a8 8 0 100 16 8 8 0 000-16zM9 9V7a1 1 0 012 0v2h2a1 1 0 110 2h-2v2a1 1 0 11-2 0v-2H7a1 1 0 110-2h2z" />
-                    </svg>
-                    <span className="text-gray-600 dark:text-gray-400">
-                      Centralized Dashboard for All Your saved Applications
-                    </span>
-                  </li>
-                  <li className="flex items-start">
-                    <svg
-                      className="w-6 h-6 text-teal-500 mr-3 flex-shrink-0"
-                      viewBox="0 0 20 20"
-                      fill="currentColor"
-                    >
-                      <path d="M10 2a8 8 0 100 16 8 8 0 000-16zM9 9V7a1 1 0 012 0v2h2a1 1 0 110 2h-2v2a1 1 0 11-2 0v-2H7a1 1 0 110-2h2z" />
-                    </svg>
-                    <span className="text-gray-600 dark:text-gray-400">
-                      ATS-Friendly Formatting for Higher Pass Rates
-                    </span>
-                  </li>
-                  <li className="flex items-start">
-                    <svg
-                      className="w-6 h-6 text-teal-500 mr-3 flex-shrink-0"
-                      viewBox="0 0 20 20"
-                      fill="currentColor"
-                    >
-                      <path d="M10 2a8 8 0 100 16 8 8 0 000-16zM9 9V7a1 1 0 012 0v2h2a1 1 0 110 2h-2v2a1 1 0 11-2 0v-2H7a1 1 0 110-2h2z" />
-                    </svg>
-                    <span className="text-gray-600 dark:text-gray-400">
-                      Increase your chances of your resume landing in front of human decision-makers.
-                    </span>
-                  </li>
+                  {[
+                    'ATS-optimized resume per job posting',
+                    'Cover letters backed by real company research',
+                    'Built-in research links as you write',
+                    'Saved application dashboard',
+                    'More interviews, less time applying',
+                  ].map((item) => (
+                    <li key={item} className="flex items-start">
+                      <svg className="w-6 h-6 text-teal-500 mr-3 flex-shrink-0" viewBox="0 0 20 20" fill="currentColor">
+                        <path d="M10 2a8 8 0 100 16 8 8 0 000-16zM9 9V7a1 1 0 012 0v2h2a1 1 0 110 2h-2v2a1 1 0 11-2 0v-2H7a1 1 0 110-2h2z" />
+                      </svg>
+                      <span className="text-gray-600 dark:text-gray-300">{item}</span>
+                    </li>
+                  ))}
                 </ul>
               </div>
 
@@ -150,17 +102,13 @@ export default function ApplyProLandingPage() {
                 data-aos="fade-left"
               >
                 <h2 className="text-3xl md:text-4xl font-bold text-teal-500 mb-4 font-red-hat-display">
-                  Our Mission
+                  No ads. No tracking. No BS.
                 </h2>
-                <p className="text-lg text-gray-600 dark:text-gray-400 mb-6">
-                  At ApplyPro, our mission is to empower individuals to achieve their ambitions by providing a robust, user-friendly platform that simplifies the application process and drives success. We believe that preparing for interviews should take more time than securing them, which is why we strive to help you land interviews with less stress and without intrusive popups, ads, or banners that distract you.
+                <p className="text-lg text-gray-600 dark:text-gray-300 mb-6">
+                  Your resume is yours. We don't sell your data, share it, or use it to train anything. No ads, no popups, no distractions.
                 </p>
-                <p className="text-lg text-gray-600 dark:text-gray-400 mb-6">
-                  <strong className="text-teal-500">Commitment to Privacy and Integrity:</strong> We prioritize your privacy and data security above all else. <strong className="text-teal-500">Unlike any other companies,</strong> ApplyPro is completely ad-free, ensuring a seamless and uninterrupted user experience. We do not share, sell, or mine your personal data under any circumstances.
-                </p>
-
-                <p className="text-lg text-gray-600 dark:text-gray-400 mb-6">
-                  <strong className="text-teal-500">Our AI systems are designed to assist you without learning from your personal habits, usage patterns, or application content.</strong> Your resume details and application materials remain confidential and are never used to improve or train our AI for other users. We hold ourselves to the highest standards of ethical data practices to safeguard your information every step of the way.
+                <p className="text-lg text-gray-600 dark:text-gray-300 mb-6">
+                  The AI helps you — it doesn't learn from you. Your application materials stay private, full stop.
                 </p>
               </div>
             </div>
@@ -190,17 +138,17 @@ export default function ApplyProLandingPage() {
         <section className="relative py-16 md:py-20 bg-teal-500">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 text-center">
             <h2
-              className="text-3xl md:text-4xl font-bold text-gray-900 mb-6"
+              className="text-3xl md:text-4xl font-bold text-gray-900 mb-4"
               data-aos="fade-up"
             >
-              Ready for Next-Level Cover Letters & Resumes?
+              Your next interview starts here.
             </h2>
             <p
               className="text-lg md:text-xl text-gray-900 mb-8"
               data-aos="fade-up"
               data-aos-delay="100"
             >
-              Simplify your process, save time, and boost your success with ApplyPro.
+              Stop sending generic applications.
             </p>
             <div data-aos="fade-up" data-aos-delay="200">
               <Link
@@ -208,7 +156,7 @@ export default function ApplyProLandingPage() {
                 target="_blank"
                 className="btn text-teal-500 bg-gray-900 hover:bg-gray-700 px-8 py-4 rounded-lg shadow-md transition duration-300 text-lg font-semibold"
               >
-                Get Started Now
+                Try ApplyPro
               </Link>
             </div>
           </div>

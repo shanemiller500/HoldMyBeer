@@ -26,6 +26,18 @@ export default function UMailLandingPage() {
     trackEvent('CTA Become Test User Clicked', { label: 'Become a Test User Now' });
   };
 
+  const renderBullet = (item: string) => (
+    <li key={item} className="flex items-start">
+      <svg className="w-6 h-6 text-teal-500 mr-3 flex-shrink-0" viewBox="0 0 20 20" fill="currentColor">
+        <path d="M10 2a8 8 0 100 16 8 8 0 000-16zM9 9V7a1 1 0 012 0v2h2a1 1 0 110 2h-2v2a1 1 0 11-2 0v-2H7a1 1 0 110-2h2z" />
+      </svg>
+      <span>{item}</span>
+    </li>
+  )
+
+  const voiceBullets = ['Voice dictation with tone control', 'Accurate across accents and dialects', 'Fast replies without typing'].map(renderBullet)
+  const professionalBullets = ['Fast email creation from voice or text', 'Personalized tone and style controls', 'Adapts to your style, not the other way around', 'Voice-to-text with accent support', 'Real-time global translations', 'No ads. No tracking. Ever.'].map(renderBullet)
+
   return (
     <div className={darkMode ? 'dark' : ''}>
       <main className="bg-white dark:bg-gray-900 transition-colors duration-300">
@@ -44,16 +56,14 @@ export default function UMailLandingPage() {
               className="mt-10 text-3xl md:text-5xl font-bold text-teal-500 font-red-hat-display"
               data-aos="fade-down"
             >
-              AI-Powered Solutions for Effortless Communication.
+              Smarter email. Zero noise.
             </h1>
             <p
-              className="mt-4 text-gray-600 dark:text-gray-400 text-lg md:text-xl"
+              className="mt-4 text-gray-600 dark:text-gray-300 text-lg md:text-xl"
               data-aos="fade-down"
               data-aos-delay="100"
             >
-              The future of global communication. UMail transforms how you connect
-              globally, work, and express yourself. Built to seamlessly integrate with
-              your Gmail & Google Workspace accounts. (Microsoft & Salesforce integration coming soon)
+              Smart tools layered on your Gmail. Write faster, sound sharper, and actually understand what you're reading — in any language.
             </p>
           </div>
         </section>
@@ -62,28 +72,28 @@ export default function UMailLandingPage() {
         <section className="relative pt-16 pb-10 md:pt-20 md:pb-16 bg-gray-100 dark:bg-gray-900 px-4 sm:px-6">
           <div className="max-w-5xl mx-auto">
             <div className="text-center mb-12" data-aos="fade-up">
-              <h2 className="text-3xl md:text-4xl font-bold text-teal-500 mb-4">What is UMail?</h2>
-              <p className="text-lg text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
-                AI-powered email for effortless communication. UMail’s simple and elegant interface lets you get started in minutes, offering powerful features like <strong>advanced voice-to-text</strong> and <strong>global language translations</strong> to boost your productivity.
+              <h2 className="text-3xl md:text-4xl font-bold text-teal-500 mb-4">Email, upgraded.</h2>
+              <p className="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+                Voice-to-text, real-time translations, tone adjustment — all layered on top of Gmail. Clean interface, powerful tools, no ads.
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8" data-aos="fade-up" data-aos-delay="100">
               <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md">
                 <h3 className="text-xl font-semibold text-teal-500 mb-4">Built-in Tools</h3>
-                <p className="text-gray-600 dark:text-gray-400 mb-4">
-                  UMail's advanced AI tools streamline your emails with mood &amp; tone optimization, professional messaging, and a built-in synonym spell check &amp; dictionary.
+                <p className="text-gray-600 dark:text-gray-300 mb-4">
+                  Tone control, synonym assistant, grammar check — the tools you actually need, built right in.
                 </p>
               </div>
               <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md">
-                <h3 className="text-xl font-semibold text-teal-500 mb-4">Optimize Your Time</h3>
-                <p className="text-gray-600 dark:text-gray-400 mb-4">
-                  Convert your spoken words into polished messages in real-time. Express any emotion, UMail automatically refines it into a clear, professional tone.
+                <h3 className="text-xl font-semibold text-teal-500 mb-4">Speak, Don't Type</h3>
+                <p className="text-gray-600 dark:text-gray-300 mb-4">
+                  Dictate your email. UMail cleans it up, sets the tone, and sends it polished.
                 </p>
               </div>
               <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md">
                 <h3 className="text-xl font-semibold text-teal-500 mb-4">Global Translations</h3>
-                <p className="text-gray-600 dark:text-gray-400 mb-4">
-                  Seamlessly translate emails across multiple languages, enabling effortless international communication.
+                <p className="text-gray-600 dark:text-gray-300 mb-4">
+                  Read and reply in any language. Real-time, inline, no copy-pasting into a translator.
                 </p>
               </div>
             </div>
@@ -108,52 +118,25 @@ export default function UMailLandingPage() {
               {/* Content Section */}
               <div className="md:w-1/2" data-aos="fade-left">
                 <h2 className="text-3xl md:text-4xl font-bold text-teal-500 mb-4">
-                  Custom Solutions for Any Industry
+                  Built for every industry.
                 </h2>
-                <p className="text-gray-600 dark:text-gray-400 text-lg mb-6">
-                  UMail offers tailored solutions for industries like Healthcare, Law Enforcement, Military support, HR Departments, and more. We customize our products to streamline processes, eliminate middlemen and save valuable time, allowing you and your team to focus on growing your business.
+                <p className="text-gray-600 dark:text-gray-300 text-lg mb-6">
+                  Healthcare, law enforcement, military, HR — UMail speaks your industry's language so your team doesn't have to translate.
                 </p>
                 <ul className="mt-4 space-y-4">
-                  <li className="flex items-start">
-                    <svg
-                      className="w-6 h-6 text-teal-500 mr-3 flex-shrink-0"
-                      viewBox="0 0 20 20"
-                      fill="currentColor"
-                    >
-                      <path d="M10 2a8 8 0 100 16 8 8 0 000-16zM9 9V7a1 1 0 012 0v2h2a1 1 0 110 2h-2v2a1 1 0 11-2 0v-2H7a1 1 0 110-2h2z" />
-                    </svg>
-                    <span>Healthcare: Streamline patient communications and administrative tasks.</span>
-                  </li>
-                  <li className="flex items-start">
-                    <svg
-                      className="w-6 h-6 text-teal-500 mr-3 flex-shrink-0"
-                      viewBox="0 0 20 20"
-                      fill="currentColor"
-                    >
-                      <path d="M10 2a8 8 0 100 16 8 8 0 000-16zM9 9V7a1 1 0 012 0v2h2a1 1 0 110 2h-2v2a1 1 0 11-2 0v-2H7a1 1 0 110-2h2z" />
-                    </svg>
-                    <span>Law Enforcement &amp; Military: Enhance operational efficiency with secure communications.</span>
-                  </li>
-                  <li className="flex items-start">
-                    <svg
-                      className="w-6 h-6 text-teal-500 mr-3 flex-shrink-0"
-                      viewBox="0 0 20 20"
-                      fill="currentColor"
-                    >
-                      <path d="M10 2a8 8 0 100 16 8 8 0 000-16zM9 9V7a1 1 0 012 0v2h2a1 1 0 110 2h-2v2a1 1 0 11-2 0v-2H7a1 1 0 110-2h2z" />
-                    </svg>
-                    <span>HR Departments: Manage employee communications and severance packages seamlessly.</span>
-                  </li>
-                  <li className="flex items-start">
-                    <svg
-                      className="w-6 h-6 text-teal-500 mr-3 flex-shrink-0"
-                      viewBox="0 0 20 20"
-                      fill="currentColor"
-                    >
-                      <path d="M10 2a8 8 0 100 16 8 8 0 000-16zM9 9V7a1 1 0 012 0v2h2a1 1 0 110 2h-2v2a1 1 0 11-2 0v-2H7a1 1 0 110-2h2z" />
-                    </svg>
-                    <span>Business Growth: Reduce overhead and focus on scaling your operations.</span>
-                  </li>
+                  {[
+                    'Healthcare: patient comms and admin, handled',
+                    'Law enforcement & military: secure, field-ready messaging',
+                    'HR: clear communications without the back-and-forth',
+                    'Any team: less overhead, more focus',
+                  ].map((item: string) => (
+                    <li key={item} className="flex items-start">
+                      <svg className="w-6 h-6 text-teal-500 mr-3 flex-shrink-0" viewBox="0 0 20 20" fill="currentColor">
+                        <path d="M10 2a8 8 0 100 16 8 8 0 000-16zM9 9V7a1 1 0 012 0v2h2a1 1 0 110 2h-2v2a1 1 0 11-2 0v-2H7a1 1 0 110-2h2z" />
+                      </svg>
+                      <span className="text-gray-600 dark:text-gray-300">{item}</span>
+                    </li>
+                  ))}
                 </ul>
                
               </div>
@@ -167,10 +150,10 @@ export default function UMailLandingPage() {
             {/* Section header */}
             <div className="text-center mb-10" data-aos="fade-up">
               <h2 className="text-3xl md:text-4xl font-bold text-teal-500 mb-4">
-                UMail's Feature Highlights
+                Everything in one place.
               </h2>
-              <p className="text-lg text-gray-600 dark:text-gray-400">
-                Explore the comprehensive range of features that makes UMail truly exceptional. There are more on the way, stay tuned!
+              <p className="text-lg text-gray-600 dark:text-gray-300">
+                More features on the way.
               </p>
             </div>
 
@@ -210,7 +193,7 @@ export default function UMailLandingPage() {
                 <div className="absolute inset-0">
                   {/* 1 */}
                   <div className="absolute font-medium px-4 py-2 text-white dark:text-indigo-500 bg-gradient-to-tr from-indigo-500 to-indigo-400 dark:bg-indigo-500 dark:from-transparent dark:to-transparent dark:bg-opacity-25 rounded-full inline-flex items-center justify-center tags-animation mt-12">
-                    Voice & Accent Enhancement
+                    Voice &amp; Accent Enhancement
                   </div>
 
                   {/* 2 */}
@@ -245,7 +228,7 @@ export default function UMailLandingPage() {
 
                   {/* 8 */}
                   <div className="absolute font-medium px-4 py-2 text-white dark:text-pink-500 bg-gradient-to-tr from-pink-500 to-pink-400 dark:bg-pink-500 dark:from-transparent dark:to-transparent dark:bg-opacity-25 rounded-full inline-flex items-center justify-center tags-animation tags-7 mt-40">
-                    AI-Powered Synonym Assistant
+                    Synonym Assistant
                   </div>
 
                   {/* 9 */}
@@ -285,7 +268,7 @@ export default function UMailLandingPage() {
 
                   {/* 16 */}
                   <div className="absolute font-medium px-4 py-2 text-white dark:text-gray-900 bg-gradient-to-tr from-red-500 to-red-400 dark:bg-red-500 dark:from-transparent dark:to-transparent dark:bg-opacity-25 rounded-full inline-flex items-center justify-center tags-animation tags-15 mt-72 top-1">
-                    Spelling & Grammar Assistant
+                    Spelling &amp; Grammar Assistant
                   </div>
                 </div>
 
@@ -310,11 +293,11 @@ export default function UMailLandingPage() {
               {/* Text Content */}
               <div className="md:pr-8 order-2 md:order-1" data-aos="fade-right">
                 <h2 className="text-3xl md:text-4xl font-bold text-teal-500 mb-4">Custom Mood &amp; Tone</h2>
-                <p className="text-gray-600 dark:text-gray-400 text-lg mb-6">
-                  Tailor your communication to any situation with any mood you're in. Whether formal, professional, or empathetic. UMail ensures your message hits the right note every time.
+                <p className="text-gray-600 dark:text-gray-300 text-lg mb-6">
+                  Formal, blunt, warm, professional — set the tone and UMail adjusts your message before it goes out.
                 </p>
-                <p className="text-gray-600 dark:text-gray-400 text-lg mb-6">
-                  With UMail’s tone adjustment, you can fully be yourself without worrying about how your message will be perceived. Write (or speak) freely, let your emotions, expressions, and sass shine through and trust UMail to handle the fine-tuning.
+                <p className="text-gray-600 dark:text-gray-300 text-lg mb-6">
+                  Write how you think. Let UMail handle how it sounds.
                 </p>
               </div>
               {/* Image */}
@@ -339,132 +322,59 @@ export default function UMailLandingPage() {
                 className="h2 font-red-hat-display text-teal-500 mb-4 text-3xl md:text-4xl"
                 data-aos="fade-up"
               >
-                What Makes UMail Amazing
+                What sets UMail apart.
               </h2>
               <p
-                className="text-lg text-gray-600 dark:text-gray-400"
+                className="text-lg text-gray-600 dark:text-gray-300"
                 data-aos="fade-up"
                 data-aos-delay="100"
               >
-                UMail is the next step in communication, designed to elevate the way you connect, work, and express yourself professionally.
+                Built on privacy. Designed for speed.
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8" data-aos="fade-up" data-aos-delay="200">
               {/* Security & Privacy */}
               <div className="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg shadow-md">
                 <h3 className="text-xl font-semibold text-teal-500 mb-4">Security &amp; Privacy</h3>
-                <p className="text-gray-600 dark:text-gray-400 mb-4">
-                  Your data is yours. UMail employs cutting-edge encryption and follows strict privacy protocols to ensure that all your communications are secure, and your personal data is never shared with third parties.
+                <p className="text-gray-600 dark:text-gray-300 mb-4">
+                  Your emails don't train anything. Your data isn't sold. End of story.
                 </p>
-                <ul className="space-y-2 text-gray-600 dark:text-gray-400">
-                  <li className="flex items-start">
-                    <svg
-                      className="w-6 h-6 text-teal-500 mr-3 flex-shrink-0"
-                      viewBox="0 0 20 20"
-                      fill="currentColor"
-                    >
-                      <path d="M10 2a8 8 0 100 16 8 8 0 000-16zM9 9V7a1 1 0 012 0v2h2a1 1 0 110 2h-2v2a1 1 0 11-2 0v-2H7a1 1 0 110-2h2z" />
-                    </svg>
-                    <span>Top-Tier Security and Data Privacy</span>
-                  </li>
-                  <li className="flex items-start">
-                    <svg
-                      className="w-6 h-6 text-teal-500 mr-3 flex-shrink-0"
-                      viewBox="0 0 20 20"
-                      fill="currentColor"
-                    >
-                      <path d="M10 2a8 8 0 100 16 8 8 0 000-16zM9 9V7a1 1 0 012 0v2h2a1 1 0 110 2h-2v2a1 1 0 11-2 0v-2H7a1 1 0 110-2h2z" />
-                    </svg>
-                    <span>No AI/ML Training on User Data or messages</span>
-                  </li>
-                  <li className="flex items-start">
-                    <svg
-                      className="w-6 h-6 text-teal-500 mr-3 flex-shrink-0"
-                      viewBox="0 0 20 20"
-                      fill="currentColor"
-                    >
-                      <path d="M10 2a8 8 0 100 16 8 8 0 000-16zM9 9V7a1 1 0 012 0v2h2a1 1 0 110 2h-2v2a1 1 0 11-2 0v-2H7a1 1 0 110-2h2z" />
-                    </svg>
-                    <span>Your Data is Never Sold to Third Parties</span>
-                  </li>
+                <ul className="space-y-2 text-gray-600 dark:text-gray-300">
+                  {['End-to-end encrypted', 'AI never trains on your messages', 'Data never sold or shared'].map((item: string) => (
+                    <li key={item} className="flex items-start">
+                      <svg className="w-6 h-6 text-teal-500 mr-3 flex-shrink-0" viewBox="0 0 20 20" fill="currentColor">
+                        <path d="M10 2a8 8 0 100 16 8 8 0 000-16zM9 9V7a1 1 0 012 0v2h2a1 1 0 110 2h-2v2a1 1 0 11-2 0v-2H7a1 1 0 110-2h2z" />
+                      </svg>
+                      <span>{item}</span>
+                    </li>
+                  ))}
                 </ul>
               </div>
               {/* Voice-to-Text AI */}
               <div className="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg shadow-md">
                 <h3 className="text-xl font-semibold text-teal-500 mb-4">Advanced Voice-to-Text</h3>
-                <p className="text-gray-600 dark:text-gray-400 mb-4">
-                  UMail’s advanced AI transforms your voice into text with precision, handling diverse accents and dialects. Simply speak, and let UMail craft polished, professional messages.
+                <p className="text-gray-600 dark:text-gray-300 mb-4">
+                  Speak it. UMail writes it. Handles any accent, any dialect — then cleans it up automatically.
                 </p>
-                <ul className="space-y-2 text-gray-600 dark:text-gray-400">
-                  <li className="flex items-start">
-                    <svg
-                      className="w-6 h-6 text-teal-500 mr-3 flex-shrink-0"
-                      viewBox="0 0 20 20"
-                      fill="currentColor"
-                    >
-                      <path d="M10 2a8 8 0 100 16 8 8 0 000-16zM9 9V7a1 1 0 012 0v2h2a1 1 0 110 2h-2v2a1 1 0 11-2 0v-2H7a1 1 0 110-2h2z" />
-                    </svg>
-                    <span>Voice Dictation with Mood &amp; Tone Adjustments</span>
-                  </li>
-                  <li className="flex items-start">
-                    <svg
-                      className="w-6 h-6 text-teal-500 mr-3 flex-shrink-0"
-                      viewBox="0 0 20 20"
-                      fill="currentColor"
-                    >
-                      <path d="M10 2a8 8 0 100 16 8 8 0 000-16zM9 9V7a1 1 0 012 0v2h2a1 1 0 110 2h-2v2a1 1 0 11-2 0v-2H7a1 1 0 110-2h2z" />
-                    </svg>
-                    <span>Accurate Transcription for Quick Replies</span>
-                  </li>
-                  <li className="flex items-start">
-                    <svg
-                      className="w-6 h-6 text-teal-500 mr-3 flex-shrink-0"
-                      viewBox="0 0 20 20"
-                      fill="currentColor"
-                    >
-                      <path d="M10 2a8 8 0 100 16 8 8 0 000-16zM9 9V7a1 1 0 012 0v2h2a1 1 0 110 2h-2v2a1 1 0 11-2 0v-2H7a1 1 0 110-2h2z" />
-                    </svg>
-                    <span>Enhanced Productivity</span>
-                  </li>
+                <ul className="space-y-2 text-gray-600 dark:text-gray-300">
+                  {voiceBullets}
                 </ul>
               </div>
               {/* Professional Enhancements */}
               <div className="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg shadow-md">
                 <h3 className="text-xl font-semibold text-teal-500 mb-4">Professional Enhancements</h3>
-                <p className="text-gray-600 dark:text-gray-400 mb-4">
-                  Elevate your emails with UMail's suite of AI-powered tools. From grammar and tone to industry-specific language, UMail ensures every message is crafted with clarity and precision.
+                <p className="text-gray-600 dark:text-gray-300 mb-4">
+                  Grammar, tone, industry terms — every message goes out exactly how it should.
                 </p>
-                <ul className="space-y-2 text-gray-600 dark:text-gray-400">
-                  <li className="flex items-start">
-                    <svg
-                      className="w-6 h-6 text-teal-500 mr-3 flex-shrink-0"
-                      viewBox="0 0 20 20"
-                      fill="currentColor"
-                    >
-                      <path d="M10 2a8 8 0 100 16 8 8 0 000-16zM9 9V7a1 1 0 012 0v2h2a1 1 0 110 2h-2v2a1 1 0 11-2 0v-2H7a1 1 0 110-2h2z" />
-                    </svg>
-                    <span>Industry-Specific Email Tools</span>
-                  </li>
-                  <li className="flex items-start">
-                    <svg
-                      className="w-6 h-6 text-teal-500 mr-3 flex-shrink-0"
-                      viewBox="0 0 20 20"
-                      fill="currentColor"
-                    >
-                      <path d="M10 2a8 8 0 100 16 8 8 0 000-16zM9 9V7a1 1 0 012 0v2h2a1 1 0 110 2h-2v2a1 1 0 11-2 0v-2H7a1 1 0 110-2h2z" />
-                    </svg>
-                    <span>AI-Powered Synonym Assistant</span>
-                  </li>
-                  <li className="flex items-start">
-                    <svg
-                      className="w-6 h-6 text-teal-500 mr-3 flex-shrink-0"
-                      viewBox="0 0 20 20"
-                      fill="currentColor"
-                    >
-                      <path d="M10 2a8 8 0 100 16 8 8 0 000-16zM9 9V7a1 1 0 012 0v2h2a1 1 0 110 2h-2v2a1 1 0 11-2 0v-2H7a1 1 0 110-2h2z" />
-                    </svg>
-                    <span>Customizable Templates &amp; Styles</span>
-                  </li>
+                <ul className="space-y-2 text-gray-600 dark:text-gray-300">
+                  {['Industry-specific language tools', 'Synonym assistant', 'Customizable templates & styles'].map((item: string) => (
+                    <li key={item} className="flex items-start">
+                      <svg className="w-6 h-6 text-teal-500 mr-3 flex-shrink-0" viewBox="0 0 20 20" fill="currentColor">
+                        <path d="M10 2a8 8 0 100 16 8 8 0 000-16zM9 9V7a1 1 0 012 0v2h2a1 1 0 110 2h-2v2a1 1 0 11-2 0v-2H7a1 1 0 110-2h2z" />
+                      </svg>
+                      <span>{item}</span>
+                    </li>
+                  ))}
                 </ul>
               </div>
             </div>
@@ -486,70 +396,11 @@ export default function UMailLandingPage() {
 
               <div className="md:w-1/2" data-aos="fade-left">
                 <h2 className="text-3xl md:text-4xl font-bold text-teal-500 mb-4">Built for Professionals</h2>
-                <p className="text-gray-600 dark:text-gray-400 text-lg mb-6">
-                  UMail’s AI doesn’t just read your text, it helps you craft effortless emails with a single word. Whether you’re a seasoned professional or simply looking to save time, UMail streamlines your writing so you can focus on what matters most.
+                <p className="text-gray-600 dark:text-gray-300 text-lg mb-6">
+                  Say one word, send a polished email. Voice dictation, tone control, and global translations — built for people who communicate for a living.
                 </p>
-                <ul className="space-y-3 text-gray-600 dark:text-gray-400">
-                  <li className="flex items-start">
-                    <svg
-                      className="w-6 h-6 text-teal-500 mr-3 flex-shrink-0"
-                      viewBox="0 0 20 20"
-                      fill="currentColor"
-                    >
-                      <path d="M10 2a8 8 0 100 16 8 8 0 000-16zM9 9V7a1 1 0 012 0v2h2a1 1 0 110 2h-2v2a1 1 0 11-2 0v-2H7a1 1 0 110-2h2z" />
-                    </svg>
-                    <span>Effortless Email Creation</span>
-                  </li>
-                  <li className="flex items-start">
-                    <svg
-                      className="w-6 h-6 text-teal-500 mr-3 flex-shrink-0"
-                      viewBox="0 0 20 20"
-                      fill="currentColor"
-                    >
-                      <path d="M10 2a8 8 0 100 16 8 8 0 000-16zM9 9V7a1 1 0 012 0v2h2a1 1 0 110 2h-2v2a1 1 0 11-2 0v-2H7a1 1 0 110-2h2z" />
-                    </svg>
-                    <span>Personalized Tone and Style</span>
-                  </li>
-                  <li className="flex items-start">
-                    <svg
-                      className="w-6 h-6 text-teal-500 mr-3 flex-shrink-0"
-                      viewBox="0 0 20 20"
-                      fill="currentColor"
-                    >
-                      <path d="M10 2a8 8 0 100 16 8 8 0 000-16zM9 9V7a1 1 0 012 0v2h2a1 1 0 110 2h-2v2a1 1 0 11-2 0v-2H7a1 1 0 110-2h2z" />
-                    </svg>
-                    <span>AI That Learns &amp; Adapts to You</span>
-                  </li>
-                  <li className="flex items-start">
-                    <svg
-                      className="w-6 h-6 text-teal-500 mr-3 flex-shrink-0"
-                      viewBox="0 0 20 20"
-                      fill="currentColor"
-                    >
-                      <path d="M10 2a8 8 0 100 16 8 8 0 000-16zM9 9V7a1 1 0 012 0v2h2a1 1 0 110 2h-2v2a1 1 0 11-2 0v-2H7a1 1 0 110-2h2z" />
-                    </svg>
-                    <span>Voice-to-Text Magic with Accent Support</span>
-                  </li>
-                  <li className="flex items-start">
-                    <svg
-                      className="w-6 h-6 text-teal-500 mr-3 flex-shrink-0"
-                      viewBox="0 0 20 20"
-                      fill="currentColor"
-                    >
-                      <path d="M10 2a8 8 0 100 16 8 8 0 000-16zM9 9V7a1 1 0 012 0v2h2a1 1 0 110 2h-2v2a1 1 0 11-2 0v-2H7a1 1 0 110-2h2z" />
-                    </svg>
-                    <span>Seamless Global Translations</span>
-                  </li>
-                  <li className="flex items-start">
-                    <svg
-                      className="w-6 h-6 text-teal-500 mr-3 flex-shrink-0"
-                      viewBox="0 0 20 20"
-                      fill="currentColor"
-                    >
-                      <path d="M10 2a8 8 0 100 16 8 8 0 000-16zM9 9V7a1 1 0 012 0v2h2a1 1 0 110 2h-2v2a1 1 0 11-2 0v-2H7a1 1 0 110-2h2z" />
-                    </svg>
-                    <span>Privacy You Can Trust</span>
-                  </li>
+                <ul className="space-y-3 text-gray-600 dark:text-gray-300">
+                  {professionalBullets}
                 </ul>
               </div>
             </div>
@@ -563,36 +414,56 @@ export default function UMailLandingPage() {
               className="text-3xl md:text-4xl font-bold text-teal-500 mb-6"
               data-aos="fade-up"
             >
-              Seamless Integrations
+              Works with what you already use.
             </h2>
             <p
-              className="text-lg text-gray-600 dark:text-gray-400 max-w-3xl mx-auto mb-12"
+              className="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto mb-12"
               data-aos="fade-up"
               data-aos-delay="100"
             >
-              UMail integrates with your favorite tools Gmail, Google Meet, Zoom, and more so you can stay connected and manage everything from one place.
+              Gmail, Google Meet, Zoom — plug in and go.
             </p>
             <div
-              className="flex flex-col md:flex-row justify-center items-start gap-8"
+              className="flex flex-col md:flex-row justify-center items-start gap-8 mb-8"
               data-aos="fade-up"
               data-aos-delay="200"
             >
               <div className="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg shadow-md flex-1">
                 <h3 className="text-xl font-semibold text-teal-500 mb-2">Calendar Scheduling</h3>
-                <p className="text-gray-600 dark:text-gray-400 text-sm mb-4">
-                  Integrated Calendar Scheduling with Google Meet and Zoom for seamless meeting setups.
+                <p className="text-gray-600 dark:text-gray-300 text-sm mb-4">
+                  Google Meet and Zoom scheduling — right inside your inbox.
                 </p>
               </div>
               <div className="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg shadow-md flex-1">
                 <h3 className="text-xl font-semibold text-teal-500 mb-2">Collaboration</h3>
-                <p className="text-gray-600 dark:text-gray-400 text-sm mb-4">
-                  Real-Time Collaboration Features let teams work together on drafting, editing, and responding to emails.
+                <p className="text-gray-600 dark:text-gray-300 text-sm mb-4">
+                  Draft, edit, and reply as a team — in real time.
                 </p>
               </div>
               <div className="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg shadow-md flex-1">
                 <h3 className="text-xl font-semibold text-teal-500 mb-2">Global Translations</h3>
-                <p className="text-gray-600 dark:text-gray-400 text-sm mb-4">
-                  Effortlessly translate your emails into multiple languages, bridging communication gaps.
+                <p className="text-gray-600 dark:text-gray-300 text-sm mb-4">
+                  Read and reply in any language without leaving your inbox.
+                </p>
+              </div>
+            </div>
+            <div
+              className="flex flex-col md:flex-row justify-center items-start gap-8"
+              data-aos="fade-up"
+              data-aos-delay="300"
+            >
+              <div className="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg shadow-md flex-1 border border-dashed border-teal-400 dark:border-teal-600">
+                <span className="text-xs font-semibold uppercase tracking-widest text-teal-500 mb-2 block">Coming Soon</span>
+                <h3 className="text-xl font-semibold text-gray-800 dark:text-gray-200 mb-2">Microsoft 365</h3>
+                <p className="text-gray-500 dark:text-gray-400 text-sm pb-5">
+                  Outlook, Teams, and the full Microsoft stack to be fully integrated.
+                </p>
+              </div>
+              <div className="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg shadow-md flex-1 border border-dashed border-teal-400 dark:border-teal-600">
+                <span className="text-xs font-semibold uppercase tracking-widest text-teal-500 mb-2 block">Coming Soon</span>
+                <h3 className="text-xl font-semibold text-gray-800 dark:text-gray-200 mb-2">Salesforce</h3>
+                <p className="text-gray-500 dark:text-gray-400 text-sm">
+                  Log emails, sync contacts, & manage pipelines without leaving your inbox.
                 </p>
               </div>
             </div>
@@ -613,12 +484,9 @@ export default function UMailLandingPage() {
               </div>
               {/* Text Content */}
               <div className="md:pl-8 order-2 md:order-1" data-aos="fade-right">
-                <h2 className="text-3xl md:text-4xl font-bold text-teal-500 mb-4">Translate Codes & Acronyms</h2>
-                <p className="text-gray-600 dark:text-gray-400 text-lg mb-6">
-                  Speak in your industry’s specific terminology, healthcare, law enforcement, military, aviation, and more. UMail effortlessly converts your codes and acronyms into clear, understandable language.
-                </p>
-                <p className="text-gray-600 dark:text-gray-400 text-lg mb-6">
-                  Save countless hours and eliminate mountains of paperwork with UMail. Let us translate your code and acronyms into professional language, so you can focus on what matters most with confidence and clarity.
+                <h2 className="text-3xl md:text-4xl font-bold text-teal-500 mb-4">Translate Codes &amp; Acronyms</h2>
+                <p className="text-gray-600 dark:text-gray-300 text-lg mb-6">
+                  Healthcare, military, aviation, law enforcement — UMail converts your industry shorthand into clear, professional language automatically.
                 </p>
               </div>
             </div>
@@ -641,17 +509,17 @@ export default function UMailLandingPage() {
         <section className="relative py-16 md:py-20 bg-teal-500 px-4 sm:px-6">
           <div className="max-w-4xl mx-auto text-center">
             <h2
-              className="text-3xl md:text-4xl font-bold text-gray-900 mb-6"
+              className="text-3xl md:text-4xl font-bold text-gray-900 mb-4"
               data-aos="fade-up"
             >
-              Ready to Experience the Future of Communications?
+              Your inbox, your rules.
             </h2>
             <p
               className="text-lg md:text-xl text-gray-900 mb-8"
               data-aos="fade-up"
               data-aos-delay="100"
             >
-              Transform your communication with UMail’s AI-driven tools, end-to-end privacy, and seamless integrations.
+              No ads. No data selling. Just better email.
             </p>
             <div data-aos="fade-up" data-aos-delay="200">
               <Link

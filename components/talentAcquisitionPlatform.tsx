@@ -55,19 +55,16 @@ export default function HeroAbout() {
             </div>
           </div>
 
-          {/* Enhanced Marketing Details */}
+          {/* Marketing Details */}
           <div className="mt-12 text-center px-4 sm:px-6 lg:px-8">
             <h2 className="text-3xl font-semibold text-gray-800 dark:text-gray-100">
-              Transform Your Hiring Experience with Our AI-Driven Talent Acquisition Platform
+              Hiring, without the noise.
             </h2>
             <p className="mt-4 text-lg text-gray-700 dark:text-gray-300 max-w-3xl mx-auto">
-              Unlock the future of recruitment with our cutting-edge AI-powered tool designed to streamline every aspect of your hiring process. Instantly scan and analyze resumes, intelligently rank candidates based on specific job description criteria, and provide succinct summaries that empower hiring managers and recruiters to make informed decisions swiftly.
+              Upload a job description, get a ranked list of candidates. The platform scans resumes, scores applicants against your criteria, and gives your team clear summaries — so you spend time on decisions, not paperwork.
             </p>
             <p className="mt-4 text-lg text-gray-700 dark:text-gray-300 max-w-3xl mx-auto">
-              Our platform revolutionizes your recruitment workflow by leveraging advanced algorithms to match the best candidates to your job descriptions. Experience unparalleled speed and accuracy in finding the perfect fit for your team, ensuring you attract and retain the brightest minds in the industry.
-            </p>
-            <p className="mt-4 text-lg text-gray-700 dark:text-gray-300 max-w-3xl mx-auto">
-              Enhance your candidate interactions with our intuitive email automation features. Effortlessly generate personalized and professional responses—whether moving candidates forward or respectfully declining—maintaining clear communication and fostering a positive impression of your brand at every touchpoint.
+              Automated responses keep candidates in the loop while you focus on the shortlist. Professional, on-brand, every time.
             </p>
 
             {/* Navigation Arrows */}

@@ -4,13 +4,14 @@ import { useRef, useState } from 'react';
 import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
 import { trackEvent } from '@/utils/mixpanel';
 
-const cards = [
+const cards: { href: string; name: string; status: string; gradient: string; description: string; stat?: string; viewBox: string; path: string }[] = [
   {
     href: '/applyPro',
     name: 'ApplyPro.ai',
     status: 'Live',
     gradient: 'from-purple-600 to-purple-400',
     description: 'Cover letters and tailored resumes that get you interviews. No data mining, no fluff.',
+    stat: '400+ Active Users',
     viewBox: '0 0 32 32',
     path: 'M20.796 20l-1.677 7.264a6 6 0 01-7.302 4.471L0 28.781V11.54l.35-.3 9.457-8.107a3.751 3.751 0 015.29 5.29L11.175 13H28.5a3.5 3.5 0 012.6 1.156c.663.736.984 1.72.878 2.74-.252 1.808-1.817 3.143-3.622 3.104h-7.56zM2 27.22l10.303 2.575a4 4 0 004.868-2.98L19.204 18h9.173c.812.018 1.508-.575 1.615-1.345A1.5 1.5 0 0028.5 15H11.173a2 2 0 01-1.517-3.3l3.922-4.577a1.755 1.755 0 00-.597-2.733 1.751 1.751 0 00-1.872.262L2 12.46v14.76zM28 .585L29.414 2 23 8.414 21.586 7 28 .586zm-8.272 6.627l-1.94-.485 1.484-5.94 1.94.484-1.484 5.94zm3.544 5l-.485-1.94 5.94-1.486.486 1.94-5.94 1.486z',
   },
@@ -129,6 +130,16 @@ export default function FeaturesBlocks() {
                 <p className="text-sm text-white/85 leading-relaxed flex-grow">
                   {card.description}
                 </p>
+
+                {/* Live stat badge */}
+                {card.stat && (
+                  <div className="mt-3">
+                    <span className="inline-flex items-center gap-1.5 text-xs font-semibold bg-white/20 text-white px-2.5 py-1 rounded-full">
+                      <span className="w-1.5 h-1.5 rounded-full bg-green-300 animate-pulse" />
+                      {card.stat}
+                    </span>
+                  </div>
+                )}
 
                 {/* Footer arrow */}
                 <div className="mt-5 pt-4 border-t border-white/15 flex items-center justify-between">

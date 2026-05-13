@@ -72,7 +72,7 @@ export default function UMailLandingPage() {
         <section className="relative pt-24 pb-12 md:pt-32 md:pb-20 px-4 sm:px-6">
           <div className="max-w-4xl mx-auto text-center">
             <div data-aos="fade-up">
-              <Image className="mx-auto opacity-80 w-full h-auto max-w-lg" src={HeroImage} alt="UMail Hero" priority />
+              <Image className="mx-auto opacity-80 w-full h-auto max-w-lg" src={HeroImage} alt="U-Mail Hero" priority />
             </div>
 
             <h1 className="mt-10 text-3xl md:text-5xl font-bold text-teal-500 font-red-hat-display" data-aos="fade-down">
@@ -184,7 +184,7 @@ export default function UMailLandingPage() {
           <div className="max-w-6xl mx-auto">
             <div className="md:flex md:items-center md:justify-between mb-12">
               <div className="md:w-1/2 mt-8 md:mt-0 mr-0 md:mr-20 mb-8 md:mb-0" data-aos="fade-right">
-                <Image src={HeroImage} alt="UMail dashboard and cleanup tools" className="mx-auto w-full max-w-lg h-auto" priority />
+                <Image src={HeroImage} alt="U-Mail dashboard and cleanup tools" className="mx-auto w-full max-w-lg h-auto" priority />
               </div>
 
               <div className="md:w-1/2" data-aos="fade-left">
@@ -297,7 +297,7 @@ export default function UMailLandingPage() {
           <div className="max-w-5xl mx-auto">
             <div className="text-center mb-12">
               <h2 className="h2 font-red-hat-display text-teal-500 mb-4 text-3xl md:text-4xl" data-aos="fade-up">
-                What sets UMail apart.
+                What sets U-Mail apart.
               </h2>
               <p className="text-lg text-gray-600 dark:text-gray-300" data-aos="fade-up" data-aos-delay="100">
                 Built to protect attention, trust, and response quality.
@@ -350,7 +350,7 @@ export default function UMailLandingPage() {
             <div className="flex flex-col md:flex-row justify-center items-start gap-8 mb-8" data-aos="fade-up" data-aos-delay="200">
               <div className="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg shadow-md flex-1">
                 <h3 className="text-xl font-semibold text-teal-500 mb-2">Calendar + Meet</h3>
-                <p className="text-gray-600 dark:text-gray-300 text-sm mb-4">Create events, include Meet links, and manage guests from UMail.</p>
+                <p className="text-gray-600 dark:text-gray-300 text-sm mb-4">Create events, include Meet links, and manage guests from U-Mail.</p>
               </div>
               <div className="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg shadow-md flex-1">
                 <h3 className="text-xl font-semibold text-teal-500 mb-2">Google Drive</h3>

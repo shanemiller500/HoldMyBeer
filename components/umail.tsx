@@ -8,7 +8,7 @@ import { FaArrowLeft, FaArrowRight } from 'react-icons/fa'
 import { trackEvent } from '@/utils/mixpanel'
 
 import HeroImage from '@/public/images/umailHero.png'
-import LogoImage from '@/public/images/umailLogo.png'
+import ShieldImage from '@/public/images/esof-shield.png'
 
 function GoogleIcon() {
   return (
@@ -50,10 +50,10 @@ export default function UMailLandingPage() {
     </li>
   )
 
-  const voiceBullets = [
-    'Voice-first drafting is in active development',
-    'Accent-aware input tuning is planned',
-    'Mobile dictation workflows are coming soon',
+  const intelligenceBullets = [
+    'Self-learning calculated algorithm adapts to sender behavior, reply patterns, and trust signals',
+    'Detects real-human urgency versus sponsored spam and AI-crafted bait',
+    'Continuously improves prioritization so critical conversations stay visible',
   ].map(renderBullet)
 
   const professionalBullets = [
@@ -62,7 +62,7 @@ export default function UMailLandingPage() {
     'Rules, filters, and cleanup actions',
     'Translation for incoming and outgoing email',
     'Dashboard with unread pressure and response signals',
-    'No ads. No sponsored spam. No data selling.',
+    'Human-first workflow built to protect real opportunities and follow-ups',
   ].map(renderBullet)
 
   return (
@@ -76,11 +76,11 @@ export default function UMailLandingPage() {
             </div>
 
             <h1 className="mt-10 text-3xl md:text-5xl font-bold text-teal-500 font-red-hat-display" data-aos="fade-down">
-              One command center for modern email.
+              Human-first intelligence for modern email.
             </h1>
 
             <p className="mt-4 text-gray-600 dark:text-gray-300 text-lg md:text-xl" data-aos="fade-down" data-aos-delay="100">
-              UMail unifies Gmail + Outlook, AI writing, translation, rules, cleanup tools, calendar, and Google Meet in one workflow.
+              U-Mail is the intelligence layer that helps people beat sponsored spam, AI-crafted bait, buried real mail, and missed follow-ups across Google and Microsoft accounts.
             </p>
 
             <div className="mt-6 flex flex-wrap justify-center gap-2" data-aos="fade-down" data-aos-delay="150">
@@ -89,6 +89,9 @@ export default function UMailLandingPage() {
               </span>
               <span className="inline-flex items-center gap-2 rounded-full bg-gray-100 dark:bg-gray-800 px-3 py-1 text-xs text-gray-700 dark:text-gray-200">
                 <MicrosoftIcon /> Works with Microsoft
+              </span>
+              <span className="inline-flex items-center gap-2 rounded-full border border-teal-200 bg-teal-50 px-3 py-1 text-xs font-semibold text-teal-700 dark:border-teal-700 dark:bg-teal-950/40 dark:text-teal-200">
+                CASA Tier 2 Passed 9.7/10
               </span>
             </div>
           </div>
@@ -100,7 +103,7 @@ export default function UMailLandingPage() {
             <div className="text-center mb-12" data-aos="fade-up">
               <h2 className="text-3xl md:text-4xl font-bold text-teal-500 mb-4">Email, upgraded.</h2>
               <p className="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-                Multi-account inbox, AI, translation, automation, and calendar tools in one clean interface.
+                U-Mail combines multi-account email, adaptive intelligence, translation, automation, and calendar tools in one focused workspace.
               </p>
             </div>
 
@@ -113,17 +116,64 @@ export default function UMailLandingPage() {
               </div>
 
               <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md">
-                <h3 className="text-xl font-semibold text-teal-500 mb-4">AI Writing</h3>
+                <h3 className="text-xl font-semibold text-teal-500 mb-4">Self-Learning Intelligence</h3>
                 <p className="text-gray-600 dark:text-gray-300 mb-4">
-                  Rewrite, fix tone, and speed up replies with review-first AI assistance.
+                  A calculated algorithm learns from trust signals, response behavior, and inbox patterns to keep the right conversations on top.
                 </p>
               </div>
 
               <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md">
-                <h3 className="text-xl font-semibold text-teal-500 mb-4">Live Translation</h3>
+                <h3 className="text-xl font-semibold text-teal-500 mb-4">Execution Tools</h3>
                 <p className="text-gray-600 dark:text-gray-300 mb-4">
-                  Read incoming messages in your native language and translate replies before sending.
+                  AI writing, translation, rules, cleanup actions, calendar, and meeting workflows stay connected in one place.
                 </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* TRUST + CASA */}
+        <section className="relative pt-6 pb-12 md:pt-10 md:pb-16 px-4 sm:px-6">
+          <div className="max-w-6xl mx-auto">
+            <div className="overflow-hidden rounded-2xl border border-teal-100 bg-gradient-to-br from-white via-teal-50 to-cyan-50 shadow-[0_20px_80px_-40px_rgba(13,148,136,0.45)] dark:border-teal-900 dark:from-gray-900 dark:via-gray-900 dark:to-teal-950">
+              <div className="grid grid-cols-1 items-center gap-10 px-6 py-8 md:grid-cols-[220px_1fr] md:px-10 md:py-10">
+                <div className="flex justify-center md:justify-start">
+                  <div className="rounded-2xl border border-white/70 bg-white/80 p-4 shadow-lg dark:border-teal-900 dark:bg-gray-900/90">
+                    <Image
+                      src={ShieldImage}
+                      alt="CASA Tier 2 assessment shield for U-Mail"
+                      className="h-auto w-full max-w-[160px]"
+                      priority
+                    />
+                  </div>
+                </div>
+
+                <div>
+                  <span className="inline-flex rounded-full border border-teal-200 bg-white/80 px-3 py-1 text-xs font-semibold uppercase tracking-[0.24em] text-teal-700 dark:border-teal-800 dark:bg-teal-950/30 dark:text-teal-200">
+                    Trust Signal
+                  </span>
+                  <h2 className="mt-4 text-3xl font-bold text-gray-900 dark:text-white md:text-4xl">
+                    Passed CASA Tier 2 with a 9.7/10 result.
+                  </h2>
+                  <p className="mt-4 max-w-3xl text-lg text-gray-700 dark:text-gray-300">
+                    U-Mail now carries a stronger public trust marker to match the product direction: serious security review, human-first inbox intelligence, and a system designed to surface real mail instead of noise.
+                  </p>
+
+                  <div className="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-3">
+                    <div className="rounded-xl border border-teal-100 bg-white/75 p-4 dark:border-teal-900 dark:bg-gray-900/70">
+                      <p className="text-sm font-semibold text-gray-900 dark:text-white">Google and Microsoft foundation</p>
+                      <p className="mt-1 text-sm text-gray-600 dark:text-gray-400">Built on the security users already trust.</p>
+                    </div>
+                    <div className="rounded-xl border border-teal-100 bg-white/75 p-4 dark:border-teal-900 dark:bg-gray-900/70">
+                      <p className="text-sm font-semibold text-gray-900 dark:text-white">Adaptive inbox scoring</p>
+                      <p className="mt-1 text-sm text-gray-600 dark:text-gray-400">Learns which messages deserve immediate attention.</p>
+                    </div>
+                    <div className="rounded-xl border border-teal-100 bg-white/75 p-4 dark:border-teal-900 dark:bg-gray-900/70">
+                      <p className="text-sm font-semibold text-gray-900 dark:text-white">No ad-driven incentives</p>
+                      <p className="mt-1 text-sm text-gray-600 dark:text-gray-400">Aligned around clarity, not inbox clutter.</p>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -140,14 +190,14 @@ export default function UMailLandingPage() {
               <div className="md:w-1/2" data-aos="fade-left">
                 <h2 className="text-3xl md:text-4xl font-bold text-teal-500 mb-4">Inbox control without chaos.</h2>
                 <p className="text-gray-600 dark:text-gray-300 text-lg mb-6">
-                  Use radars, bulk actions, rules, and sender cleanup workflows to keep inbox noise down.
+                  Use radars, bulk actions, rules, and sender cleanup workflows to reduce noise while keeping real conversations, follow-ups, and opportunities visible.
                 </p>
                 <ul className="mt-4 space-y-4">
                   {[
                     'Bulk archive, trash, mark read/unread, and move to labels',
                     'Rules and filters for automated organization',
-                    'Sender cleanup workflows (spam/unsubscribe/archive)',
-                    'Dashboard signals: unread pressure, backlog, trends',
+                    'Sender cleanup workflows for spam, unsubscribe, and archive actions',
+                    'Dashboard signals for unread pressure, backlog, and response risk',
                   ].map((item) => (
                     <li key={item} className="flex items-start">
                       <svg className="w-6 h-6 text-teal-500 mr-3 flex-shrink-0" viewBox="0 0 20 20" fill="currentColor">
@@ -250,7 +300,7 @@ export default function UMailLandingPage() {
                 What sets UMail apart.
               </h2>
               <p className="text-lg text-gray-600 dark:text-gray-300" data-aos="fade-up" data-aos-delay="100">
-                Built for focus, speed, and privacy.
+                Built to protect attention, trust, and response quality.
               </p>
             </div>
 
@@ -273,14 +323,14 @@ export default function UMailLandingPage() {
               </div>
 
               <div className="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg shadow-md">
-                <h3 className="text-xl font-semibold text-teal-500 mb-4">Voice-First System</h3>
-                <p className="text-gray-600 dark:text-gray-300 mb-4">Voice workflows are in active build and expanding through beta.</p>
-                <ul className="space-y-2 text-gray-600 dark:text-gray-300">{voiceBullets}</ul>
+                <h3 className="text-xl font-semibold text-teal-500 mb-4">Self-Learning Engine</h3>
+                <p className="text-gray-600 dark:text-gray-300 mb-4">U-Mail uses a self-learning calculated algorithm instead of static inbox rules.</p>
+                <ul className="space-y-2 text-gray-600 dark:text-gray-300">{intelligenceBullets}</ul>
               </div>
 
               <div className="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg shadow-md">
-                <h3 className="text-xl font-semibold text-teal-500 mb-4">Professional Enhancements</h3>
-                <p className="text-gray-600 dark:text-gray-300 mb-4">Everything needed to communicate clearly at speed.</p>
+                <h3 className="text-xl font-semibold text-teal-500 mb-4">Human-First Workflow</h3>
+                <p className="text-gray-600 dark:text-gray-300 mb-4">Everything needed to act fast without losing the thread on real people.</p>
                 <ul className="space-y-2 text-gray-600 dark:text-gray-300">{professionalBullets}</ul>
               </div>
             </div>
@@ -355,7 +405,7 @@ export default function UMailLandingPage() {
               Your inbox, your rules.
             </h2>
             <p className="text-lg md:text-xl text-gray-900 mb-8" data-aos="fade-up" data-aos-delay="100">
-              Beta access now. No ads, no data resale, no inbox clutter from us.
+              Beta access now. Human-first email intelligence with no ads, no data resale, and no inbox clutter from us.
             </p>
             <div data-aos="fade-up" data-aos-delay="200">
               <Link

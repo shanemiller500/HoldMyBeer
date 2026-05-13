@@ -1,6 +1,6 @@
 export const metadata = {
-    title: 'Umail - HMB-CO',
-    description: 'UMail - a clutter-free, ad-free, privacy-first email client powered by AI.',
+    title: 'U-Mail - HMB-CO',
+    description: 'U-Mail is a human-first email intelligence layer built to surface real mail, reduce sponsored spam, and protect follow-ups across Google and Microsoft accounts.',
   }
   
   import Hero from '@/components/umail'
